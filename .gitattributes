@@ -1,0 +1,17 @@
+# Keep generated/runtime output out of GitHub language statistics.
+api/publish/** linguist-generated=true
+
+# Design references and documentation are not application source code.
+stitch_luxury_atelier_e_commerce_system/** linguist-documentation=true
+docs/** linguist-documentation=true
+
+# Normalize text files across development environments.
+* text=auto
+*.cs text eol=lf
+*.ts text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
