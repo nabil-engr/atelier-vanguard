@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest"><span>Complimentary insured worldwide courier &amp; private atelier consultation | London • New York • Dhaka</span></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="home" href="#">Home</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="mens-tailoring" href="#">Men's Tailoring</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="womens-atelier" href="#">Women's Atelier</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Heritage Jamdani</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="journal" href="#">Journal</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">public</span><span>USD $ | Global</span></div><a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="garment-configurator" href="#">Create Your Garment</a><button aria-label="Search Archive" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden lg:inline-flex p-2 text-on-surface-variant hover:text-secondary transition-colors" data-path="book-private-fitting" href="#" title="Private Fitting Appointment"><span class="material-symbols-outlined text-[20px]">calendar_today</span></a><button aria-label="Shopping Bag Drawer" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-numeric text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header Architectural Micro-Breadcrumbs -->
+<div class="w-full bg-surface-container-low/60 backdrop-blur-sm px-margin lg:px-margin-lg py-3">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<nav aria-label="Sartorial Pathway" class="flex items-center gap-2 font-label-uppercase text-label-uppercase text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" data-path="home" href="#">Home</a>
+<span class="text-[10px] opacity-40">/</span>
+<a class="hover:text-secondary transition-colors" data-path="mens-tailoring" href="#">Men's Sartorial</a>
+<span class="text-[10px] opacity-40">/</span>
+<a class="hover:text-secondary transition-colors" href="#">Bespoke Suits</a>
+<span class="text-[10px] opacity-40">/</span>
+<span class="text-on-surface font-semibold tracking-wider">The Mayfair Royal Drape</span>
+</nav>
+<div class="hidden md:flex items-center gap-4 text-on-surface-variant font-label-numeric text-label-numeric">
+<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Commission Slot #AV-25/084</span>
+<span class="text-outline-variant">•</span>
+<span>Registered Guild Masterwork</span>
+</div>
+</div>
+</div>
+<!-- Main Sartorial Dossier Showcase (Split Studio Grid) -->
+<section class="w-full max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: Studio Atelier Gallery (col-lg-7 equivalent) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Primary Master Gallery Viewer -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden group">
+<!-- Active Hero Garment Image -->
+<img alt="The Mayfair Royal Drape Suit" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Editorial studio portrait of The Mayfair Royal Drape two-piece bespoke suit on an architectural mannequin. Midnight navy Super 150s worsted wool with soft rolling lapels, hand-stitched Milanese buttonhole, and subtle golden Jamdani silk inner facing glow. Dramatic chiaroscuro studio lighting, warm ivory backdrop, ultra-sharp tailoring textures." id="main-garment-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklGSqb3jIbAwLtxuf3T3aT6iizVlxbFnxvW7tVqWma0NWhywLOKAaJ3HksL07oz5kJaxn_0CLPKpCZuzBxdfgiGIaBfF0Db8Fq35ynlmPWnDSldmC9XnGYj5KUgItTcAoa0Qbg-Co-UzzxooEUMQY8Eiy9SVWLOqTKr3YOo1YGRzS4b485cGIQO9XIWr3B4seqpDeMljZlEOwilUBfcPLL5R3vSaUR6yGB1xwL1sjuu4NLUwur8LI"/>
+<!-- Live Sartorial Pills & Overlays -->
+<div class="absolute top-6 left-6 flex flex-wrap gap-2 z-10">
+<span class="bg-primary/80 backdrop-blur-md text-surface font-label-uppercase text-[10px] px-3 py-1.5 tracking-widest uppercase">
+              Full Floating Siberian Canvas
+            </span>
+<span class="bg-surface-container/90 backdrop-blur-md text-secondary font-label-uppercase text-[10px] px-3 py-1.5 tracking-widest uppercase">
+              Hand-Cut Savile Row Lineage
+            </span>
+</div>
+<!-- Bottom Action Buttons: Macro Lens & Master Video -->
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between z-10 pointer-events-none">
+<div class="flex items-center gap-2 pointer-events-auto">
+<button class="bg-surface/90 hover:bg-primary hover:text-surface backdrop-blur-md text-on-surface px-4 py-2 text-label-uppercase font-label-uppercase tracking-wider transition-colors flex items-center gap-2 shadow-sm" id="macro-toggle-btn">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+<span>Inspect Cloth Macro (24x)</span>
+</button>
+<button class="bg-surface/90 hover:bg-primary hover:text-surface backdrop-blur-md text-on-surface px-4 py-2 text-label-uppercase font-label-uppercase tracking-wider transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Artisan Cutting Video</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-1 bg-primary/70 text-surface px-3 py-1.5 font-label-numeric text-[11px] backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span>100% Guaranteed Bespoke Drape</span>
+</div>
+</div>
+<!-- Subtle Botanical / Heritage Watermark -->
+<div class="absolute right-6 top-6 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[72px] text-secondary">workspace_premium</span>
+</div>
+</div>
+<!-- 5-Aspect Interactive Thumbnail Strip -->
+<div class="grid grid-cols-5 gap-2 sm:gap-3">
+<!-- Thumb 1: Front Silhouette -->
+<button class="aspect-[4/5] bg-surface-container-low p-1 transition-all relative group opacity-100 ring-2 ring-secondary" data-title="Front Architectural Silhouette" onclick="switchAspect('front', this)">
+<img alt="Front Silhouette Thumbnail" class="w-full h-full object-cover" data-alt="Frontal geometric perspective of the Mayfair Royal Drape tailored suit jacket showcasing high armholes, sculpted waist suppression, and natural chest swell in navy worsted wool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVMnlv2kHqgmGxtXrDgEeAt6vz37w8SirPBJF7g1yit4zMTbe04hWvKNZh-LXc_eOuvsyO-Nq6l8xFW5cbyHRKbBCcp2RZu_otgm7eQW1gun2THixA7JqYeRYkT7q4fGpN3KMoFO2MSVdo9G2jvxLFnFWnJ8kf9F3hCLUJCU3aZmULPlmgEycxmLD3Jt7Kny0cvLFBwV1cUe3_Y8LO9HXtzowdV-6dB7m3yv6S8Uw005hAFoZIB-Qt"/>
+<span class="absolute bottom-1 left-1 right-1 bg-primary/80 text-surface text-[9px] font-label-uppercase text-center py-0.5 truncate backdrop-blur-sm">
+              Silhouette
+            </span>
+</button>
+<!-- Thumb 2: Lapel Roll -->
+<button class="aspect-[4/5] bg-surface-container-low p-1 transition-all relative group opacity-60 hover:opacity-100" data-title="Continuous 3.75-inch Lapel Roll" onclick="switchAspect('lapel', this)">
+<img alt="Lapel Roll Detail" class="w-full h-full object-cover" data-alt="Close-up side angle of soft 3.75-inch notched lapel rolling gracefully to the middle horn button without harsh pressing, displaying pure unforced roll and handmade canvas flex." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-PgwtAXgQ2qKvy_XNLasJanHxprOzastjO2qKQpCJP-uz7A_jlFfzcnqCcXw7pgvYCVj8FBpeV0R7mFFRT863gW73MefP8hZChjOeF3TJR5hK05S3vrcr7XVcQjqVDfDcd1aEpJD3pv3nb0bJaQ0raE0ElATk3B-dDaKyPPdr2cefTj-V9XPWNJfzKovjbDYMxFoHKqW2eclX2J8Elccmw3yuqQXAhH5opLj4MK-qBjNV15JB05kJ"/>
+<span class="absolute bottom-1 left-1 right-1 bg-primary/80 text-surface text-[9px] font-label-uppercase text-center py-0.5 truncate backdrop-blur-sm">
+              Lapel Roll
+            </span>
+</button>
+<!-- Thumb 3: Milanese Buttonhole -->
+<button class="aspect-[4/5] bg-surface-container-low p-1 transition-all relative group opacity-60 hover:opacity-100" data-title="Hand-Stitched Milanese Asola Buttonhole" onclick="switchAspect('buttonhole', this)">
+<img alt="Milanese Buttonhole Macro" class="w-full h-full object-cover" data-alt="Ultra macro lens photograph of a Milanese buttonhole on fine navy Italian wool, raised silk gimp cord hand-sewn with microscopic geometric precision by master bespoke artisan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMi0lSgBkxpq2INioLedl5x157VoCblxhPqRsVSkl2itfA5vnmsAmt2L5-CAKJykhXqcH8JZ7wnD477APUgU-sw-oIzfonR0rnGTm5qKffC0DaWYEW3BR_eK4M83QgJ1MVWD1Vk3NT1_PdNEONRr3e6iA9Tjyv6nTFgMjAkvn1LkxXia2Ds0HTJHJjBAt1c5KX4fE58edxe1WQ2OnekFI1fc47EcO_xChaK1WYFM-Ml41792NUkBTi"/>
+<span class="absolute bottom-1 left-1 right-1 bg-primary/80 text-surface text-[9px] font-label-uppercase text-center py-0.5 truncate backdrop-blur-sm">
+              Milanese Asola
+            </span>
+</button>
+<!-- Thumb 4: Jamdani Silk Facing -->
+<button class="aspect-[4/5] bg-surface-container-low p-1 transition-all relative group opacity-60 hover:opacity-100" data-title="Heritage Bengal Jamdani Silk Lining" onclick="switchAspect('jamdani', this)">
+<img alt="Jamdani Silk Interior" class="w-full h-full object-cover" data-alt="Interior chest lining view of the bespoke jacket peeled back to reveal golden silk muslin hand-loomed with Bengal Jamdani geometric motifs, iridescent gold on warm ivory silk thread." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvmpnfPi1-wbgyeJZi335oUm2MUn0dXB_1GvBe-j379J3zgDisNZspBaMUnef9a3U691dGFtOO8hIOBV12lFXmns-IbV9SsoAQu5eubfx8h4hoBUUrDrpcpMCnrTxIfjjaYVjuYhJdHvtfbnHOesC3eGB872aVnRl1m_XFgSwwAt1QMUjBlXpacRX23e7ztoQFD0U2Mw1bi9JTtpDPZO46zCLXIGbsNk8cLKlv0l9PlcbEfxqlbCtW"/>
+<span class="absolute bottom-1 left-1 right-1 bg-primary/80 text-surface text-[9px] font-label-uppercase text-center py-0.5 truncate backdrop-blur-sm">
+              Jamdani Silk
+            </span>
+</button>
+<!-- Thumb 5: Shoulder Drape -->
+<button class="aspect-[4/5] bg-surface-container-low p-1 transition-all relative group opacity-60 hover:opacity-100" data-title="Spalla Camicia Unstructured Shoulder" onclick="switchAspect('shoulder', this)">
+<img alt="Shoulder Drape Cut" class="w-full h-full object-cover" data-alt="Sleeve head and shoulder joint angle of the suit revealing slight shirring and soft natural drape of Neapolitan spalla camicia cut with roped European sleevehead option." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEZAB4gVxL2Mb5lWAoBGhUvAvSaCXUep0z-2zCtbTx4PQzYR3_zqig-aN59PXkZoeEn1PnKOZy9JrltmDEtWsm4y50avRzHs2o1rQZl23JiQ2ylTAYqZjBCKq54VzA0uXL22z0Oy2ZTRJ5tUpU3-s-Mh3iozulTpSRrjJJquAQHWhrocviU5rHIgqLV8ZP94HBUp7NSGiTKAyP8DnoZr_of05oVjEZiEPQAHjAZVHqJW1Gz_8xQ85k"/>
+<span class="absolute bottom-1 left-1 right-1 bg-primary/80 text-surface text-[9px] font-label-uppercase text-center py-0.5 truncate backdrop-blur-sm">
+              Shoulder Joint
+            </span>
+</button>
+</div>
+<!-- Craft Metric Triptych Banner -->
+<div class="grid grid-cols-3 gap-gutter bg-surface-container-low p-space-md mt-2">
+<div class="space-y-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block uppercase">Basting Cadence</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">3 Stages</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Skeleton, forward, finish</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block uppercase">Anatomical Caliber</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">38 Points</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Laser-plotted kinetic measurements</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block uppercase">Loom Super Count</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">150s Merino</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biella Italian worsted weave</p>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Sartorial Commission Dossier (col-lg-5 equivalent) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-24">
+<!-- Header & Commission Valuation Block -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Origin & Guild Tag -->
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">
+              SAVILE ROW ARCHITECTURE • NO. 047
+            </span>
+<div class="flex items-center gap-1.5">
+<div class="flex text-secondary text-[14px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">4.98</span>
+<a class="font-label-numeric text-label-numeric text-on-surface-variant hover:text-secondary underline underline-offset-2" href="#patron-reviews">(64 Bespoke Patrons)</a>
+</div>
+</div>
+<!-- Master Garment Titles -->
+<div class="space-y-1">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">
+              The Mayfair Royal Drape
+            </h1>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant">
+              Two-Piece Made-to-Measure Architectural Suit
+            </p>
+</div>
+<!-- Commission Pricing & Benchmark -->
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-wider uppercase block">Bespoke Commission</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">$1,650</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">USD / £1,305 GBP</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest uppercase block">Handcraft Benchmark</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-medium">88 Artisanal Hours</span>
+</div>
+</div>
+<!-- Delivery Timeframe Callout -->
+<div class="bg-surface-container p-space-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<div class="text-on-surface font-body-sm text-body-sm">
+<span class="font-semibold">Est. First Fitting: 4 Weeks.</span> Lifetime alteration covenant included.
+            </div>
+</div>
+<!-- Cloth & Weave Selector -->
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest">
+                1. Select Curated Sovereign Cloth
+              </span>
+<span class="font-label-numeric text-label-numeric text-secondary font-medium" id="selected-fabric-name">
+                Loro Piana Super 150s Tasmania Navy (Included)
+              </span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<!-- Swatch 1: Loro Piana Navy -->
+<button class="fabric-btn flex flex-col p-2.5 bg-surface-container-low hover:bg-surface-container text-left transition-all relative ring-2 ring-secondary" onclick="selectFabric(this, 'Loro Piana Super 150s Tasmania Navy (Included)', 0)">
+<div class="w-full h-12 bg-primary mb-2 relative overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-tr from-primary via-[#0d1f35] to-primary opacity-90"></div>
+<span class="material-symbols-outlined text-secondary text-[16px] absolute top-1 right-1">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Tasmania Navy</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Super 150s • Included</span>
+</button>
+<!-- Swatch 2: Scabal Charcoal -->
+<button class="fabric-btn flex flex-col p-2.5 bg-surface-container-low hover:bg-surface-container text-left transition-all relative opacity-75 hover:opacity-100" onclick="selectFabric(this, 'Scabal Charcoal Herringbone (+$200)', 200)">
+<div class="w-full h-12 bg-surface-container-highest mb-2 relative overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-[#2a2d32] to-[#1a1b1e]"></div>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Charcoal Herring</span>
+<span class="font-label-numeric text-[11px] text-secondary">+ $200 USD</span>
+</button>
+<!-- Swatch 3: Heritage Jamdani Silk/Wool -->
+<button class="fabric-btn flex flex-col p-2.5 bg-surface-container-low hover:bg-surface-container text-left transition-all relative opacity-75 hover:opacity-100" onclick="selectFabric(this, 'Dhaka Heritage Gold Jamdani (+$350)', 350)">
+<div class="w-full h-12 bg-surface-container-highest mb-2 relative overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-r from-[#2f2214] via-[#765a24] to-[#1a150e]"></div>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Gold Jamdani</span>
+<span class="font-label-numeric text-[11px] text-secondary">+ $350 USD</span>
+</button>
+</div>
+</div>
+<!-- Shoulder & Silhouette Construction Toggle -->
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest">
+                2. Anatomical Shoulder Expression
+              </span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Bespoke Canvas Option</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="p-3 bg-surface-container text-left flex flex-col justify-between transition-all ring-1 ring-on-surface" id="shoulder-savile" onclick="setShoulder('savile')">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">Savile Row Structured</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-1">Roped Armhole &amp; Floating Chest Pad</span>
+</button>
+<button class="p-3 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between transition-all opacity-80" id="shoulder-neapolitan" onclick="setShoulder('neapolitan')">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest">Neapolitan Soft</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-1">Spalla Camicia Unlined Ease</span>
+</button>
+</div>
+</div>
+<!-- Primary & Secondary CTA Action Grid -->
+<div class="space-y-3 pt-2">
+<!-- Major Action: Customize Garment -->
+<a class="w-full h-[54px] bg-secondary hover:bg-primary text-on-secondary hover:text-surface font-label-uppercase text-label-uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-colors shadow-sm" data-path="garment-configurator" href="#">
+<span>Customize This Garment</span>
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</a>
+<!-- Dual Secondary Buttons -->
+<div class="grid grid-cols-2 gap-3">
+<button class="h-[46px] bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-[10px] tracking-wider flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">layers</span>
+<span>Order Swatches ($45)</span>
+</button>
+<button class="h-[46px] bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-[10px] tracking-wider flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">bookmark</span>
+<span>Save to Dossier</span>
+</button>
+</div>
+</div>
+<!-- Concierge Trust Badges -->
+<div class="grid grid-cols-2 gap-2 pt-2 text-on-surface-variant font-label-numeric text-[11px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield</span>
+<span>100% Guaranteed Precise Drape</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">flight_takeoff</span>
+<span>Solid Cedar Courier Delivery</span>
+</div>
+</div>
+</div>
+<!-- Deep-Dive Sartorial Specifications Accordion -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm divide-y-0 space-y-2">
+<!-- Accordion Item 1 -->
+<div class="accordion-item bg-surface-container-low">
+<button class="w-full px-space-md py-3 flex items-center justify-between text-left group" onclick="toggleAccordion('acc-1', this)">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">
+                1. Tailoring &amp; Architectural Construction
+              </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300" id="icon-acc-1">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant space-y-2" id="acc-1">
+<p>Constructed entirely with a full floating canvas harvested from Siberian horsehair and Mongolian cashmere felt. No thermal fusing or glued substrates will ever touch an Atelier Vanguard commission.</p>
+<ul class="space-y-1 font-label-numeric text-[12px] list-disc list-inside text-on-surface">
+<li>3.75-inch hand-padded lapel roll calibrated for lifetime memory.</li>
+<li>Individual cut utilizing 14-inch Sheffield hot-forged steel shears.</li>
+<li>2.5-inch internal inlay seam allowance for multi-generational resizing.</li>
+<li>Hand-sewn horn buttons with cross-shank anchoring thread.</li>
+</ul>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="accordion-item bg-surface-container-low">
+<button class="w-full px-space-md py-3 flex items-center justify-between text-left group" onclick="toggleAccordion('acc-2', this)">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">
+                2. Sovereign Cloth &amp; Textile Provenance
+              </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300" id="icon-acc-2">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant space-y-2" id="acc-2">
+<p>Milled in the pristine alpine waters of Biella, Italy, the Super 150s Tasmania wool weighs an agile 280g/m—providing fluid four-season drape and rapid wrinkle resurgence.</p>
+<p>Internal breast facings incorporate authentic handloom Jamdani silk woven on pit looms along the Shitalakshya River in Narayanganj, integrating three centuries of Bengal sovereign textile supremacy.</p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="accordion-item bg-surface-container-low">
+<button class="w-full px-space-md py-3 flex items-center justify-between text-left group" onclick="toggleAccordion('acc-3', this)">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">
+                3. Lifetime Fit Warranty &amp; Salon Covenant
+              </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300" id="icon-acc-3">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant space-y-2" id="acc-3">
+<p>We assume full fiscal liability for your posture and drape. If your initial garment requires adjustments, you enjoy complimentary anatomical refinements at our Savile Row, Madison Avenue, or Gulshan-2 salons.</p>
+<p>For patrons remote from our physical ateliers, Atelier Vanguard reimburses up to $150 USD with your approved local master tailor upon receipt submission.</p>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="accordion-item bg-surface-container-low">
+<button class="w-full px-space-md py-3 flex items-center justify-between text-left group" onclick="toggleAccordion('acc-4', this)">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">
+                4. White-Glove Consignment &amp; Insured Transit
+              </span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300" id="icon-acc-4">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant space-y-2" id="acc-4">
+<p>Every finished two-piece suit is conditioned, brushed with natural boar bristle, draped on custom hornbeam timber hangers, and sealed in an aromatic Spanish cedar travel trunk.</p>
+<p>Dispatched via temperature-controlled, fully bonded and insured international courier (DDP with all duties and tariffs cleared by our Mayfair treasury).</p>
+</div>
+</div>
+</div>
+<!-- Private Concierge Tailor Card -->
+<div class="bg-surface-container p-space-md shadow-sm flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img alt="Master Tailor Alastair Sterling" class="w-full h-full object-cover" data-alt="Monochrome portrait photograph of master tailor Alastair Sterling in bespoke charcoal suit with tape measure draped over shoulder, warm golden background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwyEz63GteuqFQNJX7Hh7wF3sgVm2vhOsbR_wee5oY0OFlGgK6yZD5JbLy9rjGoYf_J-5qzNyUM4rhTxlszfuev9B5Uvd9GhSEq1ToUx-djqSQGlYnZw76LDOzq05kMQa38ARVsPAVfrfwvjdGP4WY-ATkAtjMBS6VxmKDCGVqdkcp34lzEBAyC8mPdc1QTG_hjbd30ZbMYJdhGd_mCEyu6AZFBTRfMurDvMnaLEPfZrWytrDWF-tG"/>
+</div>
+<div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block">Senior Master Cutter</span>
+<p class="font-headline-sm text-[16px] text-on-surface leading-snug">Alastair Sterling</p>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Mayfair &amp; Dhaka Salon Lead</span>
+</div>
+</div>
+<button class="px-4 py-2.5 bg-primary hover:bg-secondary text-surface hover:text-on-secondary font-label-uppercase text-[10px] tracking-wider transition-colors">
+            Book Drape Consultation
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- BELOW-THE-FOLD: The Seven Anatomical Hallmarks (Editorial Deep Breakdown) -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-lg">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg">
+<!-- Section Title Header -->
+<div class="max-w-2xl mb-space-lg">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em] block mb-2">
+          BESPOKE PEDIGREE
+        </span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          The Anatomical Anatomy of the Drape
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+          An unyielding refusal to compromise: seven hallmarks that separate true continental bespoke from assembly-line pretension.
+        </p>
+</div>
+<!-- Seven Hallmarks Mosaic Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Hallmark 01 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">01 / SEVEN</span>
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The Floating Siberian Canvas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Suspended freely between outer wool and inner lining, horsehair and camel hair fibers mold to the unique contours of the wearer's chest over 30 days of wear, creating an inimitable custom mold.
+          </p>
+</div>
+<!-- Hallmark 02 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">02 / SEVEN</span>
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sovereign High Armhole Cut</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Carved with razor-close anatomical proximity to the axilla. This Savile Row standard permits complete 180-degree arm articulation without pulling or displacing the jacket's collar from the neck.
+          </p>
+</div>
+<!-- Hallmark 03 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">03 / SEVEN</span>
+<span class="material-symbols-outlined">fingerprint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milanese Hand Buttonhole</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Known as the 'Asola Lucida'. Hand-sewn over a waxed silk gimp cord for 45 minutes per buttonhole, creating an architectural relief that no computerized machinery can simulate.
+          </p>
+</div>
+<!-- Hallmark 04 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">04 / SEVEN</span>
+<span class="material-symbols-outlined">texture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Artisanal Bengal Jamdani Facing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Ancestral supplementary weft technique woven thread-by-thread on bamboo pit looms. Breathable organic silk provides thermal balance and subtle heritage luster upon garment disclosure.
+          </p>
+</div>
+<!-- Hallmark 05 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">05 / SEVEN</span>
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Generous Seam Inlays</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Up to 2.5 inches of virgin cloth folded within the seams. Should your stature shift across decades, our ateliers can comfortably let out or take in the waist, chest, and sleeves seamlessly.
+          </p>
+</div>
+<!-- Hallmark 06 -->
+<div class="bg-surface-container-lowest p-space-lg space-y-3">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-[14px] font-bold tracking-widest">06 / SEVEN</span>
+<span class="material-symbols-outlined">iron</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Curved Drape Iron-Pressing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Undergoing 12 individual pressing operations with 16-pound dry irons to shape flat two-dimensional worsted cloth into the three-dimensional barrel curvature of the human torso.
+          </p>
+</div>
+</div>
+<!-- Single Highlight 07 Banner below Bento -->
+<div class="mt-gutter bg-surface-container p-space-lg flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-1 max-w-2xl">
+<span class="font-label-numeric text-[13px] text-secondary font-bold tracking-wider">07 / SEVEN — MASTER BENCHMARK</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">The 88-Hour Human Threshold</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero shortcuts. Every Mayfair Royal Drape commission represents exactly 88 hours of individual master artisan labor, recorded in our London ledger and verified by serial basting registry.
+          </p>
+</div>
+<a class="whitespace-nowrap px-6 py-3 bg-primary text-surface hover:bg-secondary hover:text-on-secondary font-label-uppercase text-label-uppercase tracking-widest transition-colors" data-path="bespoke-craft" href="#">
+          Explore Seven Craft Stages
+        </a>
+</div>
+</div>
+</section>
+<!-- BELOW-THE-FOLD: Curated Complementary Commissions -->
+<section class="w-full max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-4">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">
+          HARMONIOUS WARDROBE ENSEMBLE
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Complementary Commissions
+        </h2>
+</div>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-md">
+        Pieces specifically proportioned by our head cutter to balance the architectural volume of the Royal Drape.
+      </p>
+</div>
+<!-- 3 Companion Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+<!-- Complementary 1: Giza Mako Shirt -->
+<div class="bg-surface-container-lowest p-space-lg flex flex-col group transition-all">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden mb-space-md relative">
+<img alt="Giza Mako Bespoke Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury tailored dress shirt in pure Giza 45 Egyptian cotton with crisp high-spread cutaway collar and mother-of-pearl buttons on ivory backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNioRce74KUGlEBYLK_qMbz3eTSvI24NOYE9wBa5q6PI4Kcur1iwnJwronqyVY9CqkBAwnHlPR3gkfRPW2KbG3SCrmw2twYEby4GiqwLex0sZyxskIohq8hJYjn1U1UN5L81SsklMh13W7A3LhoNK7lwAZbZ0GxLDrWGSQ263Z_8cITsygyEiJBkV72aBNuX8RjZsl2jsbcK4PW_nmA-A1kYWNb7DbqjFUPSedRjxv9Q9G3ajIWDV"/>
+<span class="absolute top-3 left-3 bg-primary/80 backdrop-blur-sm text-surface font-label-uppercase text-[9px] px-2.5 py-1 tracking-widest">
+            Bespoke Shirting
+          </span>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest uppercase">Giza 45 Egyptian Cotton</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">$385 USD</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mb-2">The Mayfair Cutaway Collar Shirt</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-grow">
+          Engineered with an architectural 4cm collar stand to sit flush beneath the Royal Drape jacket neckline without shifting.
+        </p>
+<button class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-surface text-on-surface font-label-uppercase text-[10px] tracking-widest transition-colors">
+          Commission Piece
+        </button>
+</div>
+<!-- Complementary 2: Belgian Loafers -->
+<div class="bg-surface-container-lowest p-space-lg flex flex-col group transition-all">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden mb-space-md relative">
+<img alt="Handcrafted Belgian Loafers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pair of handmade Belgian-style loafers in deep midnight French boxcalf leather with subtle piped edges and leather soles placed on marble pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEsI1FOpITH6KBGBB5ic8Gf1hv0VOqtozngTpXb_hgYAGRyTqzMMTzfkH477p04P-NSCgEdXTi4z1x72r8dR9YloACYMchCUhSjbYBL4bEe7ti3GT4vjeHMzNSPf7XB_lIL3WYBC2atXBeCS9r5QHtRoVNiNj9vBz-sQv2IcOUABIGczp5qYxOAzAERt_u8Lwt8Q1ORFsgKRNM0SDmlHG5QkGwr4FVQON6yvCmA-vQkTJAgT60FT-r"/>
+<span class="absolute top-3 left-3 bg-primary/80 backdrop-blur-sm text-surface font-label-uppercase text-[9px] px-2.5 py-1 tracking-widest">
+            Artisanal Footwear
+          </span>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest uppercase">Hand-Welted Boxcalf</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">$690 USD</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mb-2">The Mayfair Slipper Loafer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-grow">
+          Softly unstructured, hand-turned French calfskin designed to complement the tapered hem of the bespoke trouser.
+        </p>
+<button class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-surface text-on-surface font-label-uppercase text-[10px] tracking-widest transition-colors">
+          Commission Piece
+        </button>
+</div>
+<!-- Complementary 3: Jamdani Pocket Square -->
+<div class="bg-surface-container-lowest p-space-lg flex flex-col group transition-all">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden mb-space-md relative">
+<img alt="Jamdani Silk Pocket Square" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Folded luxury pocket square in hand-loomed gold and ivory Jamdani silk with hand-rolled shoemaker hems, capturing rich light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCMXWv8DfIQwhBtc-ioJ2lQ1kM19CFcY4v4_BjSsfr8IazzwS5B1SjfsTLVbNvENnLiSg5f8BvEePDR57m7mWhzriH80m3jzsbKWotxQ5GHx5zoFQu9TFgFLlTnngLF7V23kzLQRj2iMAp-E678vhHBVSUguyAGw-03ynEGQig9CV3qOcNGJecNy2nYoxiFhEyrWLpAn-CMx7W6xB-J4cnA5CrMn8g8Rae7GbDqXS9tEgdVkOm1utv"/>
+<span class="absolute top-3 left-3 bg-primary/80 backdrop-blur-sm text-surface font-label-uppercase text-[9px] px-2.5 py-1 tracking-widest">
+            Bengal Heritage Textile
+          </span>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest uppercase">Hand-Rolled 100% Silk</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">$145 USD</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mb-2">The Dhaka Imperial Weft Square</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-grow">
+          Woven in Narayanganj with traditional geometric motifs mirroring the jacket's internal facing tapestry.
+        </p>
+<button class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-surface text-on-surface font-label-uppercase text-[10px] tracking-widest transition-colors">
+          Add To Dossier
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Client-Side Logic for PDP Micro-States -->
+<script>
+    // Gallery Switcher Handler
+    function switchAspect(aspect, btnElement) {
+      const mainImg = document.getElementById('main-garment-image');
+      const allThumbs = btnElement.parentElement.querySelectorAll('button');
+      allThumbs.forEach(t => {
+        t.classList.remove('opacity-100', 'ring-2', 'ring-secondary');
+        t.classList.add('opacity-60');
+      });
+      btnElement.classList.add('opacity-100', 'ring-2', 'ring-secondary');
+      btnElement.classList.remove('opacity-60');
+
+      // Update placeholder alt to trigger generation pipeline contextually
+      const aspectAlts = {
+        front: "Editorial studio portrait of The Mayfair Royal Drape two-piece bespoke suit on an architectural mannequin. Midnight navy Super 150s worsted wool with soft rolling lapels.",
+        lapel: "Close-up side angle of soft 3.75-inch notched lapel rolling gracefully to the middle horn button without harsh pressing, displaying pure unforced roll.",
+        buttonhole: "Ultra macro lens photograph of a Milanese buttonhole on fine navy Italian wool, raised silk gimp cord hand-sewn with microscopic geometric precision.",
+        jamdani: "Interior chest lining view of the bespoke jacket peeled back to reveal golden silk muslin hand-loomed with Bengal Jamdani geometric motifs.",
+        shoulder: "Sleeve head and shoulder joint angle of the suit revealing slight shirring and soft natural drape of Neapolitan spalla camicia cut."
+      };
+      if (aspectAlts[aspect]) {
+        mainImg.setAttribute('data-alt', aspectAlts[aspect]);
+      }
+    }
+
+    // Curated Fabric Swatch Selector
+    function selectFabric(element, fabricTitle, extraCost) {
+      document.querySelectorAll('.fabric-btn').forEach(b => {
+        b.classList.remove('ring-2', 'ring-secondary', 'opacity-100');
+        b.classList.add('opacity-75');
+      });
+      element.classList.add('ring-2', 'ring-secondary', 'opacity-100');
+      element.classList.remove('opacity-75');
+      document.getElementById('selected-fabric-name').innerText = fabricTitle;
+    }
+
+    // Shoulder Stance Selector
+    function setShoulder(type) {
+      const btnSavile = document.getElementById('shoulder-savile');
+      const btnNeap = document.getElementById('shoulder-neapolitan');
+      if (type === 'savile') {
+        btnSavile.className = 'p-3 bg-surface-container text-left flex flex-col justify-between transition-all ring-1 ring-on-surface';
+        btnNeap.className = 'p-3 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between transition-all opacity-80';
+      } else {
+        btnNeap.className = 'p-3 bg-surface-container text-left flex flex-col justify-between transition-all ring-1 ring-on-surface';
+        btnSavile.className = 'p-3 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between transition-all opacity-80';
+      }
+    }
+
+    // Sartorial Accordion Toggle
+    function toggleAccordion(id, btn) {
+      const panel = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      const isHidden = panel.classList.contains('hidden');
+      
+      // Close others for clean atelier reading pacing
+      ['acc-1', 'acc-2', 'acc-3', 'acc-4'].forEach(accId => {
+        const otherPanel = document.getElementById(accId);
+        const otherIcon = document.getElementById('icon-' + accId);
+        if (otherPanel && accId !== id) {
+          otherPanel.classList.add('hidden');
+          if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      if (isHidden) {
+        panel.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        panel.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Macro toggle zoom micro-interaction
+    const macroBtn = document.getElementById('macro-toggle-btn');
+    if (macroBtn) {
+      let zoomed = false;
+      macroBtn.addEventListener('click', () => {
+        const img = document.getElementById('main-garment-image');
+        zoomed = !zoomed;
+        img.style.transform = zoomed ? 'scale(2.2)' : 'scale(1)';
+        macroBtn.querySelector('span:last-child').innerText = zoomed ? 'Reset Zoom' : 'Inspect Cloth Macro (24x)';
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="book-private-fitting" href="#">Book Private Fitting</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Artisanal Bengal Weaves</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

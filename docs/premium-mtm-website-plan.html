@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium Made-to-Measure Website — পূর্ণাঙ্গ পরিকল্পনা</title>
+  <style>
+    @page { size: A4; margin: 15mm 14mm 17mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #20252b; font-family: "Nirmala UI", "Noto Sans Bengali", Arial, sans-serif; font-size: 10.4pt; line-height: 1.55; }
+    h1, h2, h3 { color: #102033; margin: 0; page-break-after: avoid; }
+    h1 { font-size: 27pt; line-height: 1.18; }
+    h2 { margin-top: 22px; padding-bottom: 5px; border-bottom: 1px solid #c5a66d; font-size: 17pt; }
+    h3 { margin-top: 14px; font-size: 12.5pt; }
+    p { margin: 6px 0 10px; }
+    ul, ol { margin: 5px 0 11px 20px; padding: 0; }
+    li { margin: 3px 0; }
+    code, pre { font-family: Consolas, monospace; font-size: 8.6pt; }
+    pre { background: #f4f5f6; border-left: 3px solid #b39156; padding: 10px; white-space: pre-wrap; page-break-inside: avoid; }
+    table { width: 100%; border-collapse: collapse; margin: 9px 0 15px; page-break-inside: avoid; }
+    th, td { border: 1px solid #d7dadd; padding: 7px; text-align: left; vertical-align: top; }
+    th { color: #fff; background: #172638; }
+    tr:nth-child(even) td { background: #f7f7f5; }
+    .cover { min-height: 245mm; display: flex; flex-direction: column; justify-content: center; padding: 18mm; margin: -15mm -14mm -17mm; background: #0b1623; color: #f6f1e8; page-break-after: always; }
+    .cover h1 { color: #f6f1e8; max-width: 155mm; }
+    .cover .rule { width: 40mm; height: 2px; margin: 18px 0; background: #b39156; }
+    .cover p { max-width: 145mm; font-size: 13pt; color: #d8d4cb; }
+    .cover .meta { margin-top: 35px; font-size: 9.5pt; color: #aaa79f; }
+    .note { padding: 10px 12px; margin: 10px 0; background: #f7f2e8; border-left: 4px solid #b39156; page-break-inside: avoid; }
+    .phase { margin: 9px 0; padding: 9px 12px; border: 1px solid #d8dde2; border-radius: 5px; page-break-inside: avoid; }
+    .phase strong { color: #102033; }
+    .page-break { page-break-before: always; }
+    .small { color: #68717a; font-size: 9pt; }
+    .toc a { color: #24384d; text-decoration: none; }
+    footer { position: fixed; bottom: -11mm; left: 0; right: 0; text-align: center; color: #7a8086; font-size: 8pt; }
+  </style>
+</head>
+<body>
+  <footer>Premium Made-to-Measure Platform — Technical &amp; Product Plan</footer>
+  <section class="cover">
+    <div class="small">PROJECT BLUEPRINT</div>
+    <div class="rule"></div>
+    <h1>Premium Made-to-Measure Apparel Website</h1>
+    <p>ASP.NET Core, Angular, Bootstrap ও PostgreSQL-ভিত্তিক আন্তর্জাতিক luxury tailoring platform-এর পূর্ণাঙ্গ পরিকল্পনা</p>
+    <div class="meta">Backend: <b>api</b> &nbsp;•&nbsp; Frontend: <b>ui</b><br>প্রস্তুতের তারিখ: ২০ সেপ্টেম্বর ২০২৬</div>
+  </section>
+
+  <h2>১. প্রকল্পের লক্ষ্য</h2>
+  <p>বাংলাদেশে তৈরি premium made-to-measure suit, shirt, trouser ও women’s dress US/EU গ্রাহকের কাছে বিক্রির জন্য একটি আধুনিক D2C platform। সাইটটি luxury craftsmanship, personalized fitting, secure payment, আন্তর্জাতিক delivery এবং premium after-sales support তুলে ধরবে।</p>
+  <div class="note"><b>মূল business flow:</b> Product নির্বাচন → customization → measurement → checkout → measurement review → tailoring/quality control → shipment → alteration support।</div>
+
+  <h2>২. Technology stack</h2>
+  <table>
+    <tr><th>অংশ</th><th>প্রস্তাবিত প্রযুক্তি</th></tr>
+    <tr><td>Backend</td><td>ASP.NET Core Web API, Clean Architecture, Entity Framework Core, ASP.NET Core Identity, FluentValidation, Serilog, Swagger/OpenAPI</td></tr>
+    <tr><td>Frontend</td><td>Angular standalone components, Bootstrap 5, SCSS, Reactive Forms, Signals, route guards, HTTP interceptor, lazy loading, Angular SSR</td></tr>
+    <tr><td>Database</td><td>PostgreSQL; UUID primary key, UTC timestamps, monetary value numeric(18,2), indexes ও concurrency control</td></tr>
+    <tr><td>Background/Realtime</td><td>Hangfire jobs; প্রয়োজনে SignalR notification</td></tr>
+    <tr><td>Storage</td><td>AWS S3/Cloudinary/S3-compatible storage; private files-এর signed URL</td></tr>
+    <tr><td>Testing</td><td>xUnit unit/integration tests; Angular component ও end-to-end tests</td></tr>
+    <tr><td>Deployment</td><td>Docker, Nginx, managed PostgreSQL, staging/production environments, CI/CD</td></tr>
+  </table>
+
+  <h2>৩. Repository structure</h2>
+  <pre>root/
+├── api/
+│   ├── src/
+│   │   ├── TailorShop.Api/
+│   │   ├── TailorShop.Application/
+│   │   ├── TailorShop.Domain/
+│   │   └── TailorShop.Infrastructure/
+│   ├── tests/
+│   └── Dockerfile
+├── ui/
+│   ├── src/app/{core,shared,layouts,features,admin}/
+│   └── Dockerfile
+├── deployment/{nginx,docker-compose.yml}
+├── docs/
+└── README.md</pre>
+
+  <h2>৪. User roles ও permission</h2>
+  <p>Roles: Customer, Admin, SuperAdmin, Tailor, OrderManager, ContentManager ও SupportAgent। শুধু role check নয়, granular permission ব্যবহার করতে হবে: products.manage, orders.manage, measurements.review, payments.view, refunds.manage, content.manage, reports.view, users.manage এবং settings.manage।</p>
+
+  <h2>৫. Authorization model</h2>
+  <ul>
+    <li>Default/fallback policy: authenticated user আবশ্যক।</li>
+    <li>Homepage, catalog ও product detail-এর read-only endpoint public থাকবে; rate limiting এবং caching থাকবে।</li>
+    <li>Cart, wishlist, measurements, checkout, orders ও account endpoint Customer authorization চাইবে।</li>
+    <li>Admin endpoint role + permission policy দিয়ে সুরক্ষিত হবে।</li>
+    <li>Payment/shipping webhook JWT ব্যবহার করবে না; provider signature এবং idempotency যাচাই করবে।</li>
+  </ul>
+  <div class="note"><b>কেন কিছু public endpoint দরকার:</b> সব endpoint login-required হলে নতুন visitor product বা homepage দেখতে পারবে না। তাই public read-only endpoint ছাড়া সব API secured রাখা হবে।</div>
+
+  <div class="page-break"></div>
+  <h2>৬. Customer website modules</h2>
+  <h3>Storefront ও content</h3>
+  <ul>
+    <li>Luxury homepage, Men/Women collections, category, search, filters ও sorting</li>
+    <li>Product details, fabric provenance, craftsmanship, delivery estimate এবং related products</li>
+    <li>How It Works, Craftsmanship, Fabric Story, Lookbook/Journal, FAQ ও policy pages</li>
+    <li>Country/currency selector, SEO metadata, sitemap, newsletter ও cookie consent</li>
+  </ul>
+  <h3>Product customization</h3>
+  <p>Fabric, color/pattern, fit, jacket/lapel/button/vent/lining, trouser style, shirt collar/cuff, dress neckline/sleeve/length, monogram, personal notes, rush production ও luxury packaging। প্রতিটি option price modifier সমর্থন করবে এবং order-এর সঙ্গে immutable snapshot থাকবে।</p>
+  <h3>Measurement system</h3>
+  <ul>
+    <li>Guided manual measurement wizard, inches/cm, instructional media ও expected-range validation</li>
+    <li>Self-measure, local tailor এবং virtual fitting—তিনটি পথ</li>
+    <li>Front/side photos, fit preference, saved profiles, version history</li>
+    <li>Admin/tailor approval ও correction request workflow</li>
+    <li>পরবর্তী release-এ common provider interface-এর মাধ্যমে AI sizing integration</li>
+  </ul>
+  <h3>Customer account</h3>
+  <p>Profile, addresses, measurement profiles, wishlist, cart, checkout, order history, production timeline, tracking, invoice, virtual consultation, support conversation, alteration-credit claim ও review।</p>
+
+  <h2>৭. Order ও production workflow</h2>
+  <pre>Cart → Checkout → Payment → Measurement Submitted → Measurement Review
+→ Fabric Allocated → Pattern → Cutting → Tailoring → First QC
+→ Finishing → Final QC → Premium Packaging → Shipped → Delivered
+→ Alteration Support / Completed</pre>
+  <p>প্রতিটি stage-এ customer-visible status, internal status, timestamp, responsible staff, optional photo, staff note ও notification থাকবে।</p>
+
+  <h2>৮. Admin dashboard</h2>
+  <ul>
+    <li><b>Overview:</b> sales, revenue, AOV, new customers, pending measurements, delayed orders, low-stock fabrics এবং upcoming fittings</li>
+    <li><b>Catalog:</b> products, categories, variants, fabrics/batches, collections, images, options, price modifiers ও SEO</li>
+    <li><b>Orders:</b> payment, customization, measurements, production, QC, shipment, invoice, cancellation/refund</li>
+    <li><b>Production board:</b> stage-based Kanban, staff assignment, deadlines ও delay warning</li>
+    <li><b>Measurement review:</b> range warning, photos, notes, approve/correction/fitting actions</li>
+    <li><b>Operations:</b> customers, staff/permissions, coupons, consultations, claims, reviews, CMS, reports, settings ও audit logs</li>
+  </ul>
+
+  <h2>৯. প্রধান database entities</h2>
+  <table>
+    <tr><th>Domain</th><th>Entities</th></tr>
+    <tr><td>Identity</td><td>ApplicationUser, Role, Permission, RolePermission, RefreshToken, Address</td></tr>
+    <tr><td>Catalog</td><td>Category, Product, ProductVariant, ProductImage, Collection, Fabric, FabricBatch, CustomizationGroup, CustomizationOption, PriceModifier</td></tr>
+    <tr><td>Shopping</td><td>Cart, CartItem, CartItemCustomization, WishlistItem, Coupon, CouponUsage, GiftCard</td></tr>
+    <tr><td>Measurements</td><td>MeasurementProfile, MeasurementEntry, MeasurementPhoto, MeasurementReview, MeasurementVersion</td></tr>
+    <tr><td>Orders</td><td>Order, OrderItem, OrderItemCustomization, OrderAddress, OrderStatusHistory, ProductionTask, QualityCheck, Payment, Refund, Shipment</td></tr>
+    <tr><td>Support/Content</td><td>ConsultationBooking, SupportTicket, SupportMessage, AlterationClaim, Review, Notification, CmsPage, Banner, MediaAsset</td></tr>
+    <tr><td>System</td><td>TaxRule, CurrencyRate, EmailTemplate, SystemSetting, AuditLog, WebhookEvent</td></tr>
+  </table>
+
+  <div class="page-break"></div>
+  <h2>১০. API endpoint blueprint</h2>
+  <h3>Authentication</h3>
+  <pre>POST /api/v1/auth/register         POST /api/v1/auth/login
+POST /api/v1/auth/refresh          POST /api/v1/auth/logout
+POST /api/v1/auth/verify-email     POST /api/v1/auth/forgot-password
+POST /api/v1/auth/reset-password   GET  /api/v1/auth/me</pre>
+  <h3>Public catalog</h3>
+  <pre>GET /api/v1/storefront/home        GET /api/v1/categories
+GET /api/v1/collections           GET /api/v1/collections/{slug}
+GET /api/v1/products              GET /api/v1/products/{slug}
+GET /api/v1/fabrics               GET /api/v1/pages/{slug}</pre>
+  <h3>Customer</h3>
+  <pre>GET/PUT      /api/v1/account/profile
+CRUD         /api/v1/account/addresses
+GET/POST/PUT/DELETE /api/v1/cart/items
+GET/POST/PUT /api/v1/measurements
+POST         /api/v1/measurements/{id}/submit
+POST         /api/v1/measurements/{id}/photos
+POST         /api/v1/checkout/preview
+POST         /api/v1/checkout/create-payment
+POST/GET     /api/v1/orders
+GET          /api/v1/orders/{id}
+POST/GET     /api/v1/consultations
+POST         /api/v1/alteration-claims</pre>
+  <h3>Admin</h3>
+  <pre>GET  /api/v1/admin/dashboard
+CRUD /api/v1/admin/{products,categories,collections,fabrics}
+CRUD /api/v1/admin/{customization-groups,customization-options}
+GET  /api/v1/admin/orders
+POST /api/v1/admin/orders/{id}/{status,assign,quality-check,shipment}
+GET  /api/v1/admin/measurements/pending
+POST /api/v1/admin/measurements/{id}/{approve,request-correction}
+CRUD /api/v1/admin/{users,roles,coupons,pages,banners}
+GET  /api/v1/admin/reports/sales
+GET  /api/v1/admin/audit-logs
+GET/PUT /api/v1/admin/settings</pre>
+  <h3>Webhooks</h3>
+  <pre>POST /api/v1/webhooks/payments/{provider}
+POST /api/v1/webhooks/shipping/{provider}
+POST /api/v1/webhooks/sizing/{provider}</pre>
+
+  <h2>১১. Angular structure</h2>
+  <pre>app/
+├── core/{auth,guards,interceptors,services,models}
+├── shared/{components,directives,pipes,validators}
+├── layouts/{storefront-layout,account-layout,admin-layout}
+├── features/{home,catalog,product-details,product-builder,cart,
+│             checkout,measurements,account,orders,consultations,content}
+└── admin/{dashboard,catalog,orders,measurements,customers,cms,reports,settings}</pre>
+
+  <h2>১২. Security checklist</h2>
+  <ul>
+    <li>Short-lived access token, rotating refresh token ও HttpOnly/Secure cookie</li>
+    <li>Email verification, strong password, lockout, rate limiting এবং admin 2FA</li>
+    <li>CORS allow-list, HTTPS, security headers, DTO validation ও safe error responses</li>
+    <li>Upload-এর MIME/signature/size validation; private storage এবং signed URL</li>
+    <li>Payment card data database-এ নয়; provider-hosted/tokenized payment flow</li>
+    <li>Webhook signature, idempotency key ও duplicate-event protection</li>
+    <li>Audit logs, encrypted secrets, sensitive-data-safe logging</li>
+    <li>Automated backup, restore test, dependency/security scan</li>
+  </ul>
+
+  <h2>১৩. Development phases</h2>
+  <div class="phase"><strong>Phase 1 — Foundation:</strong> requirements, repository, API/UI projects, Docker, PostgreSQL, authentication, permissions, logging, error handling ও CI.</div>
+  <div class="phase"><strong>Phase 2 — Catalog &amp; CMS:</strong> categories, products, fabrics, customizations, collections, media, storefront, SEO ও CMS.</div>
+  <div class="phase"><strong>Phase 3 — Measurements:</strong> guided wizard, profiles, photos, validation, admin review, correction ও virtual fitting.</div>
+  <div class="phase"><strong>Phase 4 — Commerce:</strong> cart, coupons, address, price calculation, payment abstraction, checkout, orders, email ও invoice.</div>
+  <div class="phase"><strong>Phase 5 — Production &amp; Delivery:</strong> production stages, assignments, QC, packaging, shipment, tracking ও notifications.</div>
+  <div class="phase"><strong>Phase 6 — Premium Support:</strong> alteration claims, support tickets, reviews, wishlist ও consultation calendar.</div>
+  <div class="phase"><strong>Phase 7 — Hardening:</strong> analytics, reports, accessibility, performance, security এবং automated tests.</div>
+  <div class="phase"><strong>Phase 8 — Launch:</strong> production infrastructure, domain/SSL, live integrations, monitoring, backups, UAT ও release.</div>
+  <div class="note"><b>MVP:</b> Phase 1–5। AI sizing, advanced recommendation, loyalty এবং sophisticated multi-currency settlement পরবর্তী release-এ রাখা যাবে।</div>
+
+  <h2>১৪. Testing ও quality gates</h2>
+  <ul>
+    <li>Unit tests: pricing, authorization, measurement validation ও status transitions</li>
+    <li>Integration tests: auth, catalog, checkout, payment webhook ও order lifecycle</li>
+    <li>E2E tests: browse → customize → measurement → checkout → order tracking</li>
+    <li>Permission tests: প্রত্যেক admin role কেবল অনুমোদিত action করতে পারে</li>
+    <li>Responsive, accessibility, cross-browser, load ও security testing</li>
+    <li>Staging UAT approve না হলে production release নয়</li>
+  </ul>
+
+  <h2>১৫. Launch checklist</h2>
+  <ul>
+    <li>Brand assets, product photography, copy, size/measurement instructions চূড়ান্ত</li>
+    <li>Domain, SSL, production database, storage, email এবং DNS প্রস্তুত</li>
+    <li>Payment, tax/duty messaging, courier ও tracking live verification</li>
+    <li>Privacy, terms, shipping, returns ও alteration policy legal review</li>
+    <li>Backups, alerts, error monitoring, analytics ও cookie consent সক্রিয়</li>
+    <li>Admin training, order runbook, refund/claim process এবং incident contacts</li>
+    <li>একটি সম্পূর্ণ test order দিয়ে payment থেকে delivery status পর্যন্ত rehearsal</li>
+  </ul>
+
+  <h2>১৬. Recommended delivery order</h2>
+  <ol>
+    <li>Scope ও data model freeze</li>
+    <li>Authentication/authorization foundation</li>
+    <li>Admin catalog → public storefront</li>
+    <li>Product configurator → measurements</li>
+    <li>Cart/checkout/payment → order lifecycle</li>
+    <li>Production/QC/shipping → customer tracking</li>
+    <li>Support/CMS/reports → hardening → launch</li>
+  </ol>
+  <p class="small">এই document-এ design-generation prompt অন্তর্ভুক্ত করা হয়নি। এটি শুধুমাত্র product, engineering, security, operations ও delivery plan।</p>
+</body>
+</html>

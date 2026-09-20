@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#bcc7d9", "primary-container": "#111c29", "surface-container-lowest": "#ffffff", "secondary": "#765a24", "surface-container": "#f2ede4", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface": "#1d1c16", "surface-container-high": "#ece8df", "background": "#fef9f0", "on-secondary-container": "#795c27", "surface-container-low": "#f8f3ea", "surface-tint": "#545f6f", "inverse-surface": "#32302b", "secondary-container": "#ffd795", "on-secondary-fixed-variant": "#5c420e", "surface-container-highest": "#e7e2d9", "inverse-primary": "#bcc7d9", "outline-variant": "#c5c6cc", "on-surface-variant": "#44474c", "surface-dim": "#ded9d1", "on-error-container": "#93000a", "on-background": "#1d1c16", "inverse-on-surface": "#f5f0e7", "error": "#ba1a1a", "on-primary-container": "#7a8595", "tertiary-fixed-dim": "#cdc5b9", "on-secondary-fixed": "#271900", "tertiary": "#000000", "on-tertiary-fixed-variant": "#4b463d", "on-secondary": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3d4756", "surface-variant": "#e7e2d9", "on-primary-fixed": "#111c29", "outline": "#75777c", "surface": "#fef9f0", "tertiary-fixed": "#eae1d4", "secondary-fixed": "#ffdea9", "on-tertiary-fixed": "#1f1b13", "tertiary-container": "#1f1b13", "surface-bright": "#fef9f0", "primary-fixed": "#d8e3f6", "primary": "#000000", "on-tertiary-container": "#898378", "secondary-fixed-dim": "#e7c181" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "5rem", "space-lg": "2rem", "space-xs": "0.25rem", "margin-md": "3rem", "margin": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xl": "3.5rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "editorial-italic": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "label-numeric": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "label-uppercase": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "headline-xl-mobile": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "editorial-italic": [ "22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-numeric": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-uppercase": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-xl": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "300" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-md py-space-sm mb-space-md"><span class="font-label-uppercase text-label-uppercase text-secondary uppercase block mb-space-xs">Maison De Maître</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">Atelier Vanguard</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Sartorial Operations Core</span></div><div class="px-space-md mb-space-sm"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase tracking-widest block">Main Operations</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">view_quilt</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="production-kanban" href="#"><span class="material-symbols-outlined text-[20px]">view_kanban</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Production Kanban</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="measurement-workbench" href="#"><span class="material-symbols-outlined text-[20px]">straighten</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Measurement Workbench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="client-dossiers" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Client Dossiers</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fabric-vault-inventory" href="#"><span class="material-symbols-outlined text-[20px]">texture</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Fabric Vault Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="alterations-queue" href="#"><span class="material-symbols-outlined text-[20px]">content_cut</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Alterations Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financials-and-escrow" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Financials &amp; Escrow</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Settings</span></a></nav></div><div class="px-space-md py-space-sm bg-surface-container mx-space-sm"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Cutter Bench Cadence</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-label-numeric text-label-numeric text-on-surface block">8 Active Patrons in Fitting</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Super 150s Reserve: 420m</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Salon:</span><span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">London Savile Row</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">LDN</span><span class="font-label-numeric text-label-numeric text-on-surface">14:32 BST</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NYC</span><span class="font-label-numeric text-label-numeric text-on-surface">09:32 EDT</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">DAC</span><span class="font-label-numeric text-label-numeric text-on-surface">19:32 +06</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-uppercase text-label-uppercase text-on-surface">Master Cutter Active</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-uppercase text-label-uppercase text-on-surface leading-none">Alistair Vance</span><span class="font-label-numeric text-label-numeric text-secondary leading-none mt-space-xs">Master Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Top Command & Breadcrumb Strip -->
+<div class="px-gutter-lg pt-space-lg pb-space-md bg-surface">
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface-variant">Atelier Operations</span>
+<span class="text-on-surface-variant opacity-40">/</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface-variant">Textile Archives</span>
+<span class="text-on-surface-variant opacity-40">/</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary font-semibold">Fabric Vault Inventory</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Sovereign Fabric Vault &amp; Handloom Archive</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs max-w-2xl">
+          Curated custody of rare continental worsteds, artisanal Jamdani pit-loom masterworks, and conditioned natural fibers across London, Biella, and Dhaka micro-vaults.
+        </p>
+</div>
+<!-- Action Group -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-[46px] px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-label-uppercase tracking-wider transition-all flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+          Export Ledger
+        </button>
+<button class="h-[46px] px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-label-uppercase tracking-wider transition-all flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span>
+          Request Archival Loom Run
+        </button>
+<button class="h-[46px] px-space-md bg-primary hover:bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-wider transition-all flex items-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">add_circle</span>
+          Register Mill Bolt
+        </button>
+</div>
+</div>
+<!-- 4 High-Density KPI Vault Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mt-space-lg">
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Reserve Valuation</span>
+<span class="font-label-numeric text-label-numeric text-secondary bg-surface-container px-2 py-0.5">USD</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-space-xs tracking-tight">$1,420,800</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">940 Meters Curated Cloth</span>
+<span class="font-label-numeric text-label-numeric text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Audited Today
+          </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Heritage Jamdani Archive</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-space-xs tracking-tight">18 Unique Wefts</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 Unallocated (300-Count)</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">14 Committed</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Super 150s - 200s Worsteds</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-space-xs tracking-tight">42 Master Bolts</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Biella &amp; London Humidors</span>
+<span class="font-label-numeric text-label-numeric text-secondary">620.4m Total</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-error">Threshold Vigil</span>
+<span class="px-1.5 py-0.5 text-[10px] bg-error-container text-on-error-container font-label-uppercase tracking-wider">Attention</span>
+</div>
+<div class="font-headline-md text-headline-md text-error mt-space-xs tracking-tight">3 Critical Runs</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">&lt; 10m Remaining</span>
+<span class="font-label-numeric text-label-numeric text-error font-semibold">Reorder Needed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Vault Layout Grid: 8 Cols Content + 4 Cols Environmental Telemetry -->
+<div class="px-gutter-lg py-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT & CENTER REGION: Filters + Catalog (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Search, Facets, and Sorter Box -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<!-- Search Row -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-space-md py-space-sm bg-surface-container-low text-on-surface font-body-sm placeholder:text-on-surface-variant/60 focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search by Bolt #, Mill (Loro Piana, Scabal, Fox Bros, Dhaka Guild), Composition, or Micron Count..." type="text"/>
+</div>
+<!-- Facets Selection Row -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<!-- Origin Chips -->
+<div class="flex items-center bg-surface-container px-space-sm py-1 gap-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Origin:</span>
+<button class="font-label-uppercase text-label-uppercase text-on-surface font-bold hover:text-secondary">All Mills</button>
+<span class="text-on-surface-variant opacity-30">|</span>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface">Dhaka Guild</button>
+<span class="text-on-surface-variant opacity-30">|</span>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface">Biella</button>
+<span class="text-on-surface-variant opacity-30">|</span>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface">UK</button>
+</div>
+<!-- Fabric Type Chips -->
+<div class="flex items-center bg-surface-container px-space-sm py-1 gap-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Class:</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">Super 150s+</span>
+<button class="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-on-surface">expand_more</button>
+</div>
+<!-- Stock Status Chips -->
+<div class="flex items-center bg-surface-container px-space-sm py-1 gap-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Reserve Status:</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary font-semibold">Active Vault &amp; Low</span>
+</div>
+<button class="ml-auto font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface flex items-center gap-1 py-1">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Reset
+          </button>
+</div>
+</div>
+<!-- High-Priority Showcase Cards (Featured Rare Bolts) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Showcase 1: Royal Peacock Jamdani -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-secondary/15 to-transparent pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Dhaka Handloom Guild • Pit-Loom #03
+              </span>
+<span class="font-label-numeric text-label-numeric px-2 py-0.5 bg-error-container text-on-error-container">Critical Hold (4.8m)</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Heritage 300-Count Royal Peacock Jamdani Gold Weft</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Diaphanous organic Meghalaya riverside cotton with pure 24k gold supplementary zari motif. Woven across 14 months by Ustad Kabir.
+            </p>
+<!-- Swatch Thumbnail + Details -->
+<div class="mt-space-md flex items-center gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-14 h-14 bg-surface-container-highest shrink-0 overflow-hidden shadow-inner relative">
+<img class="w-full h-full object-cover" data-alt="Intricate macro photograph of authentic Bangladeshi Jamdani weave, sheer fine organic ivory cotton background with glistening hand-loomed 24 karat real gold thread zari peacock motifs in soft gallery light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy5EEJjdKfIPLpO_86SQEWTwVcTnQae47zVhameoAmFPEMyQ1NinE8fG2N6gzEehaWEd2-mfHsCvzAGqCV_6F191QUduc3urelsxzVpTZqRlbwL8QdHwJoaYontyJ_AnWfSpeYL3e7Fs1Vgo3R2Kzjsd_ynPS65PNIIA9OsjTAFAS4dr5UhHCO-H6yRNAFYPUnN4TmhmFaBlWP1YdYabvFdeLf9QP4V-g3WrStpo0MrQ2YWJ1hFWtF"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Vault Batch:</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">DK-JAM-300-09</span>
+</div>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Allocation:</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Commission #AV-2025-9944</span>
+</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant mt-0.5">Storage: Dhaka Humidor #01 (78% RH)</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low px-space-sm py-2">
+<div class="flex items-center gap-space-sm">
+<button class="font-label-uppercase text-label-uppercase text-on-surface hover:text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">videocam</span> Loom Log
+              </button>
+<button class="font-label-uppercase text-label-uppercase text-error hover:opacity-80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Quarantine
+              </button>
+</div>
+<button class="h-8 px-space-sm bg-primary text-on-primary font-label-uppercase text-label-uppercase hover:bg-primary-container transition-all">
+              Allocate Yardage
+            </button>
+</div>
+</div>
+<!-- Showcase 2: Loro Piana Super 150s Tasmania -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-surface-container-high to-transparent pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Biella Mills, Piedmont (Italy)
+              </span>
+<span class="font-label-numeric text-label-numeric px-2 py-0.5 bg-surface-container text-on-surface font-semibold">68.5m Ample</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Loro Piana Super 150s Tasmania Worsted Navy</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              100% Australasian selected Merino Wool (280g/m). Unrivaled four-season drape, tight twill spun for structured Savile Row construction.
+            </p>
+<!-- Swatch Thumbnail + Details -->
+<div class="mt-space-md flex items-center gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-14 h-14 bg-surface-container-highest shrink-0 overflow-hidden shadow-inner relative">
+<img class="w-full h-full object-cover" data-alt="Extreme close-up macro of ultra-luxurious dark midnight navy Tasmanian Super 150s Merino wool suit cloth, showing razor fine twill texture and rich matte sheen under tailored spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgagZaPXmmLY3YGMLEC0gdYpPOHWPDFvitd1Nis6jLQLOJtJgiDbPdODt655px1pDY_iMVpVSIC6R-KZuT_0NwgG_Cex92Xl6PndvHegxvh5cpLjLFLCvif5SWd1BW-hsPeEzangpIsslg4GoyITsqUVLi-C1xe8Mf1WdEHo3Hpn-t0Pj2bZi1ChWqNmkaIOmoaceRN8yUrjGxan0rI9Oc4_YYCnYwbNmEMX3pDGwje_BDbbStSyhQ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Vault Batch:</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">LP-TAS-552-BL</span>
+</div>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Linked Orders:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">12 Active Atelier Garments</span>
+</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant mt-0.5">Storage: London Row Humidor #04 (55% RH)</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low px-space-sm py-2">
+<div class="flex items-center gap-space-sm">
+<button class="font-label-uppercase text-label-uppercase text-on-surface hover:text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Certificate
+              </button>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span> Adjust Tag
+              </button>
+</div>
+<button class="h-8 px-space-sm bg-primary text-on-primary font-label-uppercase text-label-uppercase hover:bg-primary-container transition-all">
+              Reserve Cut (3.65m)
+            </button>
+</div>
+</div>
+</div>
+<!-- High-Density Inventory Archive Ledger Table -->
+<div class="bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_rows</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">Global Archival Ledger</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant ml-2">(Showing 5 of 64 Master Bolts)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Sort:</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold cursor-pointer">Yardage (Desc)</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-uppercase text-label-uppercase">
+<th class="py-space-sm px-space-md">Bolt / Specimen ID</th>
+<th class="py-space-sm px-space-sm">Mill &amp; Terroir</th>
+<th class="py-space-sm px-space-sm">Composition &amp; Weight</th>
+<th class="py-space-sm px-space-sm">Vault Location</th>
+<th class="py-space-sm px-space-sm text-right">Available Length</th>
+<th class="py-space-sm px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-on-surface">
+<!-- Row 1: Scabal Noble Cashmere -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 bg-surface-container-highest shrink-0 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-secondary">fiber_manual_record</span>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase font-semibold text-on-surface">Scabal Noble Cashmere 480g</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">SC-NC-8812-YRK</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Yorkshire, UK</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Huddersfield Mills</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Double-Faced 100% Mongolian Cashmere</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">480g/m • Midnight Black</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-container text-on-surface font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> London Vault #B
+                  </div>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">16.0 m</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Min run: 30m</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-xs py-1 text-secondary hover:text-on-surface font-label-uppercase text-label-uppercase">
+                    Reserve
+                  </button>
+</td>
+</tr>
+<!-- Row 2: Dormeuil Royal 11 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 bg-surface-container-highest shrink-0 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase font-semibold text-on-surface">Dormeuil Royal 11 Midnight Herringbone</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">DM-R11-0941-HUD</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Huddersfield, UK</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Dormeuil Archives</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Super 160s Worsted Subtle Luster</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">320g/m • Herringbone Weave</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-container text-on-surface font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> London Vault #A
+                  </div>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">32.4 m</span>
+<div class="font-label-numeric text-label-numeric text-secondary font-medium">Safe Stock</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-xs py-1 text-secondary hover:text-on-surface font-label-uppercase text-label-uppercase">
+                    Reserve
+                  </button>
+</td>
+</tr>
+<!-- Row 3: Dhaka Handloom Indigo Floral Jaldar -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 bg-surface-container-highest shrink-0 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-secondary">flare</span>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase font-semibold text-on-surface">Dhaka Midnight Indigo Floral Jaldar</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">DH-JAL-104-SRN</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Sonargaon Guild, Dhaka</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Pit Loom Master Sajjad</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Rajshahi Mulberry Silk &amp; Dhaka Weft</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Natural River Indigo Ferment Dye</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-container text-on-surface font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Dhaka Humidor
+                  </div>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-label-numeric text-label-numeric font-semibold text-secondary">8.2 m</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">2 Jackets Allocated</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-xs py-1 text-secondary hover:text-on-surface font-label-uppercase text-label-uppercase">
+                    Allocate
+                  </button>
+</td>
+</tr>
+<!-- Row 4: Fox Brothers Flannel Classic -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 bg-surface-container-highest shrink-0 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">grid_view</span>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase font-semibold text-on-surface">Fox Bros Somerset Flannel 400g</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">FX-FLN-400-SOM</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Somerset, UK</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Historic Fox Mill 1772</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">100% British Wool Flannel Finish</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">400g/m • Oxford Melange</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-container text-on-surface font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> London Vault #B
+                  </div>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">22.0 m</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Batch Cert #419</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-xs py-1 text-secondary hover:text-on-surface font-label-uppercase text-label-uppercase">
+                    Reserve
+                  </button>
+</td>
+</tr>
+<!-- Row 5: Alumo Supraluxe Swiss Cotton -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 bg-surface-container-highest shrink-0 shadow-inner flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">dry_cleaning</span>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase font-semibold text-on-surface">Alumo Supraluxe 140/2 Twill</div>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">AL-SLX-140-APP</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">Appenzell, Switzerland</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">Alumo Weaving AG</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm">100% Giza Egyptian Long-Staple Cotton</span>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">120g/m • Pure Crisp White</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-container text-on-surface font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> New York Vault
+                  </div>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">84.5 m</span>
+<div class="font-label-numeric text-label-numeric text-secondary">Shirting Reserve</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-xs py-1 text-secondary hover:text-on-surface font-label-uppercase text-label-uppercase">
+                    Reserve
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low flex items-center justify-between">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Displaying 1–5 of 64 Curated Mill Bolts</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface font-label-numeric text-label-numeric">1</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-numeric text-label-numeric">2</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-numeric text-label-numeric">3</button>
+<span class="px-1 text-on-surface-variant">…</span>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-numeric text-label-numeric">13</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT REGION: Environmental Humidor Telemetry & Loom Allocations (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Environmental Humidor Sensor Telemetry -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">thermostat</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vault Humidors</h3>
+</div>
+<span class="font-label-uppercase text-label-uppercase text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Telemetry Active
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous atmospheric conditioning ensuring micro-fiber elasticity and pure silk ductility.
+        </p>
+<!-- Humidor Sensor 1: London -->
+<div class="bg-surface-container-low p-space-sm mb-space-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">London Savile Row Humidor</span>
+<span class="font-label-numeric text-label-numeric text-secondary bg-surface-container px-1.5 py-0.5">Primary Wool Room</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Ambient Temp</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">18.5°C</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block text-[10px]">Optimal (18–20°C)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Relative Humidity</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">55% RH</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block text-[10px]">Worsted Grade</span>
+</div>
+</div>
+<!-- Gauge Bar -->
+<div class="w-full bg-surface-container h-1 mt-2 overflow-hidden">
+<div class="bg-secondary h-full w-[55%]"></div>
+</div>
+</div>
+<!-- Humidor Sensor 2: Dhaka Archival Chamber -->
+<div class="bg-surface-container-low p-space-sm mb-space-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">Dhaka Archival Weft Vault</span>
+<span class="font-label-numeric text-label-numeric text-secondary bg-surface-container px-1.5 py-0.5">Jamdani Regulated</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Ambient Temp</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">24.0°C</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block text-[10px]">Pit Micro-Climate</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Relative Humidity</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">74% RH</span>
+<span class="font-label-numeric text-label-numeric text-secondary block text-[10px]">300-Count Ductile</span>
+</div>
+</div>
+<!-- Gauge Bar -->
+<div class="w-full bg-surface-container h-1 mt-2 overflow-hidden">
+<div class="bg-secondary h-full w-[74%]"></div>
+</div>
+</div>
+<!-- Humidor Sensor 3: New York UES -->
+<div class="bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">New York UES Vault</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container px-1.5 py-0.5">Manhattan Salon</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Ambient Temp</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">19.0°C</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block text-[10px]">Climate Regulated</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Relative Humidity</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold text-[15px]">50% RH</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block text-[10px]">Standard Dressing</span>
+</div>
+</div>
+<!-- Gauge Bar -->
+<div class="w-full bg-surface-container h-1 mt-2 overflow-hidden">
+<div class="bg-on-surface-variant h-full w-[50%]"></div>
+</div>
+</div>
+</div>
+<!-- Pending Loom Reservation Queue -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">handyman</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Loom Queue</h3>
+</div>
+<span class="font-label-numeric text-label-numeric px-2 py-0.5 bg-surface-container text-on-surface">Sonargaon Pits</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Traditional pit-loom weaving pipeline scheduled for private commissioning.
+        </p>
+<div class="space-y-space-sm">
+<!-- Loom Project 1 -->
+<div class="bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary font-semibold">Loom Bench #01</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">62% Complete</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface font-medium mt-1">400-Count Nilambari Indigo Silk Zari</div>
+<div class="flex items-center justify-between mt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Master Weave: Anisur Rahman</span>
+<span>Delivery: Oct 14, 2025</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-2">
+<div class="bg-primary h-full w-[62%]"></div>
+</div>
+</div>
+<!-- Loom Project 2 -->
+<div class="bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant font-semibold">Loom Bench #04</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Warpage Setup</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Alabaster Chanderi Gold-Border Weft</div>
+<div class="flex items-center justify-between mt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Commission: Lord Sterling-Mayfair</span>
+<span>Delivery: Nov 28, 2025</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-2">
+<div class="bg-secondary h-full w-[18%]"></div>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full h-[40px] bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-label-uppercase tracking-wider transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Master Weave Schedule
+        </button>
+</div>
+<!-- Quick Bolt Verification & Batch Barcode Scan Box -->
+<div class="bg-primary-container text-on-primary-container p-space-md shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-secondary-fixed">Optical Verification</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">qr_code_scanner</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-primary">Verify Bolt Seal</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-space-xs">
+            Scan physical NFC micro-tag attached to any atelier bolt selvedge to register yardage cut or return residual cloth to humidor.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<input class="w-full px-space-sm py-2 bg-surface/10 text-on-primary font-label-numeric text-label-numeric placeholder:text-on-primary-container/60 focus:outline-none" placeholder="Enter Selvedge Hash ID..." type="text"/>
+<button class="h-9 px-space-md bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-uppercase text-label-uppercase tracking-wider transition-all shrink-0">
+            Scan
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest"><span>Complimentary insured worldwide courier &amp; private atelier consultation | London • New York • Dhaka</span></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="home" href="#">Home</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="mens-tailoring" href="#">Men's Tailoring</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="womens-atelier" href="#">Women's Atelier</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Heritage Jamdani</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="journal" href="#">Journal</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">public</span><span>USD $ | Global</span></div><a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="garment-configurator" href="#">Create Your Garment</a><button aria-label="Search Archive" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden lg:inline-flex p-2 text-on-surface-variant hover:text-secondary transition-colors" data-path="book-private-fitting" href="#" title="Private Fitting Appointment"><span class="material-symbols-outlined text-[20px]">calendar_today</span></a><button aria-label="Shopping Bag Drawer" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-numeric text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Sartorial Grid Underlay & Ambient Glow -->
+<div class="relative w-full overflow-hidden bg-surface">
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-surface-container-low/40 to-surface pointer-events-none"></div>
+<div class="absolute -top-40 right-10 w-96 h-96 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 left-[-100px] w-80 h-80 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="relative max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-space-md lg:py-space-lg">
+<!-- 1. Editorial Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 mb-space-md">
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" href="#">Atelier</a>
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" href="#">Concierge</a>
+<span class="material-symbols-outlined text-secondary text-[14px]">chevron_right</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Book a Fitting</span>
+</nav>
+<!-- 2. Editorial Header Section -->
+<div class="mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter">
+<div class="max-w-3xl">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em] block mb-2">Protocol No. 38 • Biometric Calibration</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight tracking-tight mb-space-sm">
+              Schedule Your Virtual Anatomical Fitting
+            </h1>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-2xl leading-relaxed">
+              Connect via encrypted high-definition video with a Senior Master Cutter in London or Dhaka to calibrate your 38 biometric points, stance pitch, and structural drape.
+            </p>
+</div>
+<!-- Feature Badges -->
+<div class="flex flex-wrap lg:flex-col gap-space-xs shrink-0 pt-2 lg:pt-0">
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">videocam</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">30-Minute Live Consultation</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">architecture</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Dual-Axis Caliper Review</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">inventory_2</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Personalized Swatch Dossier Dispatched</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Layout Grid: Bootstrap 5 aligned 12-column architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Step-by-Step Workflow (8 Columns) -->
+<div class="lg:col-span-8 space-y-space-xl">
+<!-- STEP 1: Select Consultation Type -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm relative">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-primary-container text-surface flex items-center justify-center font-label-numeric text-label-numeric">01</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Select Consultation Modality</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose between encrypted virtual calibration or an in-person bespoke salon suite.</p>
+</div>
+</div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest hidden sm:inline-block">Stage 1 of 3</span>
+</div>
+<!-- Modality Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="consultation-types">
+<!-- Card A: Virtual Protocol (Selected) -->
+<div class="consultation-card cursor-pointer p-space-md rounded bg-surface-container-low transition-all duration-300 relative shadow-sm" data-modality="virtual">
+<div class="flex items-start justify-between mb-2">
+<div class="p-2 bg-surface rounded text-secondary">
+<span class="material-symbols-outlined text-[24px]">screen_share</span>
+</div>
+<span class="bg-secondary text-on-secondary font-label-uppercase text-[9px] px-2 py-0.5 rounded tracking-widest">Selected</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-on-surface font-semibold mb-1">Virtual Fitting Protocol (30 Min)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  Direct master cutter video feed, 38-point anatomical slope analysis, and guided self-measurement verification.
+                </p>
+<div class="flex items-center justify-between text-on-surface pt-2">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Complimentary with commission</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant">Global Video Suite</span>
+</div>
+</div>
+<!-- Card B: Savile Row Salon -->
+<div class="consultation-card cursor-pointer p-space-md rounded bg-surface transition-all duration-300 hover:bg-surface-container-low relative" data-modality="savile-row">
+<div class="flex items-start justify-between mb-2">
+<div class="p-2 bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">location_city</span>
+</div>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">Mayfair, London</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-on-surface font-semibold mb-1">Savile Row Salon Fitting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  Private sanctuary session at 14 Grosvenor Square with anatomical basted muslin trial and tea service.
+                </p>
+<div class="flex items-center justify-between text-on-surface pt-2">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Included in Bespoke Tier</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant">London</span>
+</div>
+</div>
+<!-- Card C: Dhaka Flagship Atelier -->
+<div class="consultation-card cursor-pointer p-space-md rounded bg-surface transition-all duration-300 hover:bg-surface-container-low relative" data-modality="dhaka">
+<div class="flex items-start justify-between mb-2">
+<div class="p-2 bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">temple_buddhist</span>
+</div>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">Gulshan-2, Dhaka</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-on-surface font-semibold mb-1">Dhaka Flagship Atelier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  Tactile drape exploration alongside master Bengal weavers and heritage Jamdani loom archivists.
+                </p>
+<div class="flex items-center justify-between text-on-surface pt-2">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Heritage Archive Tour</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant">Dhaka</span>
+</div>
+</div>
+<!-- Card D: Private Travelling Tailor -->
+<div class="consultation-card cursor-pointer p-space-md rounded bg-surface transition-all duration-300 hover:bg-surface-container-low relative" data-modality="travelling">
+<div class="flex items-start justify-between mb-2">
+<div class="p-2 bg-surface-container rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">flight_takeoff</span>
+</div>
+<span class="font-label-numeric text-[10px] text-secondary">Private Valet</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-on-surface font-semibold mb-1">Private Travelling Tailor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  Senior cutter visits your private estate, yacht, or luxury suite across Manhattan, Dubai, or Geneva.
+                </p>
+<div class="flex items-center justify-between text-on-surface pt-2">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Concierge Surcharge Applies</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant">On-Demand</span>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2: Timezone & Date Selection -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-primary-container text-surface flex items-center justify-center font-label-numeric text-label-numeric">02</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Timezone &amp; Temporal Reservation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Synchronize atelier schedules with your international location.</p>
+</div>
+</div>
+<!-- Timezone Selector Dropdown -->
+<div class="relative min-w-[220px]">
+<label class="block font-label-uppercase text-[9px] text-on-surface-variant mb-1" for="tz-select">Atelier Synchronizer</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm py-2 px-3 pr-8 rounded appearance-none focus:outline-none focus:bg-surface-container cursor-pointer transition-colors" id="tz-select">
+<option value="GMT">London (GMT+0) • 14:35 Local</option>
+<option value="EST">New York (EST-5) • 09:35 Local</option>
+<option selected="" value="BST">Dhaka (BST+6) • 20:35 Local</option>
+<option value="CET">Paris / Milan (CET+1) • 15:35 Local</option>
+<option value="GST">Dubai (GST+4) • 18:35 Local</option>
+</select>
+<span class="material-symbols-outlined text-secondary text-[18px] absolute right-2.5 top-2.5 pointer-events-none">schedule</span>
+</div>
+</div>
+</div>
+<!-- Calendar & Time Slot Container -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Interactive Monthly Calendar (7 Columns) -->
+<div class="md:col-span-7 bg-surface p-space-md rounded">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-sm text-[16px] text-on-surface font-medium">November 2025</span>
+<div class="flex items-center gap-1">
+<button aria-label="Previous Month" class="p-1 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Next Month" class="p-1 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Weekdays -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-uppercase text-[10px] text-on-surface-variant mb-2">
+<span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+</div>
+<!-- Calendar Days Grid -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-numeric text-label-numeric" id="calendar-days">
+<!-- Prev month fill -->
+<span class="py-2.5 text-on-surface-variant/30">27</span>
+<span class="py-2.5 text-on-surface-variant/30">28</span>
+<span class="py-2.5 text-on-surface-variant/30">29</span>
+<span class="py-2.5 text-on-surface-variant/30">30</span>
+<span class="py-2.5 text-on-surface-variant/30">31</span>
+<!-- November days -->
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">01</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">02</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">03</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">04</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">05</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">06</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">07</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">08</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">09</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">10</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">11</button>
+<!-- Wednesday Nov 12 Selected -->
+<button class="py-2.5 rounded bg-secondary text-on-secondary font-semibold shadow-sm scale-105 transition-transform" id="selected-date-btn">12</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">13</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">14</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">15</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">16</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">17</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">18</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">19</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">20</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">21</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">22</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">23</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">24</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">25</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">26</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">27</button>
+<button class="py-2.5 rounded hover:bg-surface-container transition-colors text-on-surface">28</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">29</button>
+<button class="py-2.5 rounded text-on-surface-variant/50 cursor-not-allowed">30</button>
+</div>
+<div class="flex items-center gap-4 mt-4 pt-3 text-[11px] font-label-numeric text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Selected Date</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+<span>Available Slots</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-dim opacity-50"></span>
+<span>Fully Committed</span>
+</div>
+</div>
+</div>
+<!-- Time Slot Grid (5 Columns) -->
+<div class="md:col-span-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-uppercase text-label-uppercase text-on-surface">Wednesday, Nov 12</span>
+<span class="font-label-numeric text-[11px] text-secondary">5 Slots Open</span>
+</div>
+<!-- Morning Cohort -->
+<div class="mb-3">
+<span class="font-label-uppercase text-[9px] text-on-surface-variant tracking-wider block mb-2">Morning Salon Cohort</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="time-slot-btn py-2 px-3 text-center rounded bg-surface hover:bg-surface-container font-label-numeric text-label-numeric text-on-surface transition-colors" data-time="10:00 AM">
+                        10:00 AM
+                      </button>
+<button class="time-slot-btn py-2 px-3 text-center rounded bg-surface hover:bg-surface-container font-label-numeric text-label-numeric text-on-surface transition-colors" data-time="11:30 AM">
+                        11:30 AM
+                      </button>
+</div>
+</div>
+<!-- Afternoon Cohort -->
+<div>
+<span class="font-label-uppercase text-[9px] text-on-surface-variant tracking-wider block mb-2">Afternoon Calibration Cohort</span>
+<div class="space-y-2">
+<button class="time-slot-btn w-full py-2.5 px-3 flex items-center justify-between rounded bg-primary-container text-surface font-label-numeric text-label-numeric shadow-sm transition-all" data-time="02:00 PM">
+<span>02:00 PM GMT</span>
+<span class="font-label-uppercase text-[9px] bg-secondary px-1.5 py-0.5 rounded text-on-secondary">Optimal Light</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="time-slot-btn py-2 px-3 text-center rounded bg-surface hover:bg-surface-container font-label-numeric text-label-numeric text-on-surface transition-colors" data-time="03:30 PM">
+                          03:30 PM
+                        </button>
+<button class="time-slot-btn py-2 px-3 text-center rounded bg-surface hover:bg-surface-container font-label-numeric text-label-numeric text-on-surface transition-colors" data-time="05:00 PM">
+                          05:00 PM
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface rounded mt-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">lock</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-normal">
+                      Encrypted end-to-end studio link generated upon reservation. Zero patron data retained on third-party servers.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 3: Patron Details & Fit Intentions -->
+<section class="bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-primary-container text-surface flex items-center justify-center font-label-numeric text-label-numeric">03</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Patron Dossier &amp; Drape Intentions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specify the commission context and biometric notes for the cutter.</p>
+</div>
+</div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest hidden sm:inline-block">Stage 3 of 3</span>
+</div>
+<div class="space-y-space-md">
+<!-- Associated Garment Selection -->
+<div>
+<label class="block font-label-uppercase text-label-uppercase text-on-surface mb-2">Associated Commission / Portfolio Cut</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded cursor-pointer transition-colors hover:bg-surface-container">
+<input checked="" class="w-4 h-4 accent-secondary" name="commission-garment" type="radio"/>
+<div class="min-w-0">
+<span class="font-body-md font-semibold text-on-surface block truncate">The Mayfair Royal Drape (#AV-2025-9921)</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant block">Super 160s Navy Chalkstripe • Stage 2 Muslin Cut</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface rounded cursor-pointer transition-colors hover:bg-surface-container">
+<input class="w-4 h-4 accent-secondary" name="commission-garment" type="radio"/>
+<div class="min-w-0">
+<span class="font-body-md font-semibold text-on-surface block truncate">New Garment Consultation</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant block">Explore 2026 Jamdani &amp; Solbiati Linens</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Pre-consultation Notes -->
+<div>
+<label class="block font-label-uppercase text-label-uppercase text-on-surface mb-2" for="fit-notes">
+                  Pre-Consultation Fit Notes &amp; Posture Nuances
+                </label>
+<textarea class="w-full bg-surface text-on-surface font-body-md p-space-sm rounded focus:outline-none focus:bg-surface-container transition-colors resize-none placeholder:text-on-surface-variant/50 text-body-sm" id="fit-notes" placeholder="e.g., Lower right shoulder slope by 0.75 inches, preference for higher armhole scye, or high-twist tropical worsted drape requirements for Singapore climate..." rows="3"></textarea>
+<span class="font-label-numeric text-[11px] text-on-surface-variant block mt-1">These observations are directly appended to your Savile Row block pattern chart.</span>
+</div>
+<!-- Option Checkboxes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<label class="flex items-start gap-3 p-3 bg-surface rounded cursor-pointer group hover:bg-surface-container transition-colors">
+<input checked="" class="mt-1 w-4 h-4 accent-secondary" type="checkbox"/>
+<div>
+<span class="font-body-sm font-semibold text-on-surface block">Dispatch Physical Measure Kit</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant block leading-snug">
+                      Includes laser level guideline tape, dual-axis chest gauge, and chalk pencil via priority courier.
+                    </span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 bg-surface rounded cursor-pointer group hover:bg-surface-container transition-colors">
+<input checked="" class="mt-1 w-4 h-4 accent-secondary" type="checkbox"/>
+<div>
+<span class="font-body-sm font-semibold text-on-surface block">Include Jamdani Textile Archivist</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant block leading-snug">
+                      Adds 15 minutes dedicated to handloom lining curation with our Dhaka museum textile curator.
+                    </span>
+</div>
+</label>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Persistent Appointment Dossier Rail (4 Columns) -->
+<div class="lg:col-span-4 sticky top-28 space-y-space-md">
+<div class="bg-primary-container text-surface p-space-lg rounded shadow-md relative overflow-hidden">
+<!-- Subtle Gold Filigree Watermark -->
+<div class="absolute -right-8 -bottom-8 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[160px] text-surface">shield</span>
+</div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Reserved Dossier</span>
+<span class="bg-surface/10 font-label-numeric text-[11px] px-2.5 py-0.5 rounded text-surface">Live Draft</span>
+</div>
+<!-- Master Cutter Profile Capsule -->
+<div class="flex items-center gap-3 pb-4 mb-4 bg-surface/5 p-3 rounded">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Distinguished senior Savile Row master cutter in bespoke waistcoat holding bespoke tailor shears and chalk in an atmospheric Mayfair tailoring studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_BY0hVPKUxtnf8QpMQwbEbCnqXi92e0y5RQIVyoXVveil4YUex2WN2w4bGIoRscT7lL-95uloQw6YTpB_VmN_Zx6XUvN-jHYI3X5LDtUcnrqSengxfmFkQsNwugvc0845bq1arkuwo8jdsXKeVlh53W1yRJ159UZ1TEX_nwMk8BZWShk5rbVtcasCEMap1s6B92yUSFOE2Pd_D-z00NM2yVczEL2mYtV-uZEBK76Fccy_aUQmzmC"/>
+<span class="w-3.5 h-3.5 rounded-full bg-secondary absolute bottom-0 right-0"></span>
+</div>
+<div class="min-w-0">
+<span class="font-body-md font-semibold text-surface block truncate">Master Alastair Sterling</span>
+<span class="font-label-uppercase text-[10px] text-on-primary-container tracking-wider block truncate">Head Cutter • Mayfair Salon No. 4</span>
+</div>
+</div>
+<!-- Appointment Specs -->
+<div class="space-y-3 font-body-sm text-body-sm mb-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">event</span>
+<div>
+<span class="font-label-uppercase text-[9px] text-on-primary-container tracking-wider block">Session Time</span>
+<span class="text-surface font-medium block">Wednesday, Nov 12, 2025</span>
+<span class="font-label-numeric text-secondary">02:00 PM GMT (30 Minutes)</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">encrypted</span>
+<div>
+<span class="font-label-uppercase text-[9px] text-on-primary-container tracking-wider block">Video Encryption</span>
+<span class="text-surface block">Atelier Private HD Vault Link</span>
+<span class="font-label-numeric text-[11px] text-on-primary-container">Dual-screen camera calibrate</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified</span>
+<div>
+<span class="font-label-uppercase text-[9px] text-on-primary-container tracking-wider block">Patron Investment</span>
+<span class="text-secondary font-medium block">Complimentary</span>
+<span class="font-label-numeric text-[11px] text-on-primary-container">Associated with Commission #AV-2025-9921</span>
+</div>
+</div>
+</div>
+<!-- Preparation Checklist -->
+<div class="p-3 bg-surface/5 rounded mb-6">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block mb-2">Pre-Fitting Protocol</span>
+<ul class="space-y-2 font-body-sm text-[12px] text-surface/80">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+<span>Wear form-fitting base layer or tailored dress shirt</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+<span>Ensure 2 meters of clear standing space from camera</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+<span>Direct natural frontal light on posture baseline</span>
+</li>
+</ul>
+</div>
+<!-- CTAs -->
+<div class="space-y-2">
+<button class="w-full h-12 bg-secondary text-on-secondary hover:bg-secondary/90 font-label-uppercase text-label-uppercase transition-all duration-200 flex items-center justify-center gap-2 shadow-sm" id="confirm-booking-btn">
+<span>Confirm &amp; Reserve Fitting Slot</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full h-10 bg-transparent hover:bg-surface/10 text-surface font-label-uppercase text-[10px] tracking-widest transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>Add to Calendar (.ics / Google)</span>
+</button>
+</div>
+<!-- Live Status Notice -->
+<p class="font-label-numeric text-[10px] text-center text-on-primary-container mt-4">
+              Changes permitted up to 4 hours prior without forfeiture of slot.
+            </p>
+</div>
+<!-- Mini Atelier Trust Card -->
+<div class="bg-surface-container-low p-4 rounded shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+<div>
+<span class="font-label-uppercase text-[10px] text-on-surface tracking-wider block">Savile Row Bespoke Code</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant block leading-tight">Master cutting verified under traditional London gild regulations.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Bottom Section: Upcoming & Past Consultations History -->
+<section class="mt-space-xl bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md mb-space-md gap-4">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-1">Archival Record</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Your Consultation &amp; Fitting Ledger</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Client ID: #AV-UK-8840</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-uppercase text-[10px] text-secondary">Active Patron</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="font-label-uppercase text-[10px] text-on-surface-variant bg-surface-container-low">
+<th class="py-3 px-4 rounded-l">Session Details</th>
+<th class="py-3 px-4">Modality &amp; Specialist</th>
+<th class="py-3 px-4">Associated Garment</th>
+<th class="py-3 px-4">Anatomical Calibrations</th>
+<th class="py-3 px-4 text-right rounded-r">Session Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm divide-y-0">
+<!-- Row 1: Upcoming -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-numeric">Nov 12, 2025 • 02:00 PM GMT</span>
+<span class="font-body-sm text-[12px] text-secondary">Confirmed Upcoming Virtual</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Virtual Calibration Suite</span>
+<span class="text-on-surface-variant text-[12px]">Master Alastair Sterling</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="text-on-surface font-label-numeric">#AV-2025-9921</span>
+<span class="block text-on-surface-variant text-[12px]">Mayfair Royal Drape</span>
+</td>
+<td class="py-4 px-4">
+<span class="text-on-surface-variant text-[12px]">38 biometric markers pending lock</span>
+</td>
+<td class="py-4 px-4 text-right">
+<span class="bg-secondary/10 text-secondary font-label-uppercase text-[9px] px-2.5 py-1 rounded tracking-wider">
+                    Reserved
+                  </span>
+</td>
+</tr>
+<!-- Row 2: Past Completed -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-numeric">Oct 14, 2025 • 11:00 AM BST</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Archived Studio Feed</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Preliminary Silhouette Baseline</span>
+<span class="text-on-surface-variant text-[12px]">Cutter Julian Vance (London)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="text-on-surface font-label-numeric">#AV-2025-9921</span>
+<span class="block text-on-surface-variant text-[12px]">Mayfair Royal Drape</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="text-on-surface-variant text-[12px]">Posture incline +1.2° recorded</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<a class="font-label-uppercase text-[10px] text-secondary hover:underline tracking-wider" href="#">
+                    View Dossier
+                  </a>
+</td>
+</tr>
+<!-- Row 3: Past Completed Initial -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-numeric">Aug 29, 2025 • 04:30 PM BST</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Dhaka Flagship Salon</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Loom Selection &amp; Jamdani Weft Intake</span>
+<span class="text-on-surface-variant text-[12px]">Tariq Rahman (Weave Master)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="text-on-surface font-label-numeric">#AV-2025-8410</span>
+<span class="block text-on-surface-variant text-[12px]">Archival Smoking Jacket</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="text-on-surface-variant text-[12px]">Loom swatch #44 verified</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<a class="font-label-uppercase text-[10px] text-secondary hover:underline tracking-wider" href="#">
+                    View Dossier
+                  </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script for Booking State Selection -->
+<script>
+  (function() {
+    // Interactive card switching for Modality
+    const modalityCards = document.querySelectorAll('.consultation-card');
+    modalityCards.forEach(card => {
+      card.addEventListener('click', () => {
+        modalityCards.forEach(c => {
+          c.classList.remove('bg-surface-container-low', 'shadow-sm');
+          c.classList.add('bg-surface');
+          const badge = c.querySelector('.bg-secondary');
+          if (badge && badge.textContent === 'Selected') {
+            badge.remove();
+          }
+        });
+        card.classList.remove('bg-surface');
+        card.classList.add('bg-surface-container-low', 'shadow-sm');
+      });
+    });
+
+    // Time Slot Selection
+    const timeSlots = document.querySelectorAll('.time-slot-btn');
+    timeSlots.forEach(slot => {
+      slot.addEventListener('click', () => {
+        timeSlots.forEach(s => {
+          s.classList.remove('bg-primary-container', 'text-surface', 'shadow-sm');
+          s.classList.add('bg-surface', 'text-on-surface');
+        });
+        slot.classList.remove('bg-surface', 'text-on-surface');
+        slot.classList.add('bg-primary-container', 'text-surface', 'shadow-sm');
+      });
+    });
+
+    // Confirmation Toast Feedback
+    const confirmBtn = document.getElementById('confirm-booking-btn');
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        const originalText = confirmBtn.innerHTML;
+        confirmBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">verified</span> <span>Fitting Reserved • Encrypted Link Sent</span>`;
+        confirmBtn.classList.replace('bg-secondary', 'bg-primary-container');
+        setTimeout(() => {
+          confirmBtn.innerHTML = originalText;
+          confirmBtn.classList.replace('bg-primary-container', 'bg-secondary');
+        }, 3000);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="book-private-fitting" href="#">Book Private Fitting</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Artisanal Bengal Weaves</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

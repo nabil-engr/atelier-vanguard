@@ -1,0 +1,29 @@
+<div class="service-bar">Complimentary insured delivery on orders over $500</div>
+<header class="site-header">
+  <a routerLink="/" class="brand" (click)="menuOpen.set(false)"><span>AV</span><b>ATELIER VANGUARD</b><small>MADE TO
+      MEASURE</small></a>
+  <button class="menu-toggle" aria-label="Toggle menu" (click)="toggleMenu()"><i class="bi bi-list"></i></button>
+  <nav [class.open]="menuOpen()">
+    <a routerLink="/shop" routerLinkActive="active" (click)="menuOpen.set(false)">Shop</a>
+    <a routerLink="/shop" [queryParams]="{category:'Suits'}" (click)="menuOpen.set(false)">Men</a>
+    <a routerLink="/shop" [queryParams]="{category:'Dresses'}" (click)="menuOpen.set(false)">Women</a>
+    <a routerLink="/measurements" routerLinkActive="active" (click)="menuOpen.set(false)">Measurements</a>
+    <a routerLink="/booking" routerLinkActive="active" (click)="menuOpen.set(false)">Book a fitting</a>
+  </nav>
+  <div class="header-actions">
+    <a routerLink="/account" aria-label="Account"><i class="bi bi-person"></i></a>
+    <a routerLink="/cart" aria-label="Shopping bag" class="bag"><i class="bi bi-bag"></i><span>{{ store.count()
+        }}</span></a>
+  </div>
+</header>
+<main><router-outlet /></main>
+<footer>
+  <div><a routerLink="/" class="footer-brand">ATELIER VANGUARD</a>
+    <p>Made to measure in Dhaka. Delivered worldwide.</p>
+  </div>
+  <div><b>Shop</b><a routerLink="/shop">All garments</a><a routerLink="/measurements">Measurements</a><a
+      routerLink="/booking">Virtual fitting</a></div>
+  <div><b>Help</b><a routerLink="/account">Your account</a><a
+      href="mailto:concierge@ateliervanguard.com">Concierge</a><a routerLink="/alterations">Alteration support</a></div>
+  <div><b>Atelier</b><span>Dhaka · London · New York</span><span>© 2026 Atelier Vanguard</span></div>
+</footer>

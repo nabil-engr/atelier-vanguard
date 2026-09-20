@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest"><span>Complimentary insured worldwide courier &amp; private atelier consultation | London • New York • Dhaka</span></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="home" href="#">Home</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="mens-tailoring" href="#">Men's Tailoring</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="womens-atelier" href="#">Women's Atelier</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Heritage Jamdani</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="journal" href="#">Journal</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">public</span><span>USD $ | Global</span></div><a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="garment-configurator" href="#">Create Your Garment</a><button aria-label="Search Archive" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden lg:inline-flex p-2 text-on-surface-variant hover:text-secondary transition-colors" data-path="book-private-fitting" href="#" title="Private Fitting Appointment"><span class="material-symbols-outlined text-[20px]">calendar_today</span></a><button aria-label="Shopping Bag Drawer" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-numeric text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Configurator Controller Script -->
+<script>
+    function switchFabric(name, mill, weight, composition, priceDelta, patternImg) {
+      const nameEl = document.getElementById('selected-fabric-name');
+      const millEl = document.getElementById('selected-fabric-mill');
+      const specEl = document.getElementById('selected-fabric-spec');
+      const fabricCostEl = document.getElementById('dock-fabric-cost');
+      const totalCostEl = document.getElementById('dock-total-cost');
+      const studioClothOverlay = document.getElementById('studio-cloth-preview');
+
+      if (nameEl) nameEl.innerText = name;
+      if (millEl) millEl.innerText = mill;
+      if (specEl) specEl.innerText = weight + ' • ' + composition;
+      if (fabricCostEl) fabricCostEl.innerText = '+$' + priceDelta;
+      
+      const total = 1650 + priceDelta + 40;
+      if (totalCostEl) totalCostEl.innerText = '$' + total.toLocaleString() + ' USD';
+
+      document.querySelectorAll('.swatch-card').forEach(card => {
+        card.classList.remove('bg-surface-container-highest', 'shadow-md');
+        card.classList.add('bg-surface-container-low');
+      });
+      const activeCard = document.getElementById('swatch-' + name.toLowerCase().replace(/\s+/g, '-'));
+      if (activeCard) {
+        activeCard.classList.remove('bg-surface-container-low');
+        activeCard.classList.add('bg-surface-container-highest', 'shadow-md');
+      }
+    }
+
+    function setStudioAngle(angle) {
+      document.querySelectorAll('.angle-btn').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-surface');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      const activeBtn = document.getElementById('btn-angle-' + angle);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-primary', 'text-surface');
+      }
+      const angleLabel = document.getElementById('studio-angle-label');
+      if (angleLabel) angleLabel.innerText = angle.toUpperCase() + ' PERSPECTIVE • 360° RENDER';
+    }
+
+    function toggleHotspot(id) {
+      const popover = document.getElementById('hotspot-popover-' + id);
+      if (popover) {
+        popover.classList.toggle('hidden');
+      }
+    }
+  </script>
+<!-- Section 1: Progress Breadcrumbs / Sartorial Pipeline -->
+<div class="w-full bg-surface-container-low shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-4">
+<div class="flex items-center justify-between gap-gutter overflow-x-auto no-scrollbar py-2">
+<!-- 01 Fabric (Active) -->
+<div class="flex items-center gap-3 shrink-0 cursor-pointer group">
+<div class="w-7 h-7 bg-primary text-surface font-label-numeric text-label-numeric flex items-center justify-center rounded-none shadow-sm">
+            01
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest leading-none">STAGE 01</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Fabric Selection</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 02 Jacket Style -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            02
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 02</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Jacket Silhouette</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 03 Lapel -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            03
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 03</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Lapel Geometry</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 04 Buttons -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            04
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Horn Buttons</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 05 Vents -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            05
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 05</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Back Vents</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 06 Silk Lining -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            06
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 06</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Jamdani Lining</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 07 Trouser -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            07
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 07</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Trouser Rise</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 08 Monogram -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            08
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 08</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Embroidery</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 09 Drape -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            09
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 09</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Fit Balance</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 10 Measurements -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            10
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 10</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Tailor Profile</span>
+</div>
+</div>
+<div class="h-[1px] w-6 bg-surface-variant shrink-0"></div>
+<!-- 11 Review -->
+<div class="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-7 h-7 bg-surface-container-highest text-on-surface-variant font-label-numeric text-label-numeric flex items-center justify-center">
+            11
+          </div>
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest leading-none">STAGE 11</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Master Review</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: 12-Column Responsive Workspace -->
+<div class="w-full max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-gutter-lg">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: High-Fidelity 360 Garment Visualizer (Col 7 / Col 12) -->
+<div class="xl:col-span-7 flex flex-col gap-gutter">
+<div class="relative w-full h-[760px] bg-surface-container rounded-none overflow-hidden flex flex-col justify-between p-6 shadow-md">
+<!-- Top Studio Metadata Overlay -->
+<div class="flex items-start justify-between z-10 w-full">
+<div class="bg-surface/90 backdrop-blur-md px-4 py-3 shadow-sm flex flex-col">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">DIGITAL TWIN SPECIFICATION</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight" id="studio-angle-label">FRONT PERSPECTIVE • 360° RENDER</h2>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant mt-1">SUPER 150S WORSTED WOOL &amp; ARCHIVAL SILK • FULL CANVAS ANATOMY</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 bg-surface/90 backdrop-blur-md text-on-surface flex items-center justify-center hover:bg-primary hover:text-surface transition-colors shadow-sm" title="Expand Fullscreen Studio">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+<button class="w-10 h-10 bg-surface/90 backdrop-blur-md text-on-surface flex items-center justify-center hover:bg-primary hover:text-surface transition-colors shadow-sm" title="Download Atelier Dossier PDF">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Studio Main Visualizer Subject -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-auto">
+<img class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 ease-out" data-alt="Photorealistic studio capture of a bespoke midnight navy two-piece suit on a minimalist sculptural wooden mannequin against warm ivory atelier backdrop, sharp natural side lighting illuminating textured Italian wool fabric weave, immaculate lapel roll, genuine horn buttons, hand-stitched pick stitch detailing visible along the peak lapel, ultra high-end Savile Row presentation" id="studio-suit-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbEh3nZ4hVCZgVEk7NWO3IMKAi9m6WF81LPNA8EUmiZn05ZEAhZz-Q6OHhgPpYDh1K_ixqXX_XLqoD13rMWDEUCjsTLyGkZ5DkT9V17IR_jlgxBkxBrSlfccYGLl3ns05V0FHZ8GtG-a3O3y2XKOjtTgDHkunNN5uWARv4aSXw-XW2wJVcTFwstUJutPPrtF5NHNZy_AHg1iRTmvOseuIeNHtADPRglXVwMIH9wUHB1K7-l07vIgyO"/>
+<!-- Dynamic Subtle Vignette Gradient for Depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+<!-- HOTSPOT 1: Hand Milanese Lapel Buttonhole & Pick Stitching -->
+<div class="absolute top-[28%] left-[44%] z-20 group">
+<button class="relative flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-on-secondary shadow-xl transition-transform transform group-hover:scale-110" onclick="toggleHotspot('lapel')">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span class="absolute -inset-1 rounded-full bg-secondary/30 animate-ping"></span>
+</button>
+<div class="hidden absolute left-10 -top-8 w-64 bg-surface/95 backdrop-blur-md p-4 shadow-xl text-on-surface z-30" id="hotspot-popover-lapel">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">SAVILE ROW DETAIL</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-on-surface leading-snug">Milanese Hand Buttonhole</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Artisanally worked with pure silk gimp thread over 45 minutes for sculptured relief and pocket flower stability.</p>
+<div class="mt-2 pt-2 bg-surface-container flex items-center justify-between px-2 py-1">
+<span class="font-label-numeric text-[11px] text-on-surface">Option Active</span>
+<span class="font-label-numeric text-[11px] text-secondary font-semibold">+$40</span>
+</div>
+</div>
+</div>
+<!-- HOTSPOT 2: Jamdani Silk Interior Contrast Facing -->
+<div class="absolute top-[48%] left-[49%] z-20 group">
+<button class="relative flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-on-secondary shadow-xl transition-transform transform group-hover:scale-110" onclick="toggleHotspot('lining')">
+<span class="material-symbols-outlined text-[16px]">architecture</span>
+<span class="absolute -inset-1 rounded-full bg-secondary/30 animate-ping"></span>
+</button>
+<div class="hidden absolute right-10 -top-8 w-64 bg-surface/95 backdrop-blur-md p-4 shadow-xl text-on-surface z-30" id="hotspot-popover-lining">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">BENGAL HERITAGE</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">stars</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-on-surface leading-snug">Interwoven Jamdani Weft</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Floating supplementary weft woven on handloom pit looms along the Shitalakshya River for regal breathability.</p>
+<div class="mt-2 pt-2 bg-surface-container flex items-center justify-between px-2 py-1">
+<span class="font-label-numeric text-[11px] text-on-surface">Interior Peaked Facing</span>
+<span class="font-label-numeric text-[11px] text-secondary font-semibold">Included</span>
+</div>
+</div>
+</div>
+<!-- HOTSPOT 3: Real Water Buffalo Horn Buttons -->
+<div class="absolute top-[62%] left-[45%] z-20 group">
+<button class="relative flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-on-secondary shadow-xl transition-transform transform group-hover:scale-110" onclick="toggleHotspot('buttons')">
+<span class="material-symbols-outlined text-[16px]">lens</span>
+<span class="absolute -inset-1 rounded-full bg-secondary/30 animate-ping"></span>
+</button>
+<div class="hidden absolute left-10 -top-8 w-64 bg-surface/95 backdrop-blur-md p-4 shadow-xl text-on-surface z-30" id="hotspot-popover-buttons">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">AUTHENTIC HARDWARE</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-on-surface leading-snug">Matte Smoked Horn</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Individually hand-carved ethically sourced water buffalo horn, cross-stitched with waxed linen thread.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Visualizer Controls & Angle Switcher -->
+<div class="z-10 flex flex-wrap items-center justify-between gap-3 bg-surface/90 backdrop-blur-md p-3 shadow-md">
+<div class="flex items-center gap-1.5">
+<button class="angle-btn px-3 py-2 text-[11px] font-label-uppercase bg-primary text-surface transition-colors" id="btn-angle-front" onclick="setStudioAngle('front')">
+                Front View
+              </button>
+<button class="angle-btn px-3 py-2 text-[11px] font-label-uppercase bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="btn-angle-side" onclick="setStudioAngle('side')">
+                Profile Angle
+              </button>
+<button class="angle-btn px-3 py-2 text-[11px] font-label-uppercase bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="btn-angle-back" onclick="setStudioAngle('back')">
+                Rear Vent
+              </button>
+<button class="angle-btn px-3 py-2 text-[11px] font-label-uppercase bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="btn-angle-lining" onclick="setStudioAngle('lining')">
+                Lining Open
+              </button>
+<button class="angle-btn px-3 py-2 text-[11px] font-label-uppercase bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="btn-angle-fabric" onclick="setStudioAngle('fabric')">
+                Weave Macro (10x)
+              </button>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary animate-spin" style="animation-duration: 9s;">sync</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">360° Real-Time Physics Mesh</span>
+</div>
+</div>
+</div>
+<!-- Studio Sub-Dossier Grid: Craftsmanship Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-[22px] mb-2">straighten</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface">Full Horsehair Canvas</h5>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-2">Floating internal canvas chest piece molds intimately to your muscular physique across 200+ hours of wear.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 font-label-numeric text-[11px] text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Savile Row Bench Standard
+            </div>
+</div>
+<div class="bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-[22px] mb-2">flare</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface">Bengal Handloom Silk</h5>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-2">Historic floral geometric Jamdani internal accents offer unassisted thermoregulation in tropical and temperate air.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 font-label-numeric text-[11px] text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              UNESCO Intangible Heritage
+            </div>
+</div>
+<div class="bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-[22px] mb-2">history_edu</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface">3 Anatomical Basting Fittings</h5>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-2">Calico skeleton fitting followed by forward basted and final bench review at our Mayfair, Manhattan, or Dhaka salons.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 font-label-numeric text-[11px] text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Lifetime Seam Restructuring
+            </div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Precision Configuration Panel (Col 5 / Col 12) -->
+<div class="xl:col-span-5 flex flex-col gap-gutter">
+<!-- Section: Active Garment Dossier Card -->
+<div class="bg-surface-container-lowest p-6 shadow-md">
+<div class="flex items-start justify-between pb-4">
+<div>
+<span class="font-label-uppercase text-[11px] text-secondary tracking-widest block mb-1">BESPOKE TWO-PIECE COMMISSION</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">The Mayfair Royal Drape</h1>
+<p class="font-editorial-italic text-[16px] text-on-surface-variant mt-1">Structured British shoulder with Italian waist contour and Dhaka woven lining.</p>
+</div>
+<span class="font-label-numeric text-label-numeric px-3 py-1 bg-surface-container text-on-surface">REF #AV-8921</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-4 font-body-sm text-body-sm">
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">SELECTED TEXTILE</span>
+<span class="font-semibold text-on-surface block mt-1" id="selected-fabric-name">Super 150s Tasmania Silk-Wool</span>
+<span class="text-[12px] text-secondary" id="selected-fabric-mill">Loro Piana • Biella, Italy</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">FABRIC METRICS</span>
+<span class="font-semibold text-on-surface block mt-1" id="selected-fabric-spec">280g/m • All-Season Weft</span>
+<span class="text-[12px] text-on-surface-variant">Archival Deep Navy Weave</span>
+</div>
+</div>
+</div>
+<!-- Section: Mill & Textile Vault Browser -->
+<div class="bg-surface-container-lowest p-6 shadow-md flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">palette</span>
+<h3 class="font-headline-sm text-[18px] text-on-surface">1. Sartorial Cloth Vault</h3>
+</div>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-wider">4 OF 24 MILLS DISPLAYED</span>
+</div>
+<!-- Mill Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="px-3 py-1.5 bg-primary text-surface font-label-uppercase text-[10px] shrink-0">
+              All Sovereign Mills
+            </button>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-uppercase text-[10px] shrink-0 transition-colors">
+              Loro Piana (Italy)
+            </button>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-uppercase text-[10px] shrink-0 transition-colors">
+              Ermenegildo Zegna
+            </button>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-uppercase text-[10px] shrink-0 transition-colors">
+              Atelier Bengal Weft
+            </button>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-uppercase text-[10px] shrink-0 transition-colors">
+              Fox Brothers Flannel
+            </button>
+</div>
+<!-- Weight & Weave Selectors -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="font-label-uppercase text-[10px] text-on-surface-variant block mb-1.5">CLOTH WEIGHT</label>
+<select class="w-full bg-surface-container p-2.5 font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-high cursor-pointer">
+<option>All Season (260g - 290g)</option>
+<option>Tropical Fresco (220g - 240g)</option>
+<option>Heavy Winter Flannel (340g - 380g)</option>
+<option>Pure Cashmere Overcoating (480g)</option>
+</select>
+</div>
+<div>
+<label class="font-label-uppercase text-[10px] text-on-surface-variant block mb-1.5">WEAVE PATTERN</label>
+<select class="w-full bg-surface-container p-2.5 font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-high cursor-pointer">
+<option>Solid Midnight Luster</option>
+<option>Subtle Pinstripe &amp; Chalk</option>
+<option>Savile Row Glen Plaid</option>
+<option>Bengal Handloom Jacquard</option>
+</select>
+</div>
+</div>
+<!-- Tactile Fabric Swatch Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<!-- Swatch 1 (Active by default) -->
+<div class="swatch-card bg-surface-container-highest p-3 cursor-pointer shadow-md transition-all group relative" id="swatch-tasmania-silk-wool" onclick="switchFabric('Tasmania Silk-Wool', 'Loro Piana • Biella, Italy', '280g/m', '85% Super 150s Wool, 15% Mulberry Silk', 250)">
+<div class="flex gap-3">
+<div class="w-16 h-16 shrink-0 relative overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="High resolution macro photograph of fine Italian Super 150s wool and mulberry silk worsted navy fabric weave showing subtle natural yarn texture, subtle diagonal twill luster, luxurious deep midnight blue tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Z5j-1_Bb8FUL_tNMFrw1TcgQi1mQ2B4MR82hSqGAErLubNmTWwDcMfoVbgTILeu99rtwv4FqIk4zt3eQrocjRZa0L4GTxGaam6I_s9L8TzLAyZgVlFTjWqlPPcxw9SOX5-jt9-Bzsw33lu1OZdVj7U6aByOmFJ0EXmgDPxell72W21u4XG36Renlop9Q09uw4krGK6xFtLMsbpy6fPpr1RgY_KVmEqCeIRp6hmQBeRgFMVGR8JqS"/>
+<span class="absolute bottom-1 right-1 bg-primary/80 text-surface p-0.5 rounded-none font-label-numeric text-[8px] px-1">150s</span>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-uppercase text-[9px] text-secondary tracking-widest truncate">LORO PIANA</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-headline-sm text-[14px] text-on-surface truncate">Tasmania Silk-Wool</h4>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">280g • Deep Navy Twill</span>
+<span class="font-label-numeric text-[11px] text-secondary font-semibold mt-1">+$250 Supplement</span>
+</div>
+</div>
+</div>
+<!-- Swatch 2 -->
+<div class="swatch-card bg-surface-container-low p-3 cursor-pointer hover:bg-surface-container-high transition-all group relative" id="swatch-trofeo-chalkstripe" onclick="switchFabric('Trofeo Chalkstripe', 'Ermenegildo Zegna • Trivero', '290g/m', '100% Australian Superfine Merino', 320)">
+<div class="flex gap-3">
+<div class="w-16 h-16 shrink-0 relative overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="High resolution macro textile swatch of Ermenegildo Zegna Trofeo superfine wool in dark slate navy with an immaculate hairline white chalkstripe, fine woven luxury suiting cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbxejq5yTxcpKHbtTcYZzjDRQjExe2b3k1FSHjexg-MYG9-4g5RnnBGtAk_srT8iv7_icltHRnV_C3qsXbs5EM9OQ-5NomklwecXK4v2QGsUOykBMMZYfbk1giC22GBfAQDWmJHnBOYcr20f5iD4GSCphiXtFMgOubZ0xHYdXSrTNjF8gfof07541X7_qJzDuI5ZmCYXNWzBbVR0ssyr_iBwclYfB7LzUbQ6k6kC88_cLIJvFhs0x"/>
+<span class="absolute bottom-1 right-1 bg-primary/80 text-surface p-0.5 rounded-none font-label-numeric text-[8px] px-1">Trofeo</span>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-label-uppercase text-[9px] text-on-surface-variant tracking-widest truncate">ZEGNA</span>
+<h4 class="font-headline-sm text-[14px] text-on-surface truncate">Trofeo Chalkstripe</h4>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">290g • Fine Slate Stripe</span>
+<span class="font-label-numeric text-[11px] text-secondary font-semibold mt-1">+$320 Supplement</span>
+</div>
+</div>
+</div>
+<!-- Swatch 3 -->
+<div class="swatch-card bg-surface-container-low p-3 cursor-pointer hover:bg-surface-container-high transition-all group relative" id="swatch-heritage-jamdani-navy" onclick="switchFabric('Heritage Jamdani Navy', 'Atelier Vanguard Bengal Guild', '240g/m', '50% Jamdani Handspun Silk, 50% Worsted Wool', 450)">
+<div class="flex gap-3">
+<div class="w-16 h-16 shrink-0 relative overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Extreme close up of handwoven Bengal Jamdani geometric floral supplementary weft motif in midnight blue and champagne gold spun silk yarn on a fine worsted wool ground, artisanal master craft textile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7cwQi5VSpmESnCVpAPfuBaGTN1n5K-HEz3j-db7uY_h2ezqJJxI5vUrsJ6uTpGIC3ON1UxFs9pYnPhcJlz1rhrSGggIba3av6FaYpjdEp7tqDlCd_cGLK9afD3-6POHjfbNCKECxs8QDZZnI7eZfA198WoYD2RWwD-zR0-Si7BZGcrUCgQAnW2PmVtNB856Z9VMaiZTruP0MLTFi7mpFcf4zqqdNfvLT8jz8_B-vywTNnT77R_g67"/>
+<span class="absolute bottom-1 right-1 bg-secondary text-surface p-0.5 rounded-none font-label-numeric text-[8px] px-1">Handloom</span>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-label-uppercase text-[9px] text-secondary tracking-widest truncate">ARCHIVAL BENGAL</span>
+<h4 class="font-headline-sm text-[14px] text-on-surface truncate">Jamdani Jacquard Weft</h4>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">240g • Royal Geometric</span>
+<span class="font-label-numeric text-[11px] text-secondary font-semibold mt-1">+$450 Supplement</span>
+</div>
+</div>
+</div>
+<!-- Swatch 4 -->
+<div class="swatch-card bg-surface-container-low p-3 cursor-pointer hover:bg-surface-container-high transition-all group relative" id="swatch-savile-row-plain-navy" onclick="switchFabric('Savile Row Plain Navy', 'Huddersfield Fine Worsteds', '310g/m', '100% Super 130s High-Twist Wool', 0)">
+<div class="flex gap-3">
+<div class="w-16 h-16 shrink-0 relative overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Detailed macro swatch of English Huddersfield Super 130s high twist matte navy suiting fabric, clean architectural weave, crisp durable crease recovery, traditional Savile Row standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGczPj6qr1zxKBOUviW7BCcySlAfRA1_M5hwU9TP51gIifXJogrswucKMvgsB-u3nAg5y8iBBftbegg3KvSw5ggkZc80IMY6LmobgXV0MgeNEj7NTTIgG9_mSTDw-fw9WhMUnSmFORFVst38f8AmGr0vRH5sxQTCbwhGPVaQQcCZrlk3WnhyrWbylU_sdsLJJiBP-o0rNtkpZaeV4RRQ6f4b1AOFICjYfBMqwvfaXgNmo0VOTjtaZE"/>
+<span class="absolute bottom-1 right-1 bg-primary/80 text-surface p-0.5 rounded-none font-label-numeric text-[8px] px-1">Classic</span>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-label-uppercase text-[9px] text-on-surface-variant tracking-widest truncate">HUDDERSFIELD</span>
+<h4 class="font-headline-sm text-[14px] text-on-surface truncate">Classic Plain Navy</h4>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">310g • Pure English Twist</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant font-semibold mt-1">Included in Base</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Jacket Construction & Silhouette Mechanics -->
+<div class="bg-surface-container-lowest p-6 shadow-md flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-[18px] text-on-surface">2. Anatomical Construction</h3>
+</div>
+<span class="font-label-uppercase text-[10px] text-secondary">ARCHITECTURAL SPEC</span>
+</div>
+<!-- Internal Canvas Selection -->
+<div class="flex flex-col gap-2">
+<label class="font-label-uppercase text-[10px] text-on-surface-variant">CHEST CANVAS ENGINE</label>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex flex-col p-3.5 bg-surface-container-highest cursor-pointer shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-[15px] text-on-surface">Full Floating Canvas</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">radio_button_checked</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Triple horsehair chest piece pad-stitched by hand for lifelong personalized drape.</span>
+<span class="font-label-numeric text-[11px] text-secondary mt-2">Savile Row Bespoke Standard</span>
+</label>
+<label class="flex flex-col p-3.5 bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-[15px] text-on-surface">Half-Canvas Light</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">radio_button_unchecked</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Lightweight chest canvas suited for Mediterranean or humid Subcontinental climates.</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant mt-2">Soft Continental Cut</span>
+</label>
+</div>
+</div>
+<!-- Button Stance Silhouette -->
+<div class="flex flex-col gap-2 pt-2">
+<label class="font-label-uppercase text-[10px] text-on-surface-variant">CLOSURE &amp; BUTTON STANCE</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="p-3 bg-surface-container-highest text-left shadow-sm">
+<span class="font-label-uppercase text-[10px] text-secondary block">SINGLE BREASTED</span>
+<span class="font-headline-sm text-[14px] text-on-surface block mt-1">2-Button Classic</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant block mt-0.5">Rolling to middle</span>
+</button>
+<button class="p-3 bg-surface-container-low hover:bg-surface-container-high text-left transition-colors">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">SINGLE BREASTED</span>
+<span class="font-headline-sm text-[14px] text-on-surface block mt-1">1-Button Cocktail</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant block mt-0.5">Elongated deep stance</span>
+</button>
+<button class="p-3 bg-surface-container-low hover:bg-surface-container-high text-left transition-colors">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">DOUBLE BREASTED</span>
+<span class="font-headline-sm text-[14px] text-on-surface block mt-1">6 x 2 Architectural</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant block mt-0.5">Military drape line</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section: Lapel Geometry & Hand Tailoring Accents -->
+<div class="bg-surface-container-lowest p-6 shadow-md flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">content_cut</span>
+<h3 class="font-headline-sm text-[18px] text-on-surface">3. Lapel Geometry</h3>
+</div>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant">HAND PICK-STITCHED</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 bg-surface-container-highest cursor-pointer shadow-sm">
+<span class="font-label-uppercase text-[9px] text-secondary block">WIDTH 3.75 INCHES</span>
+<h5 class="font-headline-sm text-[14px] text-on-surface mt-1">Dramatic Peak</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1">Broad upward points accentuating shoulder breadth.</p>
+<div class="mt-2 text-secondary font-label-numeric text-[11px]">Selected</div>
+</div>
+<div class="p-3 bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-label-uppercase text-[9px] text-on-surface-variant block">WIDTH 3.25 INCHES</span>
+<h5 class="font-headline-sm text-[14px] text-on-surface mt-1">Savile Notch</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1">Versatile diplomatic cut with gentle gorge angle.</p>
+<div class="mt-2 text-on-surface-variant font-label-numeric text-[11px]">No supplement</div>
+</div>
+<div class="p-3 bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-label-uppercase text-[9px] text-on-surface-variant block">WIDTH 3.0 INCHES</span>
+<h5 class="font-headline-sm text-[14px] text-on-surface mt-1">Grand Gala Shawl</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1">Continuous sweeping collar faced in ribbed silk.</p>
+<div class="mt-2 text-secondary font-label-numeric text-[11px]">+$120 Silk Facing</div>
+</div>
+</div>
+<!-- Hand Finishing Addon -->
+<div class="bg-surface-container p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] text-on-surface">Milanese Hand-Worked Buttonhole</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Single silk gimp cord hand-stitched on left lapel with flower loop behind.</span>
+</div>
+</div>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">+$40 USD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Bespoke Process Timeline Sparkline Bar -->
+<div class="w-full bg-surface-container-low py-8 shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter items-center">
+<div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block mb-1">ATELIER TIMELINE PIPELINE</span>
+<h4 class="font-headline-sm text-[18px] text-on-surface">90 Hours Hand Craftsmanship</h4>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Dispatched in Handcrafted Cedar Travel Trunk</span>
+</div>
+<div class="md:col-span-3 flex flex-col gap-2">
+<!-- Hand Craftsmanship Stages SVG Metric Graphic -->
+<div class="w-full bg-surface-container h-3 relative overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 25%;" title="Drafting &amp; Pattern Cutting: 15 Hours"></div>
+<div class="h-full bg-secondary" style="width: 35%;" title="Hand Canvas Basting: 30 Hours"></div>
+<div class="h-full bg-surface-tint" style="width: 25%;" title="Lapel Shaping &amp; Sleeves: 25 Hours"></div>
+<div class="h-full bg-primary-container" style="width: 15%;" title="Buttonholes &amp; Final Press: 20 Hours"></div>
+</div>
+<div class="flex items-center justify-between font-label-numeric text-[11px] text-on-surface-variant pt-1">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-primary"></span> Anatomical Draft (15h)</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-secondary"></span> Hand Canvas Baste (30h)</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-surface-tint"></span> Sleeve &amp; Collar Balance (25h)</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-primary-container"></span> Hand Buttonholes &amp; Press (20h)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Floating Atelier Concierge Video Floating Pill -->
+<div class="fixed right-6 bottom-28 z-40">
+<button class="flex items-center gap-3 bg-primary text-surface px-5 py-3 shadow-2xl hover:bg-secondary hover:text-on-secondary transition-all transform hover:-translate-y-0.5">
+<div class="relative">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-secondary rounded-full"></span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-uppercase text-[10px] tracking-widest leading-tight">LIVE ATELIER SALON</span>
+<span class="font-body-sm text-[12px] font-semibold leading-tight">Consult Master Tailor</span>
+</div>
+</button>
+</div>
+<!-- Section 5: Sticky Bottom Configuration & Investment Dock -->
+<div class="sticky bottom-0 left-0 w-full z-40 bg-surface/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(0,0,0,0.06)]">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg py-4 flex flex-col md:flex-row items-center justify-between gap-gutter">
+<!-- Left: Running Sartorial Cost Calculation breakdown -->
+<div class="flex flex-wrap items-center gap-4 lg:gap-6 min-w-0">
+<div class="flex flex-col">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest">COMMISSION TOTAL</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface" id="dock-total-cost">$1,940 USD</span>
+<span class="font-label-numeric text-[11px] text-secondary font-medium">Bespoke Two-Piece</span>
+</div>
+</div>
+<div class="hidden sm:block h-8 w-[1px] bg-surface-variant"></div>
+<div class="hidden lg:flex flex-col font-label-numeric text-[12px] text-on-surface-variant">
+<span>Base Anatomy: <strong class="text-on-surface font-normal">$1,650</strong></span>
+<span>Loro Piana Fabric: <strong class="text-secondary font-normal" id="dock-fabric-cost">+$250</strong> • Milanese Loop: <strong class="text-secondary font-normal">+$40</strong></span>
+</div>
+<div class="hidden md:flex items-center gap-2 bg-surface-container px-3 py-1.5 font-label-numeric text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">flight_takeoff</span>
+<span>Atelier Delivery: <strong>Nov 04 (4 Weeks)</strong></span>
+</div>
+</div>
+<!-- Right: Action Buttons -->
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<button class="px-5 py-3 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-uppercase text-label-uppercase transition-colors shrink-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span class="hidden sm:inline">Save &amp; Mail Physical Swatches</span>
+<span class="sm:hidden">Save</span>
+</button>
+<a class="px-7 py-3 bg-primary text-surface hover:bg-secondary hover:text-on-secondary font-label-uppercase text-label-uppercase transition-colors shadow-sm shrink-0 flex items-center gap-2 group" data-path="configurator-step-2" href="#">
+<span>Proceed to Lapel &amp; Details</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="book-private-fitting" href="#">Book Private Fitting</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Artisanal Bengal Weaves</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

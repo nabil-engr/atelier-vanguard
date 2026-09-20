@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest flex items-center justify-center gap-space-md flex-wrap"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">lock</span><span>256-Bit SSL Encrypted Bespoke Checkout</span></div><span class="hidden sm:inline opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">support_agent</span><span>Private Concierge Desk: London +44 20 7946 0912 • NY +1 212 555 0184</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden lg:flex items-center gap-4 xl:gap-5" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Measurement</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center border border-outline-variant/60 rounded px-2 py-1 gap-1 font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low"><span class="material-symbols-outlined text-[14px] text-secondary">currency_exchange</span><select aria-label="Select Currency" class="bg-transparent font-label-numeric text-label-numeric text-on-surface focus:outline-none cursor-pointer pr-1"><option selected="" value="USD">USD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></div><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><span class="hidden xl:inline">Guaranteed Safe Protocol</span></div><a class="inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="multi-step-checkout" href="#">Secure Checkout</a></div></div><div class="bg-surface-container-low border-t border-outline-variant/30 py-2 px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-numeric text-label-numeric text-on-surface-variant"><div class="flex items-center gap-2"><a class="hover:text-secondary transition-colors" data-path="home" href="#">Atelier</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Fitting</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><span class="text-secondary font-medium">Multi-Step Checkout</span></div><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span><span>Priority Tailoring Queue Confirmed</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Editorial Masthead / Header Section -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter pb-space-lg">
+<div class="space-y-space-sm max-w-3xl">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-3 py-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span class="font-label-uppercase text-label-uppercase tracking-[0.25em]">Atelier Archives • Heritage Dossier No. 09</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+            The Living Weft: <span class="font-editorial-italic italic font-normal text-secondary">300-Count Jamdani</span> Meets Savile Row Canvas
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-space-xs">
+            How centuries-old pit-loom artistry on the banks of the Shitalakshya River infuses structured British tailoring with peerless lightness and sovereign Bengali majesty.
+          </p>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md max-w-sm w-full">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric text-secondary">
+<span>SARTORIAL DISPATCH</span>
+<span>SONARGAON • MAYFAIR</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface space-y-1 pt-1">
+<p><strong class="font-semibold">Text:</strong> Julian Vance, FRSA</p>
+<p><strong class="font-semibold">Curation:</strong> Tariq Rahman, Master Archivist</p>
+<p><strong class="font-semibold">Plates:</strong> Giles Abernathy (Bespoke 35mm)</p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Verified Imperial Muslin Lineage</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Composition -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-space-md items-stretch">
+<div class="lg:col-span-8 relative min-h-[460px] lg:min-h-[580px] bg-surface-container-high overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up macro photography of master weaver fingers manipulating a fine bamboo needle across 300-count translucent Jamdani cotton with delicate antique gold floral zari motifs, bathed in soft warm morning studio light reflecting dust motes in Sonargaon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDLPKxBlHovmAVhE5MGQQlytvqJ2yuIet5qornGKWOkFXuYWpl47BZ3wjDl5UTfglzEPpMGbBrbZ9FrGlQIbystwYNLQmqZB8-SkIPpKsj_2HqpyAa-z2kXmrPsQViHcC0szm0UfaW7MTDEFxJcFyjGh2DhZIoYM92mcFXVJky8LF6eEtq6nmbMsDEd6KEc3ldmzjjBFBECxEAGsrRsGTHn5IWefxhTOjOVH4q9kv7GBt_FpbxM9y"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent p-space-lg text-surface">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-1">Plate 14B // Pit-Loom Synchronization</span>
+<p class="font-headline-sm text-headline-sm max-w-xl text-surface">
+              The continuous warp under manual tension, where one square inch can harbor up to four hundred discontinuous supplementary threads.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between bg-primary-container text-surface p-space-lg shadow-sm">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Architectural Tension</span>
+<span class="material-symbols-outlined text-secondary">architecture</span>
+</div>
+<p class="font-editorial-italic text-editorial-italic text-surface leading-snug">
+              "To combine the feather-weight transparency of Bengal Muslin with the stoic discipline of British horsehair is not merely tailoring; it is an architectural diplomacy."
+            </p>
+<div class="space-y-space-sm pt-space-xs font-body-sm text-body-sm text-on-primary-container">
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest/5 px-3">
+<span>Thread Linear Mass</span>
+<span class="font-label-numeric text-label-numeric text-surface">Ne 300/1 Organic Petti</span>
+</div>
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest/5 px-3">
+<span>Weft Insertion</span>
+<span class="font-label-numeric text-label-numeric text-surface">Discontinuous Hand-Spun</span>
+</div>
+<div class="flex justify-between items-center py-2 bg-surface-container-lowest/5 px-3">
+<span>Structural Match</span>
+<span class="font-label-numeric text-label-numeric text-surface">Floating Canvas Interlining</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<div class="flex items-center gap-space-sm text-surface font-label-numeric text-label-numeric">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span>Protected UNESCO Intangible Cultural Heritage Fabric</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: The 3-Pillar Synthesis -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs mb-space-xl">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em] block">Tripartite Methodology</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">The Three Pillars of Integration</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Neither craft yields to the other. Instead, Savile Row’s anatomical poise creates the physical sanctuary within which Jamdani’s ethereal geometry breathes.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar I -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-label-numeric tracking-widest">PILLAR 01</span>
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Savile Row Architectural Lineage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Every bespoke coat begins with a hand-padded floating Siberian horsehair and camel-hair chest piece. Formed across three fittings, it creates an anatomical chest vault that stands away from the body, preventing cloth fatigue and holding permanent three-dimensional memory.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md space-y-2 bg-surface-container-low p-space-sm">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Bench Hours</span>
+<span class="font-semibold text-secondary">88-92 Hours</span>
+</div>
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Canvas Foundation</span>
+<span>Grade A Siberian Horsehair</span>
+</div>
+</div>
+</div>
+<!-- Pillar II -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-label-numeric tracking-widest">PILLAR 02</span>
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Shitalakshya River Microclimate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              True 300-count Jamdani cannot be woven in dry air. The unique morning dew point, relative humidity (78%–84%), and alluvial river mist of Narayanganj keep gossamer Phuti Karpas cotton fibers flexible enough to prevent snap fractures under heavy loom tensions.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md space-y-2 bg-surface-container-low p-space-sm">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Loom Coordinates</span>
+<span>Sonargaon Delta, BD</span>
+</div>
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Optimal Atmosphere</span>
+<span class="font-semibold text-secondary">81% Relative Humidity</span>
+</div>
+</div>
+</div>
+<!-- Pillar III -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-numeric text-label-numeric tracking-widest">PILLAR 03</span>
+<span class="material-symbols-outlined">blur_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Discontinuous Supplementary Weft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Unlike industrial jacquard or print, Jamdani motifs are woven directly into the fabric matrix using fine ox-bone or bamboo needles (<em class="italic">kandur</em>). Each motif—from the imperial <em class="italic">Panna Hajar</em> to cascading <em class="italic">Jaldar</em>—floats weightlessly on pure mulberry silk.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md space-y-2 bg-surface-container-low p-space-sm">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Needle Matrix</span>
+<span>Hand-Carved Mature Bamboo</span>
+</div>
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface">
+<span>Motif Precision</span>
+<span class="font-semibold text-secondary">Zero Residual Thread Flap</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Oral History & Artisan Spotlight -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div class="space-y-space-xs max-w-xl">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em]">Human Stewardship</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Custodians of the Needle and Shears</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A dialogue across oceans: the master who breathes rhythm into yarn, and the cutter who sculpts wool around the human anatomy.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg">
+<!-- Master Weaver Profile Card -->
+<div class="bg-surface-container p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="relative w-full h-80 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Monochrome sepia portrait of an elderly Bengali master weaver with expressive eyes and silver beard, wearing simple natural linen kurta, sitting by a wooden pit-loom draped with gossamer fabric in Sonargaon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpcbbLZefRptG4w9gj8SzW7KQoXw8xI1LnUJzD4IjoAKkjPyIdZFdhi9epd78-38PvZp80kdq26uHluaGp4lY2u6QLnrVhEYeQKUDP-d3-kkaaZ90alXJBnLU8sQveNRwBBeiQfC5j0YGRElg5Ta60BmSCZblWPQwRvW1z5C95zRxEIWU5qNOBQYrcD88_JUWmW7USJy2vsAZVHobusMoZi6yRLgdRQkyBWdEIPX1MxAzsv1ikqt3"/>
+<div class="absolute top-4 left-4 bg-primary text-surface px-3 py-1 font-label-uppercase text-[10px] tracking-widest">
+                6th Generation Master
+              </div>
+</div>
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-1">Sonargaon Guild Elder</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Ustad Rahim Uddin</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">42 Years Active Pit-Loom Custodian • Sonargaon Artisan Council</p>
+</div>
+<blockquote class="font-editorial-italic text-editorial-italic text-on-surface leading-relaxed pl-4 border-l-2 border-secondary">
+              "We do not weave from drawings on paper. The chart exists in rhythmic verses passed down from my grandfather’s voice. When my shuttle flies, it answers only the breath of the river."
+            </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Ustad Rahim guides the loom exclusively between 4:30 AM and 9:30 AM, when atmospheric moisture peaks, preventing micro-shearing across the supplementary zari threads.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md bg-surface-container-lowest p-space-md space-y-space-xs">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric text-on-surface">
+<span class="flex items-center gap-1.5 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                Active Commission Production
+              </span>
+<span class="font-bold">Bolt #JM-2025-04</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 overflow-hidden">
+<div class="bg-secondary h-full w-[68%]"></div>
+</div>
+<div class="flex justify-between font-label-numeric text-[11px] text-on-surface-variant">
+<span>18 of 26 Yards Completed</span>
+<span>Delivery to Mayfair: October 2025</span>
+</div>
+</div>
+</div>
+<!-- Head Cutter Profile Card -->
+<div class="bg-surface-container p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="relative w-full h-80 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of a veteran British bespoke cutter in his late 50s wearing horn-rimmed spectacles and a three-piece charcoal flannel bespoke suit, holding tailor's heavy brass shears over chalked midnight wool in a sunlit Mayfair cutting room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL4AvH3Zg-30atYnb2U5aAega--zjeNO-t38_HZiOyIy1fv6oEOWchStHwzCkxIhbGHrrr6fZfAgLSKd98EHbGdK5J5xZhJwHAmljBJnpB-teL5LhTUlAc-BVIiSpAZb9xBZx30DsFHvv0VSMSvTibPqNIcehLUIvtrkhxwhuqnTfgyqQKIF9IMu1s46ALdLqEk3pPgGBU5S2BBqAE9PGvJP2U3Pqg7n-omchM4BQB1vl1Rqiptw56"/>
+<div class="absolute top-4 left-4 bg-primary text-surface px-3 py-1 font-label-uppercase text-[10px] tracking-widest">
+                Savile Row Veteran
+              </div>
+</div>
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-1">Director of Bespoke Cutting</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Master Alastair Sterling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Former Senior Cutter at Henry Poole &amp; Co. • Dhaka Atelier Fellow</p>
+</div>
+<blockquote class="font-editorial-italic text-editorial-italic text-on-surface leading-relaxed pl-4 border-l-2 border-secondary">
+              "Marrying 300-count Jamdani silk facing to a 420g Scottish cashmere overcoat demands an unprecedented surgical touch. We stabilize every silk seam with hand-basted organdie stays."
+            </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Sterling relocated part-time to Bangladesh to calibrate European drape templates to the physical tensile response of Sonargaon hand-spun yarn, forging the Atelier Vanguard hybrid silhouette.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md bg-surface-container-lowest p-space-md space-y-space-xs">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric text-on-surface">
+<span class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Anatomical Balance Protocol
+              </span>
+<span class="font-bold">Grade 1 Basting</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every Jamdani facing undergoes 48 hours of climate rest in Mayfair prior to final bias-shearing.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: The 5-Stage Loom-to-Lapel Process -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-xl">
+<div class="max-w-xl space-y-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em]">Chain of Custody</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">The 5-Stage Loom-to-Lapel Lifecycle</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          From unspun botanical seed to bespoke silk facing: ninety-six manual hours distilled into seamless sartorial permanence.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-gutter">
+<!-- Stage 01 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="font-label-numeric text-secondary font-bold text-[18px]">01</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Preparation</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Rice-Starch Sizing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Organic Ne 300 yarn is washed in cooked rice water and natural river dew at dawn to impart strength without artificial resin coatings.
+            </p>
+</div>
+<div class="pt-space-md font-label-numeric text-[11px] text-secondary">
+            Sonargaon Riverside
+          </div>
+</div>
+<!-- Stage 02 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="font-label-numeric text-secondary font-bold text-[18px]">02</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Patterning</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Oral Memory Chanting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Two weavers sit knee-to-knee at the pit loom, singing mathematical counts for every thread pass without a printed graph.
+            </p>
+</div>
+<div class="pt-space-md font-label-numeric text-[11px] text-secondary">
+            Pit-Loom Guild
+          </div>
+</div>
+<!-- Stage 03 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="font-label-numeric text-secondary font-bold text-[18px]">03</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Weaving</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Bamboo Petti Insertion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Each gold zari floral motif is fed grain by grain with hand-sharpened bamboo spindles, locking gold thread into the translucent muslin base.
+            </p>
+</div>
+<div class="pt-space-md font-label-numeric text-[11px] text-secondary">
+            Supplementary Weft
+          </div>
+</div>
+<!-- Stage 04 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="font-label-numeric text-secondary font-bold text-[18px]">04</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Transit</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Cedar Vault Courier</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Finished yardage is wrapped in unbleached silk, secured in airtight Himalayan cedar chests, and transported directly to Mayfair.
+            </p>
+</div>
+<div class="pt-space-md font-label-numeric text-[11px] text-secondary">
+            Diplomatic Transit
+          </div>
+</div>
+<!-- Stage 05 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="font-label-numeric text-secondary font-bold text-[18px]">05</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Execution</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Mayfair Hand Basting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The Jamdani cloth is eased under outer coat lapels and interior cigar pockets, attached via 4,000 invisible pick stitches.
+            </p>
+</div>
+<div class="pt-space-md font-label-numeric text-[11px] text-secondary">
+            14 Savile Row, London
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Interactive Fabric Vault Archive -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div class="space-y-space-xs max-w-xl">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em]">Archival Swatch Vault</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Bespoke Reserve Weaves</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Available exclusively for Bespoke Patron commissions. Each pattern is restricted to six garments globally before the motif is retired to the Atelier Dhaka vault.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">lock</span>
+<span>Controlled Harvest: Max 48 Metres Annually</span>
+</div>
+</div>
+<!-- Textile Swatch Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Swatch 01 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-md">
+<div class="relative w-full h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Photomacrograph of rare Jamdani textile featuring Royal Peacock Gold Weft with delicate pure gold thread woven into creamy ivory organic muslin fabric in geometric Mughal motifs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHaV22nI5ghWpGUVbGkdMUlsljcXDOQD7n2IwSAKGHpkkNk5YuMx5NPQHxGMS7X32x-uQ0MTlhzTe6rgnVMeZ2XpBgY-toe8lUmJnY0AyzH6eTmW1KZDwzJ42HHwfqbsCsT3CRXM2-qy2KcQwhHTM940Zo8i8DxrSgWGJeLQh8LTMO620uT0LKWhfQ9-Hcx08rPsbtDWe50fsE4HAgTC6EMdDiFbCqGzBRiq97NrhzkoxKH28YiH5J"/>
+<div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 text-on-surface font-label-numeric text-label-numeric">
+                Ref: AV-JMD-01
+              </div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">Superfine Muslin &amp; Zari</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Count: Ne 300/1</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Royal Peacock Gold Weft</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Reconstructed from an 1858 Nawab of Dhaka court robe. Interlaces genuine silver core wrapped in 24k gold leaf through organic hand-carded cotton.
+              </p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md space-y-3">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low p-2">
+<span>Weight: 85g / m²</span>
+<span>Available: 7.2 Metres</span>
+</div>
+<button class="w-full py-3 bg-primary text-surface font-label-uppercase text-label-uppercase hover:bg-secondary transition-colors duration-200">
+              Select for Lapel Facing
+            </button>
+</div>
+</div>
+<!-- Swatch 02 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-md">
+<div class="relative w-full h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Macro textile shot of Midnight Indigo Floral Jaldar weave showing deep ink navy mulberry silk ground with hand-embroidered pale celadon and silver floral lattice motifs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXwTsoGy8tkPhmc0np5TFkVrnyFYvf8vqKD90BsAhgJMXcEL3x8YMW6gBaooFpFbdIKM0WJf9qIdhkqhBGk8hcHP76xQZDFseCky18HGxp_SlXylhKnkFkNfzlXRah0oB78v76RIWC9UigjWLVswR6qrZqpdb7l-RTYjJRPyB4veHYGGlAkLIaSQiOWq-b6jqqyK93Yha-UbsLrVhKs-lTwTqk1qusOpHJIuU80JObqPRtYMSo7Ny0"/>
+<div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 text-on-surface font-label-numeric text-label-numeric">
+                Ref: AV-JMD-02
+              </div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">Mulberry Silk &amp; Indigo</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Count: Ne 280/2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Midnight Indigo Floral Jaldar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Vat-dyed with cold natural river indigo from Rajshahi. The supplementary motif depicts the classic <em class="italic">Jaldar</em> (netting) favored for evening coat facings.
+              </p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md space-y-3">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low p-2">
+<span>Weight: 92g / m²</span>
+<span>Available: 5.5 Metres</span>
+</div>
+<button class="w-full py-3 bg-primary text-surface font-label-uppercase text-label-uppercase hover:bg-secondary transition-colors duration-200">
+              Select for Lapel Facing
+            </button>
+</div>
+</div>
+<!-- Swatch 03 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-md">
+<div class="relative w-full h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detailed macro view of Ivory Nilambari Cloud Drape fabric showing ultra-sheer diaphanous white cotton gauze adorned with delicate diamond-shaped silver geometric drop motifs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR-h7_i6bsszOHmHqRADw3GkSZ0q1OPWgjjU73bxVuKxMeuhKTC9iERhh27pJf0W5-Hrp4ZrlPocLaA2ROEHkcq1n8IWOeWYF1Q52wt5VG_nq7wax-dCduS2oMDALLYwX_lMFJqdRjvqnCKn-zaTXEd8TzVb9JIW4MqFWhAa57UBtbvsZpIN9-yE6BVIAN6VinavrosmZlxL4xwv-0JZsKjANZwxzCfHRO_EfTF0T3w39eQuIhmlYI"/>
+<div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 text-on-surface font-label-numeric text-label-numeric">
+                Ref: AV-JMD-03
+              </div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">Diaphanous Muslin</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Count: Ne 320/1</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ivory Nilambari Cloud Drape</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                The sheerest weave in the collection. Light passes through it like morning vapor over water, revealing silver micro-dots that catch the eye only in direct movement.
+              </p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md space-y-3">
+<div class="flex justify-between font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low p-2">
+<span>Weight: 68g / m²</span>
+<span>Available: 3.8 Metres</span>
+</div>
+<button class="w-full py-3 bg-primary text-surface font-label-uppercase text-label-uppercase hover:bg-secondary transition-colors duration-200">
+              Select for Lapel Facing
+            </button>
+</div>
+</div>
+</div>
+<!-- Interactive Dossier / Trunk Show Request Box -->
+<div class="bg-primary-container text-surface p-space-lg md:p-space-xl shadow-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 space-y-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em] block">Patron Archival Kit</span>
+<h3 class="font-headline-lg text-headline-lg text-surface">Request the Bound Jamdani Cloth Dossier</h3>
+<p class="font-body-md text-body-md text-on-primary-container max-w-2xl leading-relaxed">
+              Experience the tactile weight of Ne 300 Jamdani in your hands. Delivered in a wax-sealed, linen-wrapped folio featuring five authentic cloth swatches, historical documentation, and a direct consultation credit.
+            </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-label-numeric text-label-numeric text-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Includes 5 Certified Swatches</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>$65 Credited Toward Bespoke Orders</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Global Courier Dispatch (3-5 Days)</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm w-full">
+<button class="w-full py-4 px-6 bg-secondary text-on-secondary font-label-uppercase text-label-uppercase hover:bg-secondary-container hover:text-on-secondary-container transition-colors duration-200 text-center">
+              Order Swatch Book ($65)
+            </button>
+<button class="w-full py-4 px-6 bg-surface-container-lowest/10 text-surface font-label-uppercase text-label-uppercase hover:bg-surface-container-lowest/20 transition-colors duration-200 text-center">
+              Book Loom Guild Trunk Viewing
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Archival Guarantee & Fair-Wage Covenant -->
+<section class="w-full bg-surface-container py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<div class="lg:col-span-5 space-y-space-md">
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest">Atelier Vanguard Charter</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Bengal Master Craftsmen Covenant</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every Jamdani yard used in our garments is sourced through a direct-patron covenant that circumvents speculative textile traders.
+          </p>
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex gap-space-sm items-start">
+<span class="material-symbols-outlined text-secondary mt-0.5">verified_user</span>
+<p><strong class="font-semibold text-on-surface">400% Regional Fair Wage:</strong> Guild masters receive 4× the standard handloom wage, guaranteed regardless of seasonal harvest variance.</p>
+</div>
+<div class="flex gap-space-sm items-start">
+<span class="material-symbols-outlined text-secondary mt-0.5">account_balance</span>
+<p><strong class="font-semibold text-on-surface">Artisan Endowment Fund:</strong> 5% of all bespoke proceeds fund the Sonargaon Apprentice Academy to preserve pit-loom singing traditions.</p>
+</div>
+<div class="flex gap-space-sm items-start">
+<span class="material-symbols-outlined text-secondary mt-0.5">assignment_turned_in</span>
+<p><strong class="font-semibold text-on-surface">Individual Master Sign-off:</strong> Every finished suit carries the woven initials of the specific weaver beneath the inner pocket facing.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric text-on-surface-variant">
+<span>ENDOWMENT PROGRESS • FISCAL YEAR 2025</span>
+<span class="text-secondary font-bold">$142,800 ALLOCATED</span>
+</div>
+<!-- Dynamic SVG Metric Chart -->
+<div class="w-full bg-surface-container-low p-space-md">
+<div class="flex justify-between items-end mb-2 font-label-numeric text-[11px] text-on-surface-variant">
+<span>Loom Guild Apprenticeships</span>
+<span>24 New Master Trainees</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[85%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-end mt-4 mb-2 font-label-numeric text-[11px] text-on-surface-variant">
+<span>Organic Karpas Cotton Preservation Plot</span>
+<span>12 Hectares Protected</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[92%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-end mt-4 mb-2 font-label-numeric text-[11px] text-on-surface-variant">
+<span>Oral Archive Transcription</span>
+<span>410 Songs Recorded</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[74%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>Audited by FairCraft South Asia</span>
+</div>
+<a class="text-secondary hover:text-on-surface transition-colors duration-200" href="#">
+              Download Annual Guild Impact Report (PDF) →
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Private Appointment Teaser -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="bg-surface-container-low p-space-lg md:p-space-xl flex flex-col md:flex-row items-center justify-between gap-gutter shadow-sm">
+<div class="space-y-space-xs max-w-xl text-center md:text-left">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em]">Sartorial Consultation</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Experience the Drape in Person</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Private salon trunk viewings are available by appointment at our Mayfair, Manhattan, and Gulshan-2 ateliers.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto">
+<a class="w-full sm:w-auto text-center px-8 py-4 bg-primary text-surface font-label-uppercase text-label-uppercase hover:bg-secondary transition-colors duration-200" href="#">
+            Book Atelier Appointment
+          </a>
+<a class="w-full sm:w-auto text-center px-8 py-4 bg-surface-container-lowest text-on-surface font-label-uppercase text-label-uppercase hover:bg-surface-container-high transition-colors duration-200" href="#">
+            Speak to Master Cutter
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction for swatch card button clicks
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.innerText.includes('Select for Lapel Facing')) {
+        const currentText = this.innerText;
+        this.innerText = 'Cloth Reserved for Fitting';
+        this.classList.remove('bg-primary');
+        this.classList.add('bg-secondary');
+        setTimeout(() => {
+          this.innerText = currentText;
+          this.classList.remove('bg-secondary');
+          this.classList.add('bg-primary');
+        }, 3000);
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a></li><li><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Calibration</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

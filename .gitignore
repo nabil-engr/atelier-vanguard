@@ -1,0 +1,51 @@
+# IDE and operating-system files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+secrets.json
+
+# .NET generated files
+**/bin/
+**/obj/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Angular / Node generated files
+**/node_modules/
+ui/dist/
+ui/.angular/
+ui/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime, logs, databases and archives
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Docker/local data
+postgres-data/
+docker-data/
+
+# Temporary files
+*.tmp
+*.temp
+~$*

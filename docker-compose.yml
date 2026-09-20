@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_DB: atelier_vanguard
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - atelier_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d atelier_vanguard"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  api:
+    build: ./api
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=atelier_vanguard;Username=postgres;Password=postgres
+      Jwt__Key: local-development-key-change-before-production-123456
+      Jwt__Issuer: AtelierVanguard.Api
+      Jwt__Audience: AtelierVanguard.Ui
+      Cors__UiOrigin: http://localhost:4200
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "5080:8080"
+  ui:
+    build: ./ui
+    depends_on:
+      - api
+    ports:
+      - "4200:80"
+volumes:
+  atelier_data:

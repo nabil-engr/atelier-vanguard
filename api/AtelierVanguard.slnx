@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AtelierVanguard.Api/AtelierVanguard.Api.csproj" />
+    <Project Path="src/AtelierVanguard.Application/AtelierVanguard.Application.csproj" />
+    <Project Path="src/AtelierVanguard.Domain/AtelierVanguard.Domain.csproj" />
+    <Project Path="src/AtelierVanguard.Infrastructure/AtelierVanguard.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AtelierVanguard.Tests/AtelierVanguard.Tests.csproj" />
+  </Folder>
+</Solution>

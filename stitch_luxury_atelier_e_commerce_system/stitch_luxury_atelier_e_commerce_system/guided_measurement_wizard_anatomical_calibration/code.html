@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest"><span>Complimentary insured worldwide courier &amp; private atelier consultation | London • New York • Dhaka</span></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="home" href="#">Home</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="mens-tailoring" href="#">Men's Tailoring</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="womens-atelier" href="#">Women's Atelier</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Heritage Jamdani</a><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="journal" href="#">Journal</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">public</span><span>USD $ | Global</span></div><a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="garment-configurator" href="#">Create Your Garment</a><button aria-label="Search Archive" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden lg:inline-flex p-2 text-on-surface-variant hover:text-secondary transition-colors" data-path="book-private-fitting" href="#" title="Private Fitting Appointment"><span class="material-symbols-outlined text-[20px]">calendar_today</span></a><button aria-label="Shopping Bag Drawer" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-numeric text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Architectural Header Scrim / Background Flow -->
+<div class="w-full bg-surface-container-low/60 pb-space-lg shadow-sm">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-8">
+<!-- Breadcrumbs & Status Flag -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-6">
+<nav class="flex items-center gap-2 font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">
+<a class="hover:text-secondary transition-colors" href="#">Home</a>
+<span class="text-secondary/50">/</span>
+<a class="hover:text-secondary transition-colors" href="#">Bespoke Commission <span class="font-label-numeric font-normal text-secondary">#AV-8921</span></a>
+<span class="text-secondary/50">/</span>
+<span class="text-on-surface font-semibold">Measurement Protocol</span>
+</nav>
+<div class="flex items-center gap-3 bg-surface-container-highest px-3 py-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-numeric text-label-numeric text-on-surface tracking-wider">Profile Draft: <span class="font-semibold text-primary">#PRF-LONDON-89</span></span>
+<span class="text-outline/40">|</span>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest uppercase">Pending Cutter Validation</span>
+</div>
+</div>
+<!-- Main Title Block & Profile Switcher -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
+<div class="max-w-3xl space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">straighten</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-[0.25em]">ANATOMICAL SPECIFICATION SUITE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:text-display-hero text-on-surface leading-none tracking-tight">
+            Anatomical Calibration &amp; Precision Fit Protocol
+          </h1>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant pt-2 max-w-2xl">
+            Guaranteed absolute bespoke fit backed by master cutters in Mayfair, Manhattan, and Dhaka. Calibrated to your natural stance.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 self-start lg:self-end">
+<div class="bg-surface-container-lowest px-4 py-2.5 shadow-sm">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">Active Silhouette Target</span>
+<div class="flex items-center gap-2 text-on-surface font-headline-sm text-[17px] leading-tight">
+<span>Commission: Two-Piece British Drape</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">expand_more</span>
+</div>
+</div>
+<button class="px-4 py-2.5 bg-surface-container hover:bg-surface-container-high transition-colors font-label-uppercase text-label-uppercase text-on-surface flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">folder_shared</span>
+<span>Switch Profile</span>
+</button>
+</div>
+</div>
+<!-- Protocol Mode Selection Cards (Step 1 Onboarding Method) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-4">
+<!-- Card 1: Interactive Wizard (Active) -->
+<div class="relative bg-surface-container-lowest p-6 shadow-md transition-all duration-300">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">square_foot</span>
+</div>
+<span class="font-label-uppercase text-[10px] tracking-widest bg-secondary text-on-secondary px-2.5 py-1">Active Protocol</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Self-Guided Calibration</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            12 anatomical checkpoints with millimeter-accurate tape placement, real-time variance algorithms, and 3D diagram assist.
+          </p>
+<div class="flex items-center justify-between text-secondary font-label-uppercase text-[11px] pt-3 bg-surface-container-low/40 -mx-6 -mb-6 px-6 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span> 12–15 Minutes</span>
+<span class="font-semibold flex items-center">Engaged <span class="material-symbols-outlined text-[16px] ml-1">check</span></span>
+</div>
+</div>
+<!-- Card 2: Virtual Concierge -->
+<div class="group relative bg-surface-container-lowest/80 hover:bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all duration-300">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-[26px]">videocam</span>
+</div>
+<span class="font-label-uppercase text-[10px] tracking-widest text-on-surface-variant/70">Remote Live</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Virtual Fitting Concierge</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            A 30-minute private consultation via HD video with a Savile Row-trained cutter guiding your measuring companion.
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-uppercase text-[11px] pt-3 bg-surface-container-low/40 -mx-6 -mb-6 px-6 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Next Slot: Today, 3:30 PM</span>
+<a class="text-secondary hover:underline flex items-center font-semibold" href="#">Book Slot →</a>
+</div>
+</div>
+<!-- Card 3: Resident Tailor Dispatch -->
+<div class="group relative bg-surface-container-lowest/80 hover:bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all duration-300">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-[26px]">meeting_room</span>
+</div>
+<span class="font-label-uppercase text-[10px] tracking-widest text-on-surface-variant/70">Salons &amp; Suites</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Resident Tailor Dispatch</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Visit our private Mayfair, Madison Ave, or Gulshan suites, or request an artisanal measuring visit to your private residence.
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-uppercase text-[11px] pt-3 bg-surface-container-low/40 -mx-6 -mb-6 px-6 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">home_pin</span> Global Salons</span>
+<a class="text-secondary hover:underline flex items-center font-semibold" href="#">Request Visit →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stepper Navigation Bar & Imperial/Metric Toggle -->
+<div class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Linear Step Chain -->
+<div class="w-full md:w-auto overflow-x-auto pb-2 md:pb-0 flex items-center gap-3">
+<!-- Step 1 -->
+<div class="flex items-center gap-2 text-secondary flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-numeric text-[11px] flex items-center justify-center font-semibold">✓</span>
+<span class="font-label-uppercase text-label-uppercase">01 Method</span>
+</div>
+<div class="w-6 h-[1px] bg-secondary/40 flex-shrink-0"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-2 text-on-surface font-semibold flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-numeric text-[11px] flex items-center justify-center font-semibold">02</span>
+<span class="font-label-uppercase text-label-uppercase">Torso &amp; Chest</span>
+</div>
+<div class="w-6 h-[1px] bg-surface-container-highest flex-shrink-0"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-2 text-on-surface-variant/60 flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px] flex items-center justify-center">03</span>
+<span class="font-label-uppercase text-label-uppercase">Arms &amp; Shoulders</span>
+</div>
+<div class="w-6 h-[1px] bg-surface-container-highest flex-shrink-0"></div>
+<!-- Step 4 -->
+<div class="flex items-center gap-2 text-on-surface-variant/60 flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px] flex items-center justify-center">04</span>
+<span class="font-label-uppercase text-label-uppercase">Waist &amp; Drape</span>
+</div>
+<div class="w-6 h-[1px] bg-surface-container-highest flex-shrink-0"></div>
+<!-- Step 5 -->
+<div class="flex items-center gap-2 text-on-surface-variant/60 flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px] flex items-center justify-center">05</span>
+<span class="font-label-uppercase text-label-uppercase">Photometric Verify</span>
+</div>
+<div class="w-6 h-[1px] bg-surface-container-highest flex-shrink-0"></div>
+<!-- Step 6 -->
+<div class="flex items-center gap-2 text-on-surface-variant/60 flex-shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px] flex items-center justify-center">06</span>
+<span class="font-label-uppercase text-label-uppercase">Master Review</span>
+</div>
+</div>
+<!-- Unit of Measurement Switcher -->
+<div class="flex items-center gap-3 self-end md:self-center flex-shrink-0">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-wider">Calibration Unit:</span>
+<div class="bg-surface-container p-0.5 flex items-center shadow-inner">
+<button class="px-3 py-1 font-label-uppercase text-label-uppercase bg-surface-container-lowest text-primary shadow-sm" id="btn-in">Inches (in)</button>
+<button class="px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface" id="btn-cm">Centimeters (cm)</button>
+</div>
+</div>
+</div>
+</div>
+<!-- WORKSPACE BODY (Main Calibration Grid: col-lg-8 & col-lg-4) -->
+<div class="max-w-[1360px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: Active Calibration Studio (8 cols) -->
+<div class="lg:col-span-8 space-y-space-md">
+<!-- Checkpoint Detail Banner -->
+<div class="bg-surface-container-lowest p-8 shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-2 pb-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 bg-primary text-surface font-label-numeric text-[11px] tracking-widest font-semibold uppercase">Step 03 / 12</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Torso Calibration</span>
+</div>
+<div class="flex items-center gap-2 text-secondary bg-secondary/10 px-3 py-1 text-xs">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+<span class="font-label-numeric text-[11px]">Level Check: <strong class="font-semibold text-primary">0.0° Parallax True</strong></span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Chest Circumference (Natural Breath)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Pass the measuring tape under both armpits at the widest projection of the pectoral muscles and straight across the shoulder blade line. Breathe out gently without contracting.
+          </p>
+<!-- Interactive Anatomical Diagram & Video Guide Split -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 my-8 pt-4">
+<!-- Anatomical Guide Visualization Placeholder with live HUD -->
+<div class="md:col-span-7 bg-surface-container-low p-6 flex flex-col justify-between relative overflow-hidden group min-h-[340px]">
+<div class="absolute top-4 left-4 z-10 bg-surface/90 backdrop-blur-md px-3 py-1 shadow-sm font-label-uppercase text-[10px] text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Anatomical Plane: Horizontal Thoracic</span>
+</div>
+<!-- Tailoring Diagram Silhouette with Tape Vector Overlay -->
+<div class="relative w-full h-64 flex items-center justify-center my-auto">
+<img class="h-full object-contain opacity-90 transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist architectural line illustration of a tailored masculine torso mannequin seen from three-quarter front angle, warm ivory background, charcoal silhouette lines with an antique gold glowing horizontal measuring tape positioned under the pectoral ridge and across shoulder blades, clean bespoke atelier aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRRLdv-F5st7lg9k_XDiiutiSkviBeQ_J04wUjWF1jbxIbygSsbu6yIDW6iX2zSS93jk81uI1WUmfOyjYpJKHOKVV-g2T88ahRXwacTPkHB0qgRWRwbn9WFu73YiA5sbBk4Xss6FV4fNQ-tmmxPC9w2FO95IN2E9UUF8jODVZrkJNIF2pADABqbAh2wTuYnNs1kXarBBzTNjvpvWmOgnm1XHB76zPuldR9z72TTLRM1Gpr0XBnZWak"/>
+<!-- SVG Tape Line and Guideline Overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<!-- Measuring Ribbon Guide -->
+<path class="animate-pulse" d="M 80,140 Q 200,165 320,140" stroke="#765a24" stroke-dasharray="6 4" stroke-width="2.5"></path>
+<!-- Horizontal level reference -->
+<line stroke="#c5c6cc" stroke-dasharray="2 2" stroke-width="1" x1="60" x2="340" y1="140" y2="140"></line>
+<circle cx="200" cy="153" fill="#765a24" r="4"></circle>
+</svg>
+<!-- Floating Dimension Pin -->
+<div class="absolute right-8 top-1/2 -translate-y-1/2 bg-primary text-on-primary px-2.5 py-1 text-xs font-label-numeric shadow-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">height</span>
+<span>Apex Level: +28.4 cm</span>
+</div>
+</div>
+<!-- Diagram Footnote -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-numeric text-[11px] pt-2">
+<span>Hold tape snug, not pinching skin</span>
+<span class="text-secondary font-semibold">1 Finger Allowance</span>
+</div>
+</div>
+<!-- Video Micro-Guide & Cutter Tips -->
+<div class="md:col-span-5 flex flex-col justify-between space-y-4">
+<div class="relative bg-primary overflow-hidden shadow-sm aspect-video md:aspect-auto md:h-44 flex items-center justify-center group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Close up editorial photograph of master tailor hands gently holding a bespoke yellow measuring tape around a gentleman wearing an off-white cotton dress shirt, soft dramatic studio spotlight, Mayfair atelier aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJEktbRXjbjSnyos-SXdtMkiEZpA6IeLTCAUslB7_e0nL47osYF3Apx5an8h3MWYBbe8Fm5nK2BdBUXVmrW6_e7kOQsvU7vt2BJ5o-1IwZ4C14g23c6zTLP7Bj86Rbljv1AVzLAPYRAhoX2cthLe3wCgHCmNMOX3Qlt8MO79q4ePINMdxCIL43lEFC5oAD5zuzewsojO13mBmCGgZ16ipMG4UTOgJmi6dDpdmb4B13CCKKktawSQHd"/>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-secondary/90 text-on-secondary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<span class="font-label-uppercase text-[10px] text-surface tracking-widest uppercase bg-primary/80 px-2 py-0.5">14s Master Cutter Tip</span>
+</div>
+</div>
+<div class="bg-surface-container p-4 space-y-2">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-uppercase text-[11px] font-semibold">Master Cutter Rule</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                  "Stand naturally looking straight ahead. Do not puff out the chest or hold your breath; European drape relies on true resting volume."
+                </p>
+<div class="font-label-numeric text-[11px] text-secondary text-right pt-1">
+                  — A. Sterling, Savile Row Guild
+                </div>
+</div>
+</div>
+</div>
+<!-- INPUT SYSTEM: Measurement Numeric Dial & Variance Engine -->
+<div class="bg-surface-container-low p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Prominent Numeric Stepper Input -->
+<div class="md:col-span-6 space-y-2">
+<label class="font-label-uppercase text-label-uppercase text-on-surface block tracking-widest" for="chest-input">
+                  Recorded Circumference
+                </label>
+<div class="flex items-stretch bg-surface-container-lowest shadow-sm p-1">
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-lg transition-colors" onclick="adjustValue(-0.25)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex-1 relative flex items-center justify-center">
+<input class="w-full text-center font-headline-md text-headline-md text-primary bg-transparent focus:outline-none tracking-tight font-semibold" id="chest-input" type="text" value="41.50"/>
+<span class="absolute right-4 font-label-numeric text-label-numeric text-on-surface-variant font-medium">IN</span>
+</div>
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-lg transition-colors" onclick="adjustValue(0.25)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Live Anatomical Baseline Variance Engine -->
+<div class="md:col-span-6 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-wider">AI Cutter Baseline Model</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Nominal 41.2 in</span>
+</div>
+<!-- Range Track Visualization -->
+<div class="relative w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<!-- Expected range green zone -->
+<div class="absolute top-0 bottom-0 left-[25%] right-[25%] bg-secondary/30 rounded-full"></div>
+<!-- Marker of current value -->
+<div class="absolute top-0 bottom-0 w-2.5 bg-primary -ml-1 left-[55%] rounded-full shadow"></div>
+</div>
+<div class="flex justify-between font-label-numeric text-[11px] text-on-surface-variant pt-1">
+<span>39.0 in (Min Drape)</span>
+<span class="text-on-surface font-medium">Recorded: 41.5 in</span>
+<span>44.0 in (Max Drape)</span>
+</div>
+</div>
+</div>
+<!-- Real-time Validation Tags & Context Warning -->
+<div class="pt-2 space-y-3">
+<!-- Primary Valid State -->
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-[13px] bg-surface-container-lowest px-4 py-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Within Natural Anatomical Variance for height <strong>6'1" (185 cm)</strong> and weight <strong>182 lbs (82.5 kg)</strong>.</span>
+</div>
+<!-- Contextual Outlier Notification Specimen -->
+<div class="bg-surface-container-high p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">info</span>
+<div class="space-y-0.5">
+<p class="font-body-sm text-[13px] text-on-surface font-medium">Sartorial Variance Advisory</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+                      If you enter &gt;44.0 in, our Mayfair cutter will adjust chest canvas stiffness for optimal roll without rippling.
+                    </p>
+</div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer flex-shrink-0">
+<input checked="" class="accent-secondary w-4 h-4 cursor-pointer" type="checkbox"/>
+<span class="font-label-uppercase text-[11px] text-on-surface">Auto-Compensate Ease</span>
+</label>
+</div>
+</div>
+</div>
+<!-- FIT PREFERENCE SELECTION (Pill cards) -->
+<div class="pt-8 space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fit Preference &amp; Chest Allowance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the garment ease allowance calculated on top of your bare measurement.</p>
+</div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">Canvas Internal Ease</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Option 1: Sartorial Slim -->
+<div class="p-4 bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="font-headline-sm text-[16px] text-on-surface">Sartorial Slim</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">+2.5 in ease</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">
+                  Fitted profile sculpts close to thoracic contours with minimal chest swell. Ideal for sharp evening wear.
+                </p>
+</div>
+<!-- Option 2: Classic Savile Row Drape (SELECTED) -->
+<div class="p-4 bg-surface-container-lowest shadow-md relative">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex justify-between items-start mb-2">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Savile Row Drape</span>
+<span class="font-label-numeric text-[11px] font-semibold text-secondary">+3.75 in ease</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">
+                  Authentic British chest drape. Full canvas allows uninhibited movement while keeping crisp architectural lapels.
+                </p>
+<div class="mt-3 flex items-center gap-1.5 text-secondary font-label-uppercase text-[10px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Active Master Recommendation</span>
+</div>
+</div>
+<!-- Option 3: Relaxed Neapolitan -->
+<div class="p-4 bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="font-headline-sm text-[16px] text-on-surface">Relaxed Neapolitan</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">+4.5 in ease</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">
+                  Deconstructed chest, soft spalla camicia shoulder, generous nonchalant room for continental climate ease.
+                </p>
+</div>
+</div>
+</div>
+<!-- POSTURE & SHOULDER SLOPE ADJUSTERS -->
+<div class="pt-8 space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Anatomical Posture &amp; Shoulder Calibration</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Shoulder Slope Selector -->
+<div class="bg-surface-container-low p-5 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">Shoulder Slope Angle</span>
+<span class="font-label-numeric text-label-numeric text-secondary">Affects Collar Hug</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 px-2 bg-surface-container-lowest text-center hover:bg-surface-container transition-colors">
+<span class="font-body-sm text-body-sm block text-on-surface">Square</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">0° - 15°</span>
+</button>
+<button class="py-2.5 px-2 bg-primary text-surface text-center shadow-sm">
+<span class="font-body-sm text-body-sm block font-medium">Standard</span>
+<span class="font-label-numeric text-[10px] text-secondary">20° Slope</span>
+</button>
+<button class="py-2.5 px-2 bg-surface-container-lowest text-center hover:bg-surface-container transition-colors">
+<span class="font-body-sm text-body-sm block text-on-surface">Sloping</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">Drop 1.5 cm</span>
+</button>
+</div>
+</div>
+<!-- Spinal Posture Selector -->
+<div class="bg-surface-container-low p-5 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">Spinal Attitude</span>
+<span class="font-label-numeric text-label-numeric text-secondary">Balances Vent &amp; Hem</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 px-2 bg-surface-container-lowest text-center hover:bg-surface-container transition-colors">
+<span class="font-body-sm text-body-sm block text-on-surface">Erect</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">Military stance</span>
+</button>
+<button class="py-2.5 px-2 bg-primary text-surface text-center shadow-sm">
+<span class="font-body-sm text-body-sm block font-medium">Natural</span>
+<span class="font-label-numeric text-[10px] text-secondary">Neutral balance</span>
+</button>
+<button class="py-2.5 px-2 bg-surface-container-lowest text-center hover:bg-surface-container transition-colors">
+<span class="font-body-sm text-body-sm block text-on-surface">Forward</span>
+<span class="font-label-numeric text-[10px] text-on-surface-variant">Head forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PHOTOMETRIC ASSIST & ENCRYPTED UPLOAD SECTION -->
+<div class="bg-surface-container-lowest p-8 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">encrypted</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">COMPUTER-VISION ASSIST</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Dual-Angle Posture Verification</h3>
+</div>
+<span class="font-label-uppercase text-[10px] tracking-widest bg-surface-container px-3 py-1.5 text-on-surface-variant">Optional But Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl mb-6">
+            Upload two quick photographs wearing fitted attire. Our proprietary vision pipeline calibrates shoulder blade curvature and suppresses facial data automatically.
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Front Stance Dropzone -->
+<div class="bg-surface-container-low p-6 flex flex-col items-center justify-center text-center space-y-4 group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">person</span>
+</div>
+<div>
+<span class="font-headline-sm text-[17px] text-on-surface block mb-1">Front Full-Body Stance</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Arms relaxed 4 inches from hips • Plain background</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 shadow-sm text-secondary font-label-uppercase text-[10px]">
+<span class="material-symbols-outlined text-[14px]">blur_on</span>
+<span>Automatic Face Masking Enabled</span>
+</div>
+<button class="font-label-uppercase text-[11px] uppercase tracking-widest text-primary hover:text-secondary font-semibold">
+                Select Photo or Drag File
+              </button>
+</div>
+<!-- Profile Stance Dropzone -->
+<div class="bg-surface-container-low p-6 flex flex-col items-center justify-center text-center space-y-4 group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">accessibility</span>
+</div>
+<div>
+<span class="font-headline-sm text-[17px] text-on-surface block mb-1">Side Profile 90° Stance</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Natural spine curve and arm posture angle</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 shadow-sm text-secondary font-label-uppercase text-[10px]">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>End-to-End Encrypted Vault</span>
+</div>
+<button class="font-label-uppercase text-[11px] uppercase tracking-widest text-primary hover:text-secondary font-semibold">
+                Select Photo or Drag File
+              </button>
+</div>
+</div>
+<!-- Privacy Trust Note -->
+<div class="mt-6 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-on-surface-variant text-[12px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span>All reference imagery is permanently shredded 30 days after garment delivery. GDPR &amp; UK-DPA certified.</span>
+</div>
+<a class="text-secondary hover:underline font-label-uppercase text-[11px] whitespace-nowrap" href="#">Privacy Guarantee →</a>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Real-time Dossier & Tailor Concierge (4 cols) -->
+<div class="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
+<!-- Real-Time Spec Ledger Card -->
+<div class="bg-surface-container-lowest p-6 shadow-md">
+<div class="flex items-center justify-between pb-4">
+<div>
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest block">DOSSIER SUMMARY</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Anatomical Ledger</h3>
+</div>
+<span class="w-8 h-8 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-label-numeric text-[12px] font-bold">
+              3/12
+            </span>
+</div>
+<!-- Progress Ring Gauge (SVG) -->
+<div class="bg-surface-container-low p-4 flex items-center gap-4 my-3">
+<div class="relative w-14 h-14 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="25, 100" stroke-linecap="square" stroke-width="3"></path>
+</svg>
+<span class="absolute font-label-numeric text-[12px] font-semibold text-primary">25%</span>
+</div>
+<div>
+<p class="font-label-uppercase text-[11px] font-semibold text-on-surface">Torso Volume Locked</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">9 measurements remaining for cutter sign-off.</p>
+</div>
+</div>
+<!-- Checkpoint List Matrix -->
+<div class="space-y-3 py-4">
+<!-- Item 1: Recorded -->
+<div class="flex items-center justify-between text-body-sm text-[13px] pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="text-on-surface">01. Collar &amp; Neck</span>
+</div>
+<span class="font-label-numeric font-semibold text-on-surface">16.25 in</span>
+</div>
+<!-- Item 2: Recorded -->
+<div class="flex items-center justify-between text-body-sm text-[13px] pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="text-on-surface">02. Cross-Shoulder Span</span>
+</div>
+<span class="font-label-numeric font-semibold text-on-surface">18.75 in</span>
+</div>
+<!-- Item 3: Current Active -->
+<div class="flex items-center justify-between text-body-sm text-[13px] bg-secondary/10 p-2.5 -mx-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">radio_button_checked</span>
+<span class="font-semibold text-primary">03. Chest Circumference</span>
+</div>
+<span class="font-label-numeric font-bold text-secondary">41.50 in</span>
+</div>
+<!-- Item 4: Pending -->
+<div class="flex items-center justify-between text-body-sm text-[13px] text-on-surface-variant/60 pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>04. Natural Waistline</span>
+</div>
+<span class="font-label-numeric">Pending</span>
+</div>
+<!-- Item 5: Pending -->
+<div class="flex items-center justify-between text-body-sm text-[13px] text-on-surface-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>05. Full Sleeve Reach</span>
+</div>
+<span class="font-label-numeric">Pending</span>
+</div>
+<!-- Item 6: Pending -->
+<div class="flex items-center justify-between text-body-sm text-[13px] text-on-surface-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>06. Front Jacket Drop</span>
+</div>
+<span class="font-label-numeric">Pending</span>
+</div>
+<!-- Item 7: Pending -->
+<div class="flex items-center justify-between text-body-sm text-[13px] text-on-surface-variant/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>07. Trouser Waist &amp; Rise</span>
+</div>
+<span class="font-label-numeric">Pending</span>
+</div>
+</div>
+<!-- Master Cutter Dispatch Box -->
+<div class="bg-surface-container-high p-4 my-2 space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-surface font-headline-sm text-[14px]">
+                AS
+              </div>
+<div>
+<span class="font-label-uppercase text-[11px] font-bold text-on-surface block">Alastair Sterling</span>
+<span class="font-label-numeric text-[10px] text-secondary">Head Cutter, Mayfair Salon</span>
+</div>
+</div>
+<p class="font-editorial-italic text-[13px] text-on-surface-variant italic leading-relaxed pt-1">
+              "Your chest-to-shoulder ratio indicates high athletic definition. I will cut the jacket armholes slightly higher to preserve shoulder ease."
+            </p>
+</div>
+<!-- Primary Actions -->
+<div class="pt-4 space-y-3">
+<button class="w-full py-4 bg-primary hover:bg-secondary text-surface hover:text-primary font-label-uppercase text-label-uppercase font-semibold tracking-widest transition-all duration-300 shadow-md flex items-center justify-center gap-2 group">
+<span>Save &amp; Continue to Arms</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full py-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-uppercase text-[11px] tracking-wider transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">bookmark</span>
+<span>Save Incomplete Calibration Draft</span>
+</button>
+</div>
+</div>
+<!-- Live Atelier Concierge Quick Trigger -->
+<div class="bg-primary text-surface p-6 shadow-md space-y-4">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-uppercase text-[10px] text-secondary tracking-widest">LIVE ATELIER SUPPORT</span>
+<h4 class="font-headline-sm text-[18px]">Uncertain of Tape Placement?</h4>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">support_agent</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant/80">
+            Master apprentices are on standby in our London &amp; Dhaka studios to assist via real-time camera inspection.
+          </p>
+<div class="pt-2 flex flex-col gap-2">
+<a class="w-full py-2.5 px-4 bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface text-center font-label-numeric text-[12px] flex items-center justify-center gap-2 transition-colors" href="tel:+442079460912">
+<span class="material-symbols-outlined text-[16px] text-secondary">phone_in_talk</span>
+<span>Mayfair Atelier: +44 20 7946 0912</span>
+</a>
+<button class="w-full py-2.5 px-4 bg-secondary text-on-secondary hover:bg-secondary-fixed text-center font-label-uppercase text-[11px] tracking-widest uppercase transition-colors">
+              Trigger 60-Second Video Check
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script for Stepper & Units -->
+<script>
+    function adjustValue(delta) {
+      const input = document.getElementById('chest-input');
+      if (!input) return;
+      let val = parseFloat(input.value) || 41.50;
+      val = Math.max(20, Math.min(70, val + delta));
+      input.value = val.toFixed(2);
+    }
+
+    const btnIn = document.getElementById('btn-in');
+    const btnCm = document.getElementById('btn-cm');
+    const chestInput = document.getElementById('chest-input');
+
+    if (btnIn && btnCm && chestInput) {
+      btnIn.addEventListener('click', () => {
+        btnIn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnIn.classList.remove('text-on-surface-variant');
+        btnCm.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnCm.classList.add('text-on-surface-variant');
+        let current = parseFloat(chestInput.value);
+        if (current > 70) {
+          chestInput.value = (current / 2.54).toFixed(2);
+        }
+      });
+
+      btnCm.addEventListener('click', () => {
+        btnCm.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnCm.classList.remove('text-on-surface-variant');
+        btnIn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnIn.classList.add('text-on-surface-variant');
+        let current = parseFloat(chestInput.value);
+        if (current < 70) {
+          chestInput.value = (current * 2.54).toFixed(1);
+        }
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="book-private-fitting" href="#">Book Private Fitting</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="heritage-jamdani" href="#">Artisanal Bengal Weaves</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

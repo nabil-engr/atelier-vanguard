@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#bcc7d9", "primary-container": "#111c29", "surface-container-lowest": "#ffffff", "secondary": "#765a24", "surface-container": "#f2ede4", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface": "#1d1c16", "surface-container-high": "#ece8df", "background": "#fef9f0", "on-secondary-container": "#795c27", "surface-container-low": "#f8f3ea", "surface-tint": "#545f6f", "inverse-surface": "#32302b", "secondary-container": "#ffd795", "on-secondary-fixed-variant": "#5c420e", "surface-container-highest": "#e7e2d9", "inverse-primary": "#bcc7d9", "outline-variant": "#c5c6cc", "on-surface-variant": "#44474c", "surface-dim": "#ded9d1", "on-error-container": "#93000a", "on-background": "#1d1c16", "inverse-on-surface": "#f5f0e7", "error": "#ba1a1a", "on-primary-container": "#7a8595", "tertiary-fixed-dim": "#cdc5b9", "on-secondary-fixed": "#271900", "tertiary": "#000000", "on-tertiary-fixed-variant": "#4b463d", "on-secondary": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3d4756", "surface-variant": "#e7e2d9", "on-primary-fixed": "#111c29", "outline": "#75777c", "surface": "#fef9f0", "tertiary-fixed": "#eae1d4", "secondary-fixed": "#ffdea9", "on-tertiary-fixed": "#1f1b13", "tertiary-container": "#1f1b13", "surface-bright": "#fef9f0", "primary-fixed": "#d8e3f6", "primary": "#000000", "on-tertiary-container": "#898378", "secondary-fixed-dim": "#e7c181" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "5rem", "space-lg": "2rem", "space-xs": "0.25rem", "margin-md": "3rem", "margin": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xl": "3.5rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "editorial-italic": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "label-numeric": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "label-uppercase": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "headline-xl-mobile": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "editorial-italic": [ "22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-numeric": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-uppercase": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-xl": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "300" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-md py-space-sm mb-space-md"><span class="font-label-uppercase text-label-uppercase text-secondary uppercase block mb-space-xs">Maison De Maître</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">Atelier Vanguard</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Sartorial Operations Core</span></div><div class="px-space-md mb-space-sm"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase tracking-widest block">Main Operations</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">view_quilt</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="production-kanban" href="#"><span class="material-symbols-outlined text-[20px]">view_kanban</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Production Kanban</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="measurement-workbench" href="#"><span class="material-symbols-outlined text-[20px]">straighten</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Measurement Workbench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="client-dossiers" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Client Dossiers</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fabric-vault-inventory" href="#"><span class="material-symbols-outlined text-[20px]">texture</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Fabric Vault Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="alterations-queue" href="#"><span class="material-symbols-outlined text-[20px]">content_cut</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Alterations Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financials-and-escrow" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Financials &amp; Escrow</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Settings</span></a></nav></div><div class="px-space-md py-space-sm bg-surface-container mx-space-sm"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Cutter Bench Cadence</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-label-numeric text-label-numeric text-on-surface block">8 Active Patrons in Fitting</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Super 150s Reserve: 420m</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Salon:</span><span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">London Savile Row</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">LDN</span><span class="font-label-numeric text-label-numeric text-on-surface">14:32 BST</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NYC</span><span class="font-label-numeric text-label-numeric text-on-surface">09:32 EDT</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">DAC</span><span class="font-label-numeric text-label-numeric text-on-surface">19:32 +06</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-uppercase text-label-uppercase text-on-surface">Master Cutter Active</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-uppercase text-label-uppercase text-on-surface leading-none">Alistair Vance</span><span class="font-label-numeric text-label-numeric text-secondary leading-none mt-space-xs">Master Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<div class="px-space-md md:px-space-lg lg:px-space-xl py-space-md space-y-space-xl max-w-[1440px] mx-auto w-full">
+<!-- Top Executive Header & Ledger Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase">Dual-Sovereignty Treasury &amp; Guild Trust</span>
+<span class="text-on-surface-variant/40">/</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Q4 FY-2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Financials, Escrow &amp; Artisan Ledger</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+          Fiduciary oversight of bespoke commission tranches, ring-fenced client deposits across London &amp; Dhaka, and direct ethical disbursements to Sonargaon master pit-loom weavers.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-3 text-on-surface transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span class="font-label-uppercase text-label-uppercase tracking-wider">Coutts Reconciliation</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-primary-container hover:bg-surface-container-highest px-space-md py-3 text-surface-container-lowest transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span class="font-label-uppercase text-label-uppercase tracking-wider">Export Full Ledger</span>
+</button>
+</div>
+</div>
+<!-- Executive Metrics Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-24 h-24 bg-surface-container-low rounded-bl-full -mr-6 -mt-6 pointer-events-none transition-transform group-hover:scale-110"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">Ring-Fenced Escrow</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">lock</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$682,400 <span class="font-label-numeric text-label-numeric text-on-surface-variant font-normal">USD</span></div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-numeric text-label-numeric">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+<span>100% Custody • Coutts &amp; SCB Dhaka</span>
+</div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">Monthly Escrow Inflow</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">trending_up</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$284,500 <span class="font-label-numeric text-label-numeric text-on-surface-variant font-normal">USD</span></div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric">
+<span class="text-secondary font-semibold">+18.4% vs prev cycle</span>
+<span class="text-on-surface-variant">38 Active Patrons</span>
+</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">Artisan Direct Fair-Wage</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">handshake</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$94,200 <span class="font-label-numeric text-label-numeric text-on-surface-variant font-normal">USD</span></div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric">
+<span class="text-on-surface-variant">4.2× Market Benchmark</span>
+<span class="text-secondary font-semibold">Bengal Trust Clear</span>
+</div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">Pending Releases</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">hourglass_top</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">14 <span class="font-headline-sm text-headline-sm font-normal text-on-surface">Tranches</span></div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between font-label-numeric text-label-numeric">
+<span class="text-secondary font-medium">$58,750 USD in review</span>
+<span class="text-on-surface-variant">Cutter verification</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Currency Global Vault Status & Visual Breakdown -->
+<div class="bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-1 uppercase">Sovereign Vault Reserves &amp; Escrow Solvency</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Multi-Jurisdictional Depository Balances</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-lowest px-space-md py-2 flex items-center gap-space-xs shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface">100% Fully Backed</span>
+<span class="text-on-surface-variant text-label-numeric">· Smart Contract Escrow</span>
+</div>
+</div>
+</div>
+<!-- Vault Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Vault 1: London -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-uppercase text-label-uppercase bg-surface-container px-2 py-0.5 text-on-surface">GBP</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">London Savile Row Vault</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">£310,200 <span class="text-label-numeric font-label-numeric text-on-surface-variant">GBP</span></div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-space-xs">
+<span>Coutts &amp; Co. Private Client</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">≈ $397,056 USD</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 58%"></div>
+</div>
+</div>
+<!-- Vault 2: Manhattan -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-uppercase text-label-uppercase bg-surface-container px-2 py-0.5 text-on-surface">USD</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Manhattan UES Depository</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">domain</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">$220,500 <span class="text-label-numeric font-label-numeric text-on-surface-variant">USD</span></div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-space-xs">
+<span>JP Morgan Private Bank</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">32.3% Escrow Total</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 32%"></div>
+</div>
+</div>
+<!-- Vault 3: Dhaka -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-uppercase text-label-uppercase bg-surface-container px-2 py-0.5 text-on-surface">BDT</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Dhaka Artisan Guild Reserve</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">৳14,850,000 <span class="text-label-numeric font-label-numeric text-on-surface-variant">BDT</span></div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-space-xs">
+<span>Standard Chartered Bangladesh</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">≈ $124,790 USD</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 18%"></div>
+</div>
+</div>
+</div>
+<!-- Inline SVG Ratio Representation -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<svg class="w-14 h-14 shrink-0 text-secondary" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-tight">1.00 : 1.00 Solvency Equilibrium</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every commissioned meter and cutter hour corresponds to segregated fiat escrow. No fractional leverage permitted under Vanguard Constitution.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<div class="font-label-uppercase text-label-uppercase text-on-surface-variant">Automated Smart Release</div>
+<div class="font-label-numeric text-label-numeric text-secondary font-semibold">Active &amp; Calibrated</div>
+</div>
+<div>
+<div class="font-label-uppercase text-label-uppercase text-on-surface-variant">Audit Signature</div>
+<div class="font-label-numeric text-label-numeric text-on-surface">PwC London Sartorial Fiduciary</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section A: Active Commission Escrow Tranches (Milestone Clearance) -->
+<div class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase block mb-1">Operational Clearing House</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Active Commission Escrow Tranches</h2>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center bg-surface-container-low p-1 gap-1">
+<button class="px-space-md py-2 font-label-uppercase text-label-uppercase bg-surface-container-lowest text-on-surface shadow-sm" type="button">All Tranches (38)</button>
+<button class="px-space-md py-2 font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors" type="button">Pending Cutter (6)</button>
+<button class="px-space-md py-2 font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors" type="button">Awaiting Patron (8)</button>
+<button class="px-space-md py-2 font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors" type="button">Cleared &amp; Disbursed</button>
+</div>
+</div>
+<!-- Tranche Table Container -->
+<div class="bg-surface-container-lowest shadow-sm overflow-x-auto">
+<table class="w-full text-left min-w-[980px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-uppercase text-label-uppercase tracking-wider">
+<th class="py-space-md px-space-md">Commission ID</th>
+<th class="py-space-md px-space-md">Patron &amp; Salon</th>
+<th class="py-space-md px-space-md">Garment / Textile</th>
+<th class="py-space-md px-space-md">Milestone Stage</th>
+<th class="py-space-md px-space-md text-right">Tranche Value</th>
+<th class="py-space-md px-space-md">Escrow Status</th>
+<th class="py-space-md px-space-md">Verification Trigger</th>
+<th class="py-space-md px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface block">#AV-2025-9921</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Savile Row #04</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface block">Lord Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mayfair Private Salon</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface block">Mayfair Royal Drape</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Super 160s Worsted Chalkstripe</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-uppercase text-label-uppercase text-secondary block">Stage 04: Muslin Fitting</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">25% Settlement Tranche</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface block">$635.00</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">USD</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary-container text-on-secondary-fixed-variant font-label-numeric text-label-numeric font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Awaiting Patron Biometric
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Verified by Alastair Vance</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Oct 24 • Savile Row Cutting Bench</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-primary hover:bg-secondary px-space-md py-2 text-on-primary font-label-uppercase text-label-uppercase tracking-wider transition-colors shadow-sm whitespace-nowrap" type="button">
+                  Authorize Release
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface block">#AV-2025-9944</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dhaka Bespoke #12</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface block">Baroness Rothschild</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Geneva Direct Client</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface block">Royal Jamdani Sherwani</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">300-Count Handloom Gold Zari</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-uppercase text-label-uppercase text-secondary block">Stage 01: Cloth &amp; Loom Verification</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">50% Advance Tranche</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface block">$2,100.00</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">USD</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container text-on-surface font-label-numeric text-label-numeric font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Disbursed to Sonargaon Guild
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Certified by Tariq Rahman</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Loom Audit Hash: 0x8a9f...c4</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-highest px-space-md py-2 text-on-surface font-label-uppercase text-label-uppercase tracking-wider transition-colors shadow-sm whitespace-nowrap" type="button">
+                  View Receipt
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface block">#AV-2025-9905</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mayfair Salon #02</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface block">Ambassador C. Moreau</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Paris Diplomatic Suite</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface block">Morning Coat Three-Piece</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Super 150s Midnight Barathea</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-uppercase text-label-uppercase text-secondary block">Stage 03: Canvas Basting</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">30% Floating Tranche</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface block">$1,095.00</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">USD</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary-container text-on-secondary-fixed-variant font-label-numeric text-label-numeric font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Ready for Release
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Basting approved Oct 21</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Master Horsehair Canvas Spec</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-primary hover:bg-secondary px-space-md py-2 text-on-primary font-label-uppercase text-label-uppercase tracking-wider transition-colors shadow-sm whitespace-nowrap" type="button">
+                  Authorize Release
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-label-numeric text-label-numeric font-semibold text-on-surface block">#AV-2025-9928</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Manhattan UES #08</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface block">Devin Khondoker</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">New York Tribeca</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface block">Silk Velvet Dinner Jacket</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Quilted Mulberry Silk Satin</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-uppercase text-label-uppercase text-secondary block">Stage 02: Pattern Metrology</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">20% In-Progress Tranche</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface block">$525.00</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">USD</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container text-on-surface-variant font-label-numeric text-label-numeric font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Cleared &amp; Settled
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface block">Metrology Laser Scan OK</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Receipt #TX-8821</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-highest px-space-md py-2 text-on-surface font-label-uppercase text-label-uppercase tracking-wider transition-colors shadow-sm whitespace-nowrap" type="button">
+                  View Receipt
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section B: Bengal Master Artisan Fair-Wage & Guild Ledger -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Visual Context / Artisan Guild Spotlight Card (5 cols) -->
+<div class="lg:col-span-5 bg-primary-container text-surface-container-lowest p-space-lg shadow-sm space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase">Artisanal Direct Equity</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest tracking-tight">Bengal Guild Fair-Wage Mandate</h3>
+<p class="font-body-md text-body-md text-on-primary-container mt-2">
+            Every thread woven in Sonargaon and Dhaka carries an indelible financial compact: Vanguard pays a minimum 400% premium over prevailing regional textile rates directly to master pit-loom ustads and communal guild reserves.
+          </p>
+</div>
+<div class="my-space-md relative overflow-hidden h-52 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A master Bengali handloom weaver working on an intricate Jamdani floral wooden pit loom, warm golden cinematic directional light, deep navy shadows, rich tactile thread detail, serene dignified portrait in a heritage artisan atelier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQotcRTW79_iddxxZyP_K-gjNiX5cJYEQ1stdd1FpWHGWSzUbeS4vq8vo2_LQLBYm5DTu31S1cF6RAq5aNHmwd4IGaiU5veMq1ZC6sVPAqR2byJA9yeIOxwbcWCZP9HOLl8eqJ2dxYaQwnjZJ5X8zkMOh3867cmntBymqYDVKN_6F6GBPLcHNqWQL5RChUK61pExT3onr0MOMJ6K_LFt-JOijFZtoQlq_F0btRFpQ13aLP3Qz5q6hq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-surface-container-lowest bg-primary-container/80 px-2 py-1">Sonargaon Loom Bench #03</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">180hrs Guild Verified</span>
+</div>
+</div>
+<div class="space-y-space-xs pt-space-xs text-on-primary-container">
+<div class="flex items-center justify-between text-body-sm">
+<span>Average Regional Loom Wage</span>
+<span class="font-label-numeric text-label-numeric">$3.20 / hour</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-surface-container-lowest font-medium">Atelier Vanguard Direct Guarantee</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">$15.83 / hour</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span>Apprentice Endowment Allocation</span>
+<span class="font-label-numeric text-label-numeric">5% Gross Commission</span>
+</div>
+</div>
+</div>
+<!-- Artisan Ledger Table & Disbursements (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase block mb-1">Direct Settlement Ledger</span>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Bengal Master Weaver Disbursements</h3>
+</div>
+<button class="inline-flex items-center gap-1 font-label-uppercase text-label-uppercase text-secondary hover:text-on-surface transition-colors self-start sm:self-auto" type="button">
+<span>Audit Certificate</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Ledger Cards / Rows -->
+<div class="space-y-space-sm">
+<!-- Artisan Row 1 -->
+<div class="bg-surface-container-low p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ustad Rahim Uddin</span>
+<span class="font-label-uppercase text-label-uppercase bg-secondary-container text-on-secondary-fixed-variant px-2 py-0.5">Master Weaver</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sonargaon Pit-Loom #03 • 300-Count Royal Peacock Weft</p>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">180 Handloom Hours Logged • Commission #AV-2025-9944</div>
+</div>
+<div class="text-left md:text-right space-y-1">
+<div class="font-headline-md text-headline-md text-on-surface">$2,850.00 <span class="text-label-numeric font-label-numeric text-on-surface-variant">USD</span></div>
+<span class="inline-flex items-center gap-1 text-secondary font-label-numeric text-label-numeric font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Disbursed to Guild Trust
+              </span>
+</div>
+</div>
+<!-- Artisan Row 2 -->
+<div class="bg-surface-container-low p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Master Anisur Rahman</span>
+<span class="font-label-uppercase text-label-uppercase bg-surface-container text-on-surface-variant px-2 py-0.5">Bench #01 Ustad</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dhaka Jamdani Center • 400-Count Nilambari Indigo Silk Zari</p>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">120 Hours Logged • Commission #AV-2025-9972</div>
+</div>
+<div class="text-left md:text-right space-y-1">
+<div class="font-headline-md text-headline-md text-on-surface">$1,900.00 <span class="text-label-numeric font-label-numeric text-on-surface-variant">USD</span></div>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-numeric text-label-numeric">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+                Scheduled Oct 28 Release
+              </span>
+</div>
+</div>
+<!-- Apprentice Endowment Fund Row -->
+<div class="bg-surface-container-low p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Apprentice Guild Endowment Fund</span>
+<span class="font-label-uppercase text-label-uppercase bg-secondary text-surface-container-lowest px-2 py-0.5">Communal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dhaka Traditional Weavers Academy • Tooling &amp; Spindle Subsidy</p>
+<div class="font-label-numeric text-label-numeric text-on-surface-variant">5% Gross Allocation from October Global Commissions</div>
+</div>
+<div class="text-left md:text-right space-y-1">
+<div class="font-headline-md text-headline-md text-on-surface">$14,225.00 <span class="text-label-numeric font-label-numeric text-on-surface-variant">USD</span></div>
+<span class="inline-flex items-center gap-1 text-secondary font-label-numeric text-label-numeric font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Transferred to Academy Trust
+              </span>
+</div>
+</div>
+</div>
+<!-- Trust Note Footer -->
+<div class="pt-space-xs flex items-center gap-space-xs text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<span>Verified under FairCraft South Asia Accord • Registration #BWA-DH-2025-089</span>
+</div>
+</div>
+</div>
+<!-- Section C: Financial Audit Trail, Compliance Export & Cryptographic Hashes -->
+<div class="bg-surface-container-low p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase block mb-1">Cryptographic Ledger &amp; Regulatory Conformance</span>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Real-Time Escrow Verification Trail</h3>
+</div>
+<!-- Actions & Compliance Certs -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="bg-surface-container-lowest hover:bg-surface-container px-space-md py-2.5 font-label-uppercase text-label-uppercase text-on-surface shadow-sm transition-colors" type="button">
+            Export CSV / PDF
+          </button>
+<button class="bg-primary text-on-primary hover:bg-secondary px-space-md py-2.5 font-label-uppercase text-label-uppercase tracking-wider transition-colors shadow-sm" type="button">
+            Generate Audit Certificate
+          </button>
+</div>
+</div>
+<!-- Hash Stream Log -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm space-y-space-xs font-label-numeric text-label-numeric">
+<!-- Log Entry 1 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-2 border-b border-surface-container gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+<span class="text-on-surface font-semibold">BLOCK #891,241</span>
+<span class="text-on-surface-variant hidden sm:inline">•</span>
+<span class="text-on-surface-variant">Disbursement: Ustad Rahim Uddin ($2,850.00 USD)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant/80 truncate max-w-[280px]">Hash: 0xf492e8c2...89a19c</span>
+<span class="text-secondary font-semibold">SAVILE-DHAKA-CLEAR</span>
+</div>
+</div>
+<!-- Log Entry 2 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-2 border-b border-surface-container gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">fingerprint</span>
+<span class="text-on-surface font-semibold">BLOCK #891,240</span>
+<span class="text-on-surface-variant hidden sm:inline">•</span>
+<span class="text-on-surface-variant">Escrow Ingestion: Commission #AV-2025-9921 ($2,540.00 USD Deposit)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant/80 truncate max-w-[280px]">Hash: 0x3bb1709d...ee1452</span>
+<span class="text-on-surface-variant">COUTTS-ESCROW-LOCKED</span>
+</div>
+</div>
+<!-- Log Entry 3 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-2 border-b border-surface-container gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">token</span>
+<span class="text-on-surface font-semibold">BLOCK #891,239</span>
+<span class="text-on-surface-variant hidden sm:inline">•</span>
+<span class="text-on-surface-variant">Guild Endowment Auto-Split: $14,225.00 to Dhaka Weavers Academy</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant/80 truncate max-w-[280px]">Hash: 0x90a827cf...55db10</span>
+<span class="text-secondary font-semibold">ENDOWMENT-COMMITTED</span>
+</div>
+</div>
+<!-- Log Entry 4 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">receipt_long</span>
+<span class="text-on-surface font-semibold">BLOCK #891,238</span>
+<span class="text-on-surface-variant hidden sm:inline">•</span>
+<span class="text-on-surface-variant">Settlement Cleared: Dinner Jacket Pattern Metrology ($525.00 USD)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant/80 truncate max-w-[280px]">Hash: 0x11cc4e71...99a0bf</span>
+<span class="text-on-surface-variant">JPM-UES-SETTLED</span>
+</div>
+</div>
+</div>
+<!-- Compliance Badges Bottom Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs text-on-surface-variant font-label-uppercase text-label-uppercase">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">policy</span>
+<span>UK FCA Ring-Fence Regulated</span>
+</div>
+<span class="text-on-surface-variant/30">|</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">gavel</span>
+<span>Bangladesh Bank Guild Protocol</span>
+</div>
+<span class="text-on-surface-variant/30">|</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">assured_workload</span>
+<span>Monthly Independent PwC Audit</span>
+</div>
+</div>
+<div class="text-body-sm font-label-numeric text-secondary">
+          Next Scheduled Reconciliation: 00:00 GMT (in 9 hrs 28 min)
+        </div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

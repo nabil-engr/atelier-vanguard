@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest flex items-center justify-center gap-space-md flex-wrap"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">lock</span><span>256-Bit SSL Encrypted Bespoke Checkout</span></div><span class="hidden sm:inline opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">support_agent</span><span>Private Concierge Desk: London +44 20 7946 0912 • NY +1 212 555 0184</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden lg:flex items-center gap-4 xl:gap-5" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Measurement</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a aria-current="page" class="transition-colors text-secondary font-semibold" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center border border-outline-variant/60 rounded px-2 py-1 gap-1 font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low"><span class="material-symbols-outlined text-[14px] text-secondary">currency_exchange</span><select aria-label="Select Currency" class="bg-transparent font-label-numeric text-label-numeric text-on-surface focus:outline-none cursor-pointer pr-1"><option selected="" value="USD">USD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></div><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><span class="hidden xl:inline">Guaranteed Safe Protocol</span></div><a class="inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="multi-step-checkout" href="#">Secure Checkout</a></div></div><div class="bg-surface-container-low border-t border-outline-variant/30 py-2 px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-numeric text-label-numeric text-on-surface-variant"><div class="flex items-center gap-2"><a class="hover:text-secondary transition-colors" data-path="home" href="#">Atelier</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Fitting</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><span class="text-secondary font-medium">Multi-Step Checkout</span></div><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span><span>Priority Tailoring Queue Confirmed</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full selection:bg-secondary selection:text-on-secondary">
+<!-- Top Archival Notification Ribbon -->
+<div class="w-full bg-primary-container text-surface px-margin py-3">
+<div class="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 font-label-numeric text-label-numeric">
+<div class="flex items-center gap-3">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-surface font-semibold tracking-wider">COMMISSION SEALED &amp; RECORDED</span>
+<span class="text-on-primary-container hidden md:inline">|</span>
+<span class="text-on-primary-container">Registry Ledger: <strong class="text-surface font-mono">AV-8942-LON</strong></span>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span> Escrow Sealed: $1,790.00 USD</span>
+<span class="hidden lg:inline">•</span>
+<span class="hidden lg:inline">Vault Custody: Loro Piana Bolt #LP-9921</span>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1360px] mx-auto px-margin lg:px-margin-lg py-space-xl space-y-space-xl">
+<!-- Hero Charter Certificate Card -->
+<div class="relative bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-xl overflow-hidden">
+<!-- Ambient decorative gradient wash -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-gradient-to-br from-secondary/15 via-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row justify-between items-start gap-gutter-lg">
+<div class="max-w-3xl space-y-space-md">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-uppercase text-label-uppercase tracking-widest uppercase">
+              Sovereign Charter Confirmed
+            </span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">
+              October 28, 2025 • 11:30 GMT
+            </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+            The Ninety-Hour Journey Begins.
+          </h1>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant leading-relaxed">
+            “Lord Sterling, your silhouette has been permanently scribed into the Savile Row guild register. Over the forthcoming four weeks, eighty-four distinct anatomical points will be translated into floating horsehair, unspun silk, and artisanal weft.”
+          </p>
+<div class="pt-2 flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">draw</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary leading-none">Master Alastair Sterling</p>
+<p class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider mt-1">Head Cutter • Mayfair Guildroom No. 4</p>
+</div>
+</div>
+</div>
+<!-- Archival Seal & Quick Action Drawer -->
+<div class="w-full lg:w-80 flex flex-col justify-between bg-surface-container-low p-space-lg shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center justify-between pb-3 bg-surface-container px-3 py-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">COMMISSION ESCROW</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-bold">100% SECURED</span>
+</div>
+<div class="space-y-2 font-label-numeric text-label-numeric text-on-surface-variant">
+<div class="flex justify-between">
+<span>Anatomical Ledger:</span>
+<span class="text-primary font-semibold">#PRF-LONDON-89</span>
+</div>
+<div class="flex justify-between">
+<span>First Fitting Target:</span>
+<span class="text-primary font-semibold">Nov 24, 2025</span>
+</div>
+<div class="flex justify-between">
+<span>Final Cedar Delivery:</span>
+<span class="text-primary font-semibold">Dec 14, 2025</span>
+</div>
+<div class="flex justify-between">
+<span>Courier Protocol:</span>
+<span class="text-secondary font-semibold">DHL Sovereign DDP</span>
+</div>
+</div>
+</div>
+<div class="pt-6 space-y-2">
+<button class="w-full h-12 bg-primary text-surface font-label-uppercase text-label-uppercase tracking-widest hover:bg-secondary transition-colors flex items-center justify-center gap-2" onclick="alert('Generating Cryptographically Sealed Sartorial Charter (PDF)...')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Charter (PDF)</span>
+</button>
+<button class="w-full h-10 bg-surface-container text-on-surface hover:bg-surface-variant font-label-uppercase text-label-uppercase tracking-widest transition-colors flex items-center justify-center gap-2" onclick="alert('Sartorial Calendar milestones added to Apple Wallet &amp; iCal.')">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Add to Wallet / iCal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-space-lg pt-space-lg bg-surface-container-low p-4">
+<div class="p-3">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">CALIBRATION TOLERANCE</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold">&lt; 0.45 mm</span>
+<span class="font-label-numeric text-label-numeric text-secondary block mt-1">Sartorial Gold Standard</span>
+</div>
+<div class="p-3">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">MANUAL HAND-STITCH HOURS</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold">88 Hours</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block mt-1">Pad-stitched horsehair canvas</span>
+</div>
+<div class="p-3">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">FABRIC BOLT ALLOCATION</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold">3.85 Metres</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block mt-1">Loro Piana Tasmania 150s</span>
+</div>
+<div class="p-3">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">FIT GUARANTEE</span>
+<span class="font-headline-md text-headline-md text-secondary font-semibold">Perpetual</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block mt-1">Lifetime adjustments worldwide</span>
+</div>
+</div>
+</div>
+<!-- Active Production Milestone Progress Overview -->
+<div class="bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-md space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">LIVE SARTORIAL PIPELINE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Ten-Stage Master Craftsmanship Tracker</h2>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant block">Overall Progression</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Stage 3 of 10 • 28% Complete</span>
+</div>
+<div class="w-14 h-14 bg-surface-container flex items-center justify-center rounded-full text-secondary">
+<!-- Inline SVG Gauge -->
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="28, 100" stroke-linecap="square" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Linear Micro Step Bar -->
+<div class="w-full bg-surface-container h-2 relative overflow-hidden">
+<div class="bg-secondary h-full transition-all duration-700 w-[28%]"></div>
+</div>
+<!-- The 10 Interactive Pipeline Stages -->
+<div class="space-y-4 pt-4">
+<!-- Stage 1: Completed -->
+<div class="group bg-surface-container-low p-space-md transition-all hover:bg-surface-container flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-label-numeric text-label-numeric font-bold shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface px-2 py-0.5 font-bold">COMPLETED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Oct 27, 2025 • 10:14 GMT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Stage 01: Order Confirmed &amp; Escrow Deposit Ratified</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sovereign settlement validated by Mayfair Treasury. Raw material funding locked into Guild Escrow account #ESC-992.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right shrink-0">
+<div>
+<p class="font-label-uppercase text-[10px] text-on-surface-variant">TREASURY STEWARD</p>
+<p class="font-body-sm text-body-sm font-semibold text-primary">Julian Vance, FRSA</p>
+</div>
+<div class="w-12 h-12 bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Intricate golden wax seal stamped onto handmade deckle edge cotton parchment paper under warm daylight in an archival bespoke London counting house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vGHN4KhNKm54cJPRnzdvUQyJe6c8Sy2ET6zUXKEHaiWRP15d99mKXyPJCGFIwH0Z6aJ1v9_PkN6-AUSidQM3tpJZebfj-flZqNd8JN1vsGdJehEj_Ao72QZo9Bs0a699fThOQw9Z80PLDQL7k7c8FvSUyUOG-O02YQG8ZFB4f6CLL5eKJhUhmoQalmsz1Iaa-tv5UhVquq1YZBbpH-F3dlYV2N5L1rSaMrmG__UlmqTdfPWV8Pjc"/>
+</div>
+</div>
+</div>
+<!-- Stage 2: Completed -->
+<div class="group bg-surface-container-low p-space-md transition-all hover:bg-surface-container flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-label-numeric text-label-numeric font-bold shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface px-2 py-0.5 font-bold">COMPLETED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Oct 27, 2025 • 11:30 GMT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Stage 02: Anatomical Calibration &amp; Fit Sign-off</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full posture analysis across 38 biometric markers: sloped right shoulder (1.2°), high chest rake, and 7.5" drop locked.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right shrink-0">
+<div>
+<p class="font-label-uppercase text-[10px] text-on-surface-variant">MASTER FITTER</p>
+<p class="font-body-sm text-body-sm font-semibold text-primary">Alastair Sterling</p>
+</div>
+<div class="w-12 h-12 bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Architectural tailoring chalk measurement diagrams drawn on charcoal bespoke drafting board with horn protractor and brass tailor ruler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIamIMDK6JspdIbu5TEyZAUCy_yN6MIug-b7rg6QvELUZadVhZzMRRaH0ogbX18zypz1PmQouM2l77REi8-T5r_JfZsgdJrgQSD2oeAnAFr57W0AfQq0fotdxRL0qUGMNQMRVJ8yENznwdq5fApgEgOJ9h6T35IuQwUhvH3O5Y6u0y0r2JhgzDs-OpKgyGzbRxvZVrZB7s9mgpoTtXVwS0LiFPZoQxe_VY7vRrmeqAEGq1c5TfYiT"/>
+</div>
+</div>
+</div>
+<!-- Stage 3: ACTIVE CURRENT STAGE -->
+<div class="group bg-secondary-container/30 p-space-md shadow-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-secondary text-surface flex items-center justify-center font-label-numeric text-label-numeric font-bold shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-secondary text-on-secondary px-2.5 py-0.5 font-bold tracking-widest animate-pulse">CURRENT ACTIVE STAGE</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Today • Piedmont Humidity Chamber</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Stage 03: Sovereign Fabric Allocation &amp; Cold Vault Weave Release</h3>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Bolt #LP-9921 retrieved from Piedmont cold vaults (18°C, 65% humidity). Resting under Italian spring weights for 48 hours to relax worsted Super 150s fibers before shearing.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right shrink-0">
+<div>
+<p class="font-label-uppercase text-[10px] text-secondary font-bold">WEAVE ARCHIVIST</p>
+<p class="font-body-sm text-body-sm font-bold text-primary">Matteo Castiglione (Biella)</p>
+</div>
+<div class="w-12 h-12 bg-surface-variant overflow-hidden shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High-resolution macro view of luxurious midnight blue Loro Piana super 150s wool weave with subtle silk sheen, shot under soft studio spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQWkVrSybKIaLV-U09NyTukrYgXYp5mrukusqjL86p941e4B7lxS2DQPdUfmyIIHq0p-ubCpoBzpLlboLAJQ-pksf8fS6njskm7nFD5TYk9Mld0uc5gTRVMhDV8PJ6ODWqjLdB3ed7oHdGMLdgKYBA8X6ZGQq3Y4I_O8XWQQetgyqV7kMMDUa1C_z_JUtvqHNDPy5k0PvE80SzqxQ5yddTK4bIBqyumo5aI-XlCaZZnATm14rApKFp"/>
+</div>
+</div>
+</div>
+<!-- Stage 4: Upcoming -->
+<div class="bg-surface-container-low opacity-85 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              04
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Oct 31, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 04: Bespoke Pattern Drafting &amp; Unique Paper Sheaf Creation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hand-drafting one-of-a-kind heavy card master templates by Lord Sterling’s personal anatomist.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Draftsman: Giles Abernathy</span>
+<span class="text-secondary">Savile Row Bench 2</span>
+</div>
+</div>
+<!-- Stage 5: Upcoming -->
+<div class="bg-surface-container-low opacity-80 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              05
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Nov 04, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 05: Hand-Shearing &amp; Cloth Cutting Bench</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Precision razor cutting using 14-inch Sheffield shears along structural warp threads with generous inlay seam margins.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Lead Shear: Master Cutter</span>
+<span class="text-secondary">London Cutting Hall</span>
+</div>
+</div>
+<!-- Stage 6: Upcoming -->
+<div class="bg-surface-container-low opacity-75 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              06
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Nov 09, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 06: Floating Horsehair Canvas Pad-Stitching &amp; Basting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Over 3,200 invisible hand pad-stitches shaping the lapel roll and chest canvas for self-molding memory.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Artisan: Elena Rossi</span>
+<span class="text-secondary">Milan Craft Studio</span>
+</div>
+</div>
+<!-- Stage 7: Upcoming -->
+<div class="bg-surface-container-low opacity-75 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              07
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Nov 16, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 07: Hand-Worked Milanese Lapel &amp; Bengal Jamdani Interior Facing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flawless raised buttonholes sewn with wax-treated Bengal silk gimp alongside sovereign Jamdani breast pocket facing.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Master Weaver: Rahim Uddin</span>
+<span class="text-secondary">Dhaka Heritage Guild</span>
+</div>
+</div>
+<!-- Stage 8: Upcoming -->
+<div class="bg-surface-container-low opacity-70 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              08
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Nov 20, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 08: Master Tailor Quality Audit &amp; Drape Calibration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Multi-axis vertical drape balancing under simulated body movement. Tolerance verified to &lt;0.5mm.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Inspector: Henri de Saint-Germain</span>
+<span class="text-secondary">Savile Row Audit Board</span>
+</div>
+</div>
+<!-- Stage 9: Upcoming -->
+<div class="bg-surface-container-low opacity-70 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              09
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5">QUEUED</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Scheduled: Nov 23, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 09: Handcrafted Aromatic Cedar Chest Packaging</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Garment nested in pure unbleached linen inside English aromatic cedar wood travel chest with brass latch monogramming.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Cabinetmaker: Edward Croft</span>
+<span class="text-secondary">Cotswolds Atelier</span>
+</div>
+</div>
+<!-- Stage 10: Final Delivery -->
+<div class="bg-surface-container-low opacity-65 p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-on-surface-variant flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              10
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-[10px] bg-secondary-container text-on-secondary-container px-2 py-0.5 font-semibold">DESTINATION</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Target Dispatch: Nov 24, 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mt-1">Stage 10: Sovereign White-Glove Transit &amp; In-Person Basting Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Discreet private courier direct to Mayfair residence with fitting specialist available on standby.</p>
+</div>
+</div>
+<div class="text-right shrink-0 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="block">Carrier: DHL Sovereign Priority</span>
+<span class="text-secondary">Insured Value $10,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Split: Commission Dossier & Consignment Financials -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Left 7 Cols: Commissioned Garment Specs -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-md space-y-6">
+<div class="flex items-center justify-between pb-3 bg-surface-container px-4 py-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">COMMISSIONED ATELIER SPECIFICATION</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-bold">PIECE 1 OF 1</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-gutter">
+<div class="w-full sm:w-48 h-64 bg-surface-container shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Bespoke men's two-piece midnight navy suit on tailored wooden mannequin showing lapel roll and Jamdani silk interior facing inside London Mayfair atelier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu2L1Z05TSP9DCFBcfAirvHOJWNxwEDPuxOLHbU-mv5Pg2aTqVISlze4B1_-Qg8jwLa1tZeSs2vvcTLQAcNTeOZ6ZSEX_QU9k0yKYn5jVjLvkGuoHuw-9qCeLI_36o94_j6drJA9xWDVhKlhCFsmSc3_m5ekAl5-7Vs_cKUbXymttUAicm9jyWjR_dg3bwfpnenfUuGLhrK5Pd5q4KjZYWZp9XrZuF6auk0-a77QT4SPtpLxXyqeOz"/>
+</div>
+<div class="space-y-3">
+<span class="font-label-uppercase text-label-uppercase text-secondary">ARCHITECTURAL CUT</span>
+<h3 class="font-headline-md text-headline-md text-primary">The Mayfair Royal Drape — Two-Piece Bespoke Suit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              A commanding double-breasted 6x2 silhouette cut with a soft Neapolitan roped shoulder (spalla camicia), high gorge lapels, and hand-basted floating natural horsehair canvas.
+            </p>
+<div class="pt-2 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-surface-container text-on-surface font-label-numeric text-[11px]">Super 150s Worsted</span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface font-label-numeric text-[11px]">Horn Buttons</span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface font-label-numeric text-[11px]">Milanese Lapel</span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface font-label-numeric text-[11px]">Jamdani Lining</span>
+</div>
+</div>
+</div>
+<!-- Technical Specification Matrix -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">WEAVE &amp; ORIGIN</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">Loro Piana Tasmania</span>
+<span class="font-label-numeric text-[11px] text-secondary">Biella, Italy • 280g/m</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">CANVAS STRUCTURE</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">Full Floating Canvas</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Triple Grade Siberian Horsehair</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">INTERNAL FACING</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">Imperial Jamdani Weft</span>
+<span class="font-label-numeric text-[11px] text-secondary">Narayanganj Heritage Loom</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">TROUSER CUT</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">Double Reverse Pleats</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">High-waisted, side-adjusters</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">BUTTON STANCE</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">Carved Water Buffalo Horn</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Charcoal matte smoked finish</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">MONOGRAM SCRIPT</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary block mt-1">"A.S. • MAYFAIR"</span>
+<span class="font-label-numeric text-[11px] text-secondary">Under-collar antique gold</span>
+</div>
+</div>
+</div>
+<!-- Right 5 Cols: Consignment Details & Payment Ledger -->
+<div class="lg:col-span-5 space-y-gutter">
+<!-- Patron Consignment Card -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md space-y-4">
+<div class="flex items-center justify-between pb-2 bg-surface-container px-3 py-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">CONSIGNMENT DISPATCH LEDGER</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">pin_drop</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-uppercase text-[10px] text-secondary">PATRON PRIVILEGE FILE</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Lord Alastair Sterling</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Patron Sovereign Tier • Member since 2018</p>
+</div>
+<div class="bg-surface-container-low p-3 space-y-1 font-body-sm text-body-sm">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant block">PRIMARY FITTING ADDRESS</span>
+<p class="text-primary font-medium">14 Grosvenor Square, Flat 4B</p>
+<p class="text-on-surface-variant">Mayfair, London W1K 6HN</p>
+<p class="text-on-surface-variant">United Kingdom</p>
+<p class="font-label-numeric text-[12px] text-secondary pt-1">Direct Private Courier Instruction: Ring Porter Desk First</p>
+</div>
+</div>
+<!-- Settled Financial Escrow Card -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md space-y-4">
+<div class="flex items-center justify-between pb-2 bg-surface-container px-3 py-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">SETTLEMENT ESCROW STATEMENT</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+</div>
+<div class="space-y-2 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Mayfair Bespoke Two-Piece:</span>
+<span class="font-label-numeric font-semibold text-primary">$1,650.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Tasmania Super 150s Surcharge:</span>
+<span class="font-label-numeric font-semibold text-primary">$140.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Bengal Jamdani Silk Inset:</span>
+<span class="font-label-numeric text-secondary font-medium">Complimentary Guild Gift</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Sovereign Air Freight &amp; DDP Insurance:</span>
+<span class="font-label-numeric text-secondary font-medium">Included</span>
+</div>
+<div class="pt-3 flex justify-between items-baseline bg-surface-container p-3">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-primary block font-bold">TOTAL ESCROW FUNDED</span>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Charged to Amex Centurion •••• 1009</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary">$1,790.00 <span class="text-sm font-normal text-on-surface-variant">USD</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Concierge Desk, Live Atelier Feed & Guarantee Guild Seals -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+<!-- Concierge Hotdesk Card -->
+<div class="bg-primary text-surface p-space-lg flex flex-col justify-between shadow-xl">
+<div class="space-y-3">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]">concierge</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">ATELIER CONCIERGE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-surface">Need adjustments to your schedule?</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+            Your dedicated private cutter steward is on duty at Savile Row. Alter fitting dates or request trunk delivery rerouting with zero notice penalties.
+          </p>
+</div>
+<div class="pt-6 space-y-2">
+<a class="w-full h-11 bg-secondary text-primary font-label-uppercase text-label-uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-surface hover:text-primary transition-colors" href="tel:+442079460912">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Mayfair Cutter Direct Line</span>
+</a>
+<button class="w-full h-10 bg-primary-container text-surface hover:bg-surface-variant hover:text-on-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors flex items-center justify-center gap-2" onclick="alert('Connecting to Atelier Vanguard VIP encrypted messaging on WhatsApp...')">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp VIP Protocol</span>
+</button>
+</div>
+</div>
+<!-- Workshop Camera / Archive Snapshot -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between pb-2 bg-surface-container px-3 py-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">VAULT DISPATCH FEED</span>
+<span class="flex items-center gap-1 font-label-numeric text-[11px] text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> LIVE VAULT
+            </span>
+</div>
+<div class="relative w-full h-40 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artisan cloth vault interior with shelves of rolled fine Italian wool bolts and bespoke brass registry tags under architectural spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu3-DfffWfPsVdd1Xe75qgRW_b0QF5AWwOWJWgbmJdXh5wAyAhoDTe_rsEsjzvEoW6-WpIQ5XR6h2icaSb-xtGSdvcbmfKD4bFPUJ89qYdeaSnTxwQ9yZjg1SqlVizrg0pJtc1LI4rRXd5P_vp45WLfHS3PMK3uvmKjYJB0OTlFgQxxta5ofVAZ4f7zIDb0jHwQG3PQWvk_9EKKqgn_-kaErp5uVpLvCwMQHWG7D6dNT_e7Bn15Rbv"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-sm text-surface px-2 py-0.5 font-label-numeric text-[10px]">
+              Biella Bolt Vault • Chamber 03
+            </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cloth Bolt #LP-9921 has been logged out of the Italian humidity room and dispatched to Savile Row Cutting Hall via secure air transit.
+          </p>
+</div>
+<button class="w-full mt-4 h-10 bg-surface-container text-on-surface hover:bg-surface-variant font-label-uppercase text-label-uppercase tracking-wider transition-colors flex items-center justify-center gap-2" onclick="alert('Viewing archival high-resolution weave microscopy scans for Bolt #LP-9921...')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Weave Microscopy</span>
+</button>
+</div>
+<!-- Sovereign Warranties & Heritage Guarantees -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between pb-2 bg-surface-container px-3 py-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">ATELIER ASSURANCES</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">straighten</span>
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">Perpetual Drape Warranty</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Complimentary lifelong tailoring adjustments at any Atelier Vanguard salon globally.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">security</span>
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">Guild Escrow Protection</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Patron funds are safeguarded until your personal fitting approval in London.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">shield</span>
+<div>
+<h4 class="font-headline-sm text-[16px] text-primary">Jamdani Heritage Certificate</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Numbered provenance token certifying handloom artisan fair compensation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 bg-surface-container p-3 text-center">
+<span class="font-label-uppercase text-[10px] text-on-surface-variant tracking-widest block">SAVILE ROW • MILAN • DHAKA</span>
+<span class="font-label-numeric text-[11px] text-secondary font-medium">Bespoke Guild Membership Token: 0092-LON-AST</span>
+</div>
+</div>
+</div>
+<!-- Bottom Reassurance Strip -->
+<div class="bg-surface-container-low p-space-md text-center">
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-2xl mx-auto">
+        "True luxury is not consumed in haste; it is patiently calibrated by human hands over seasons."
+      </p>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mt-2">
+        ATELIER VANGUARD PERPETUAL ARCHIVE
+      </span>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a></li><li><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Calibration</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>

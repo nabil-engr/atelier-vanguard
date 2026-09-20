@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#bcc7d9", "primary-container": "#111c29", "surface-container-lowest": "#ffffff", "secondary": "#765a24", "surface-container": "#f2ede4", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface": "#1d1c16", "surface-container-high": "#ece8df", "background": "#fef9f0", "on-secondary-container": "#795c27", "surface-container-low": "#f8f3ea", "surface-tint": "#545f6f", "inverse-surface": "#32302b", "secondary-container": "#ffd795", "on-secondary-fixed-variant": "#5c420e", "surface-container-highest": "#e7e2d9", "inverse-primary": "#bcc7d9", "outline-variant": "#c5c6cc", "on-surface-variant": "#44474c", "surface-dim": "#ded9d1", "on-error-container": "#93000a", "on-background": "#1d1c16", "inverse-on-surface": "#f5f0e7", "error": "#ba1a1a", "on-primary-container": "#7a8595", "tertiary-fixed-dim": "#cdc5b9", "on-secondary-fixed": "#271900", "tertiary": "#000000", "on-tertiary-fixed-variant": "#4b463d", "on-secondary": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3d4756", "surface-variant": "#e7e2d9", "on-primary-fixed": "#111c29", "outline": "#75777c", "surface": "#fef9f0", "tertiary-fixed": "#eae1d4", "secondary-fixed": "#ffdea9", "on-tertiary-fixed": "#1f1b13", "tertiary-container": "#1f1b13", "surface-bright": "#fef9f0", "primary-fixed": "#d8e3f6", "primary": "#000000", "on-tertiary-container": "#898378", "secondary-fixed-dim": "#e7c181" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "5rem", "space-lg": "2rem", "space-xs": "0.25rem", "margin-md": "3rem", "margin": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xl": "3.5rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "editorial-italic": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "label-numeric": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "label-uppercase": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "headline-xl-mobile": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "editorial-italic": [ "22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-numeric": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-uppercase": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-xl": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "300" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-md py-space-sm mb-space-md"><span class="font-label-uppercase text-label-uppercase text-secondary uppercase block mb-space-xs">Maison De Maître</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">Atelier Vanguard</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Sartorial Operations Core</span></div><div class="px-space-md mb-space-sm"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase tracking-widest block">Main Operations</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">view_quilt</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="production-kanban" href="#"><span class="material-symbols-outlined text-[20px]">view_kanban</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Production Kanban</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="measurement-workbench" href="#"><span class="material-symbols-outlined text-[20px]">straighten</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Measurement Workbench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="client-dossiers" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Client Dossiers</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fabric-vault-inventory" href="#"><span class="material-symbols-outlined text-[20px]">texture</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Fabric Vault Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="alterations-queue" href="#"><span class="material-symbols-outlined text-[20px]">content_cut</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Alterations Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financials-and-escrow" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Financials &amp; Escrow</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Settings</span></a></nav></div><div class="px-space-md py-space-sm bg-surface-container mx-space-sm"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Cutter Bench Cadence</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-label-numeric text-label-numeric text-on-surface block">8 Active Patrons in Fitting</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Super 150s Reserve: 420m</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Salon:</span><span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">London Savile Row</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">LDN</span><span class="font-label-numeric text-label-numeric text-on-surface">14:32 BST</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NYC</span><span class="font-label-numeric text-label-numeric text-on-surface">09:32 EDT</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">DAC</span><span class="font-label-numeric text-label-numeric text-on-surface">19:32 +06</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-uppercase text-label-uppercase text-on-surface">Master Cutter Active</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-uppercase text-label-uppercase text-on-surface leading-none">Alistair Vance</span><span class="font-label-numeric text-label-numeric text-secondary leading-none mt-space-xs">Master Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Sub-Header & Live Metric Streamer -->
+<div class="px-space-lg py-space-md flex flex-col gap-space-md">
+<!-- Breadcrumb & Mode Identifier -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Guild Quality Assurance</span>
+<span class="text-on-surface-variant text-[10px] opacity-40">/</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Sartorial Lifetime Covenant</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Alterations Queue &amp; Guarantee Protocol</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-on-surface font-label-numeric text-label-numeric">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Optical Metrology Engine Active
+        </span>
+<button class="bg-primary hover:bg-secondary text-surface px-space-md py-2.5 font-label-uppercase text-label-uppercase tracking-widest transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          New Patron Alteration Docket
+        </button>
+</div>
+</div>
+<!-- Section 1: Key Quality & Escrow Metrics (Bento-style Bar) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Active Claims in Queue -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Active Claims In Queue</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">content_cut</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">18</span>
+<span class="font-editorial-italic text-editorial-italic text-secondary">Claims</span>
+</div>
+<div class="flex items-center gap-1.5 pt-space-xs text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-numeric text-label-numeric text-on-surface">6 Optical</span>
+<span class="opacity-40">·</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-numeric text-label-numeric text-on-surface">8 Rectification</span>
+<span class="opacity-40">·</span>
+<span class="inline-block w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-numeric text-label-numeric text-on-surface">4 Remit</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-space-sm overflow-hidden flex">
+<div class="bg-primary-container h-full w-[33%]"></div>
+<div class="bg-secondary h-full w-[45%]"></div>
+<div class="bg-outline h-full w-[22%]"></div>
+</div>
+</div>
+<!-- Metric 2: Average Turnaround -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Avg. Rectification Speed</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">4.2</span>
+<span class="font-editorial-italic text-editorial-italic text-on-surface-variant">Days</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Savile Guild SLA: &lt;5.0 Days</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container px-1.5 py-0.5">-0.8d vs LY</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-space-sm">
+<div class="bg-secondary h-full w-[84%]"></div>
+</div>
+</div>
+<!-- Metric 3: Escrow Ring-Fenced Reserve -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Warranty Escrow Reserve</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">$45,000</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary">USD</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-numeric text-label-numeric text-on-surface">Ring-Fenced Guarantee Pool</span>
+<span class="font-label-numeric text-label-numeric text-secondary bg-secondary-container/40 px-1.5 py-0.5">Solvent 100%</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-space-sm">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+</div>
+<!-- Metric 4: Resolution Patron Satisfaction -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Patron Post-Fit Sign-Off</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">99.4%</span>
+<span class="font-editorial-italic text-editorial-italic text-secondary">Unanimous</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-numeric text-label-numeric text-on-surface">312 Cases Closed L12M</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-[14px] text-secondary mr-0.5">star</span> 5.0
+          </span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-space-sm">
+<div class="bg-secondary h-full w-[99.4%]"></div>
+</div>
+</div>
+</div>
+<!-- Section 2: Filter & Triage Header -->
+<div class="bg-surface-container-low p-space-md shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined text-on-surface-variant absolute left-3 top-1/2 -translate-y-1/2 text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-sm py-2 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface shadow-inner" placeholder="Search Patron Surname, Dossier #, or Cut Reference ID..." type="text" value="Lord Alastair Sterling"/>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant absolute right-3 top-1/2 -translate-y-1/2 bg-surface-container px-1 py-0.5">⌘K</span>
+</div>
+<!-- Dropdown Filter Strips -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Salon Selector -->
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-2 shadow-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant mr-1.5 uppercase">Salon:</span>
+<select class="bg-transparent font-label-numeric text-label-numeric text-on-surface font-medium focus:outline-none cursor-pointer">
+<option>All Salons (World)</option>
+<option selected="">Savile Row London</option>
+<option>Madison Ave NYC</option>
+<option>Gulshan-2 Dhaka</option>
+<option>Place Vendôme Paris</option>
+</select>
+</div>
+<!-- Pathway Selector -->
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-2 shadow-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant mr-1.5 uppercase">Pathway:</span>
+<select class="bg-transparent font-label-numeric text-label-numeric text-on-surface font-medium focus:outline-none cursor-pointer">
+<option selected="">All Resolution Channels</option>
+<option>In-Salon Fitting &amp; Rectification</option>
+<option>White-Glove Cedar Trunk Return</option>
+<option>Local Master Guild Remit ($150 USD)</option>
+</select>
+</div>
+<!-- Status Filter Tabs -->
+<div class="flex items-center bg-surface-container p-0.5">
+<button class="px-space-sm py-1.5 bg-primary text-on-primary font-label-uppercase text-label-uppercase shadow-sm">Priority</button>
+<button class="px-space-sm py-1.5 text-on-surface-variant hover:text-on-surface font-label-uppercase text-label-uppercase">Optical Audit</button>
+<button class="px-space-sm py-1.5 text-on-surface-variant hover:text-on-surface font-label-uppercase text-label-uppercase">Bench</button>
+<button class="px-space-sm py-1.5 text-on-surface-variant hover:text-on-surface font-label-uppercase text-label-uppercase">Dispatch</button>
+</div>
+</div>
+</div>
+<!-- Section 3: Main Split View Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Panel: Claims Ledger / List (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider">Queue Ledger (4 Active View)</span>
+<span class="font-label-numeric text-label-numeric text-secondary">Ordered by Sovereign Rank &amp; Timestamp</span>
+</div>
+<!-- Claim Card 1: ACTIVE / SELECTED -->
+<div class="bg-surface-container-lowest p-space-md shadow-md relative transition-all duration-200 cursor-pointer bg-gradient-to-r from-secondary/10 via-transparent to-transparent">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">#ALT-2025-084</span>
+<span class="text-on-surface-variant text-[11px]">• Ref AV-2025-9921</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Lord Alastair Sterling</h3>
+</div>
+<span class="px-space-xs py-1 bg-secondary-container text-on-secondary-fixed font-label-uppercase text-label-uppercase tracking-widest uppercase">
+              Sovereign VIP
+            </span>
+</div>
+<div class="mb-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">The Mayfair Royal Drape Two-Piece — Super 150s Worsted</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">London Savile Row Salon</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low mb-space-sm">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[15px] text-error">straighten</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Optical Diagnostic Request:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Right Shoulder Balance &amp; Scye Pinch (-0.5 in required)</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-uppercase text-label-uppercase text-secondary uppercase font-semibold">Awaiting Master Cutter Audit</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Pathway: In-Salon Fitting</span>
+</div>
+</div>
+<!-- Claim Card 2: Baroness Rothschild -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">#ALT-2025-083</span>
+<span class="text-on-surface-variant text-[11px]">• Ref AV-2025-9944</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Baroness Rothschild</h3>
+</div>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-uppercase text-label-uppercase tracking-widest uppercase">
+              Diplomatic
+            </span>
+</div>
+<div class="mb-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Royal Jamdani Sherwani Overcoat — Dhaka Heritage Weave</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">flight_takeoff</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">Paris 8ème &amp; Dhaka Atelier</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low mb-space-sm">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">open_in_full</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Reported Spec:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Sleeve Inseam lengthen +0.75 in across both cuffs</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Trunk In-Transit to London</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-secondary font-medium">Cedar Trunk #AV-TK-09</span>
+</div>
+</div>
+<!-- Claim Card 3: Ambassador C. Moreau -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">#ALT-2025-081</span>
+<span class="text-on-surface-variant text-[11px]">• Ref AV-2025-9905</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Ambassador C. Moreau</h3>
+</div>
+<span class="px-space-xs py-1 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase tracking-widest uppercase">
+              Guild Ambassador
+            </span>
+</div>
+<div class="mb-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Morning Coat Three-Piece Ensemble — Midnight Barathea</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">location_on</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">Manhattan Madison Ave</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low mb-space-sm">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">currency_exchange</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Local Guild Claim ($150 USD):</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Waist suppression ease +0.35 in by Leonard Logsdail NYC</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Invoice Uploaded • Audit Pending</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">$150.00 Escrow Direct</span>
+</div>
+</div>
+<!-- Claim Card 4: Devin Khondoker -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">#ALT-2025-079</span>
+<span class="text-on-surface-variant text-[11px]">• Ref AV-2025-9928</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Devin Khondoker</h3>
+</div>
+<span class="px-space-xs py-1 bg-surface-container-high text-on-surface-variant font-label-uppercase text-label-uppercase tracking-widest uppercase">
+              Patron
+            </span>
+</div>
+<div class="mb-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bengali Silk Velvet Dinner Jacket — Deep Bordeaux</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">location_on</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">Dhaka Atelier Salon</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low mb-space-sm">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Benchwork Instruction:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Lapel roll line tension adjustment &amp; gorge flattening</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-uppercase text-label-uppercase text-secondary uppercase font-semibold">Benchwork in Progress</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">Bench #04 Dhaka</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Selected Claim Deep-Dive Audit Dossier (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Deep-Dive Header Card -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-space-xs py-0.5 bg-primary text-on-primary font-label-numeric text-label-numeric uppercase">Dossier #AV-2025-9921</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-numeric text-label-numeric uppercase font-semibold">Guarantee In Effect</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Lord Alastair Sterling</h2>
+<p class="font-editorial-italic text-editorial-italic text-secondary mt-0.5">The Mayfair Royal Drape Two-Piece Ensemble</p>
+</div>
+<div class="flex flex-col md:items-end bg-surface-container-low p-space-sm">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Commission Inception</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold mt-0.5">Delivered: 18 Oct 2024</span>
+<span class="font-label-numeric text-label-numeric text-secondary mt-0.5">Coverage: Valid Until 18 Oct 2025</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant mt-1">Salon: London Savile Row Room #02</span>
+</div>
+</div>
+<!-- Metrology & Photo Dossier Visuals -->
+<div class="pt-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">view_in_ar</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Optical Metrology &amp; Standing Stance Audit</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-secondary bg-surface-container px-space-xs py-0.5">Sub-millimeter LiDAR Compare</span>
+</div>
+<!-- Side-by-Side Images -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-md">
+<!-- Client Upload Photo -->
+<div class="flex flex-col bg-surface-container-low p-space-sm">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial close-up of a tailored wool navy suit jacket draped on a gentleman shoulder showing a minor diagonal drag wrinkle from the collar down to the right scye, warm luxury salon fitting room daylight with dark mahogany wall trims and basting tape guides." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB25bFjzwz2fldzITdheJT7JoCoHxA-BFep2XSfKrg7Xs9ObLddB9UaRfvsKb41XMzp2xg204unLO51tO1toy_7vLbRrbmqq1UgMAG2p3gfYk_R0UsdVkmUddbVsoXhL9ACmgJZoZQlfPO1FSsqAJK6akSC3iNfHhJbT58BM8qVfDFtzlJyYTj9z8dhFtNvANi_FPJ7P_38QumLZOGN_Yh6JKDwD1NuuRSJJEd4eDl0IG7T18kH0xbc"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary/80 text-on-primary font-label-numeric text-label-numeric backdrop-blur-md">
+                    Patron Fitting Capture (24h ago)
+                  </div>
+<!-- Optical Marker -->
+<div class="absolute top-[34%] right-[28%] w-10 h-10 border-2 border-dashed border-error rounded-full animate-ping opacity-75 pointer-events-none"></div>
+<div class="absolute top-[34%] right-[28%] w-10 h-10 border border-error rounded-full flex items-center justify-center pointer-events-none bg-error/10">
+<span class="font-label-numeric text-[10px] text-error font-bold">Δ-1.1</span>
+</div>
+</div>
+<div class="mt-space-xs flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Zone: Right Trapezius / Scye</span>
+<span class="font-label-numeric text-label-numeric text-error font-semibold">Observed Folds: 2</span>
+</div>
+</div>
+<!-- Baseline 3D Calibration CAD Scan -->
+<div class="flex flex-col bg-surface-container-low p-space-sm">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Technical atelier digital twin CAD blueprint wireframe showing bespoke suit shoulder slope vectors, point cloud contour lines in gold and midnight blue on ivory canvas, clean sartorial measurements and drafting notes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcmzCg-_940YVLtaQPDNRGrQf4Xq80w4izULfDL0NS7zgoDucSY-yRsHYgXGybxEGtnBL1cX133FQ68RU4qYYHOUwXLptkgrCvj4kZcHsXquFL4sQyiiE5BOGyrtDiEBAMuzoGNwcMNEivhRPqf0iFdlDsVCpVa3fmBYOzoEh1xPxBXTZv1b--w83y8Fc-9ffOA6877Qjakx2SJHmIlAiYY6pKoaagEPnqgPOT-6S0TLsDyjiZwlRN"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary/80 text-on-primary font-label-numeric text-label-numeric backdrop-blur-md">
+                    Archival CAD Baseline (Savile Row)
+                  </div>
+<div class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-secondary text-surface font-label-numeric text-label-numeric">
+                    Slope: 23.4° / Right Drop: -6mm
+                  </div>
+</div>
+<div class="mt-space-xs flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Archival Cut: Model AV-9921</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">Pre-Cut Verified</span>
+</div>
+</div>
+</div>
+<!-- Optical Analysis Callout Banner -->
+<div class="p-space-md bg-surface-container flex items-start gap-space-sm mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">analytics</span>
+<div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface uppercase font-bold block mb-1">Optical Variance Diagnostics</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                  Observed <strong class="text-secondary">-1.1 cm depression</strong> on right collar roll causing diagonal drag line down the blade. Recommend <strong class="text-on-surface">+4mm horsehair shoulder wedge insertion</strong> and easing the right collar gorge seam allowance by <strong class="text-secondary">0.5 inches</strong>.
+                </p>
+</div>
+</div>
+<!-- Section: Anatomy & Seam Reserve Check -->
+<div class="p-space-md bg-surface-container-lowest shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">inventory</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Garment Anatomy &amp; Seam Inlay Reserve</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">100% Non-Destructive</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Shoulder Gorge Inlay</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 block">1.25 in</span>
+<span class="font-label-numeric text-label-numeric text-secondary mt-0.5 block">Full Recalibration Feasible</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Side Seams Allowance</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 block">1.50 in</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant mt-0.5 block">Intact Basting Thread</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant block">Armscye Ease Margin</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 block">0.85 in</span>
+<span class="font-label-numeric text-label-numeric text-secondary mt-0.5 block">Zero Re-Cutting Required</span>
+</div>
+</div>
+</div>
+<!-- Master Cutter Action & Approval Dock -->
+<div class="p-space-md bg-surface-container-high flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">gavel</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Master Cutter Adjudication &amp; Formulation</span>
+</div>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Presiding: Alastair Vance</span>
+</div>
+<!-- Formulation Notes -->
+<div>
+<label class="font-label-uppercase text-label-uppercase text-on-surface-variant block mb-1.5 uppercase">Master Tailor Bench Instructions</label>
+<textarea class="w-full p-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-inner" rows="3">Patron exhibits subtle right clavicle drop due to polo practice. Open shoulder seam, insert hand-stitched +4mm graduated horsehair pad at Savile Row Bench #01. Re-pitch sleeve angle 2.5 degrees clockwise to restore clean vertical fall line without blade tension.</textarea>
+</div>
+<!-- Action Pathways Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-space-xs px-space-md py-3 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-uppercase text-label-uppercase transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">video_call</span>
+                  Schedule 15-Min Virtual Call
+                </button>
+<button class="flex items-center justify-center gap-space-xs px-space-md py-3 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-uppercase text-label-uppercase transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">package_2</span>
+                  Dispatch Cedar Valet Trunk
+                </button>
+<button class="flex items-center justify-center gap-space-xs px-space-md py-3 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-uppercase text-label-uppercase transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">credit_card</span>
+                  Issue $150 Guild Credit Direct
+                </button>
+<button class="flex items-center justify-center gap-space-xs px-space-md py-3 bg-secondary hover:bg-primary-container text-surface font-label-uppercase text-label-uppercase transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                  Approve Bench Rectification
+                </button>
+</div>
+<!-- Master Seal Commit Action -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+<span class="font-label-numeric text-label-numeric">Digital Guild Stamp will notify Patron Concierge instantly</span>
+</div>
+<button class="px-space-lg py-3.5 bg-primary hover:bg-secondary text-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors flex items-center justify-center gap-space-sm shadow-md">
+<span class="material-symbols-outlined text-[18px]">approval</span>
+                  Commit to Alteration Docket #ALT-084
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

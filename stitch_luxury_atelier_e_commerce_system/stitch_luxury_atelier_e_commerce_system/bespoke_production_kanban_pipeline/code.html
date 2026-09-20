@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#bcc7d9", "primary-container": "#111c29", "surface-container-lowest": "#ffffff", "secondary": "#765a24", "surface-container": "#f2ede4", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface": "#1d1c16", "surface-container-high": "#ece8df", "background": "#fef9f0", "on-secondary-container": "#795c27", "surface-container-low": "#f8f3ea", "surface-tint": "#545f6f", "inverse-surface": "#32302b", "secondary-container": "#ffd795", "on-secondary-fixed-variant": "#5c420e", "surface-container-highest": "#e7e2d9", "inverse-primary": "#bcc7d9", "outline-variant": "#c5c6cc", "on-surface-variant": "#44474c", "surface-dim": "#ded9d1", "on-error-container": "#93000a", "on-background": "#1d1c16", "inverse-on-surface": "#f5f0e7", "error": "#ba1a1a", "on-primary-container": "#7a8595", "tertiary-fixed-dim": "#cdc5b9", "on-secondary-fixed": "#271900", "tertiary": "#000000", "on-tertiary-fixed-variant": "#4b463d", "on-secondary": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3d4756", "surface-variant": "#e7e2d9", "on-primary-fixed": "#111c29", "outline": "#75777c", "surface": "#fef9f0", "tertiary-fixed": "#eae1d4", "secondary-fixed": "#ffdea9", "on-tertiary-fixed": "#1f1b13", "tertiary-container": "#1f1b13", "surface-bright": "#fef9f0", "primary-fixed": "#d8e3f6", "primary": "#000000", "on-tertiary-container": "#898378", "secondary-fixed-dim": "#e7c181" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "5rem", "space-lg": "2rem", "space-xs": "0.25rem", "margin-md": "3rem", "margin": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xl": "3.5rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "editorial-italic": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "label-numeric": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "label-uppercase": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "headline-xl-mobile": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "editorial-italic": [ "22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-numeric": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-uppercase": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-xl": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "300" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-md py-space-sm mb-space-md"><span class="font-label-uppercase text-label-uppercase text-secondary uppercase block mb-space-xs">Maison De Maître</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">Atelier Vanguard</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Sartorial Operations Core</span></div><div class="px-space-md mb-space-sm"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase tracking-widest block">Main Operations</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">view_quilt</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Dashboard Overview</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none transition-all bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase" data-path="production-kanban" href="#"><span class="material-symbols-outlined text-[20px]">view_kanban</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Production Kanban</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="measurement-workbench" href="#"><span class="material-symbols-outlined text-[20px]">straighten</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Measurement Workbench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="client-dossiers" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Client Dossiers</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fabric-vault-inventory" href="#"><span class="material-symbols-outlined text-[20px]">texture</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Fabric Vault Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="alterations-queue" href="#"><span class="material-symbols-outlined text-[20px]">content_cut</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Alterations Queue</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financials-and-escrow" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Financials &amp; Escrow</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-none text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-uppercase text-label-uppercase tracking-wider">Settings</span></a></nav></div><div class="px-space-md py-space-sm bg-surface-container mx-space-sm"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Cutter Bench Cadence</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-label-numeric text-label-numeric text-on-surface block">8 Active Patrons in Fitting</span><span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">Super 150s Reserve: 420m</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Salon:</span><span class="font-label-uppercase text-label-uppercase text-on-surface font-semibold">London Savile Row</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">LDN</span><span class="font-label-numeric text-label-numeric text-on-surface">14:32 BST</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NYC</span><span class="font-label-numeric text-label-numeric text-on-surface">09:32 EDT</span></div><span class="text-on-surface-variant opacity-30">|</span><div class="flex items-center gap-space-xs"><span class="font-label-uppercase text-label-uppercase text-on-surface-variant">DAC</span><span class="font-label-numeric text-label-numeric text-on-surface">19:32 +06</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-uppercase text-label-uppercase text-on-surface">Master Cutter Active</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-uppercase text-label-uppercase text-on-surface leading-none">Alistair Vance</span><span class="font-label-numeric text-label-numeric text-secondary leading-none mt-space-xs">Master Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Sub-Header / Dossier Context Strip -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col gap-space-sm shadow-sm relative">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Breadcrumb Hierarchy -->
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface-variant">Atelier Operations</span>
+<span class="text-outline-variant font-body-sm">/</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface-variant">Bespoke Production Journey</span>
+<span class="text-outline-variant font-body-sm">/</span>
+<span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary font-semibold">Kanban Pipeline</span>
+</div>
+<!-- Live Atelier Telemetry & Velocity -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">history_edu</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Guild Active Cadence:</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">32 Bespoke Commissions</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">timer</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Avg Handcraft Build:</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-semibold">88.4 Hours / Suit</span>
+</div>
+</div>
+</div>
+<!-- Title & Executive Controls -->
+<div class="flex flex-wrap items-baseline justify-between gap-space-md pt-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Sartorial Lifecycle Pipeline</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">10-Tier Architectural Workflow from Raw Loom Intake to Diplomatic Consignment</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-uppercase text-label-uppercase" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Guild Ledger</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary transition-all font-label-uppercase text-label-uppercase" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Initiate Commission</span>
+</button>
+</div>
+</div>
+<!-- Filter & Precision Slicing Controls Bar -->
+<div class="mt-space-xs pt-space-sm flex flex-wrap items-center justify-between gap-space-md bg-surface p-space-sm shadow-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Atelier Selector -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Atelier:</span>
+<select class="bg-transparent text-on-surface font-label-uppercase text-label-uppercase focus:outline-none cursor-pointer">
+<option>All Salons (London, Dhaka, NYC)</option>
+<option>London Savile Row</option>
+<option>Dhaka Flagship</option>
+<option>New York UES</option>
+</select>
+</div>
+<!-- Garment Category Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Silhouettes:</span>
+<select class="bg-transparent text-on-surface font-label-uppercase text-label-uppercase focus:outline-none cursor-pointer">
+<option>All Commissions (32)</option>
+<option>Three-Piece &amp; Two-Piece Suits</option>
+<option>Double-Breasted Overcoats</option>
+<option>Jamdani Royal Occasionwear</option>
+<option>Sea Island Cotton Shirts</option>
+</select>
+</div>
+<!-- Bottleneck Pill Toggle -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none bg-surface-container-low px-space-sm py-1.5 hover:bg-surface-container transition-colors">
+<input class="sr-only peer" id="bottleneck-filter" type="checkbox"/>
+<span class="w-3 h-3 bg-surface-container-high peer-checked:bg-error transition-colors"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant peer-checked:text-error">Urgent Bottlenecks Only</span>
+</label>
+</div>
+<!-- Search Input -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 min-w-[260px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline-variant focus:outline-none w-full" placeholder="Search Patron, Order # or Weft..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Horizontal Scrollable Kanban Field (10 Distinct Stages) -->
+<div class="w-full overflow-x-auto p-space-lg bg-surface">
+<div class="flex items-start gap-space-md min-w-[3400px] pb-space-lg">
+<!-- STAGE 01 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">01</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Cloth Intake &amp; Weave</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Textile dampening, flaw mapping, shrinkage rest.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9944</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Close up of bespoke artisanal Jamdani gold thread weft woven into superfine charcoal worsted wool inside a master tailor salon studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADloy4YK3_4hMtg2l1zAAnvjPmMQOe3R1dsKEuOlTroBF2flU5Oq5eTeaEze7KBDtc8p03kBK5uM_nRJXRHZE1GIuAcy4ku4Cicbbjcrgp-7V_kQPYIKiJYNIitv4yN9aZSWRjPJ_oGBAk1I-VDGqSNnPbPd95jh2suxpZZDzPP0kpLTr9MVsYnagpextDMNY9QTUBqq1PeRQaopIyXGDIHU0JaHjBozHZ6zAu3qIYYve52iSYWKlG"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Baroness Rothschild</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Royal Jamdani Sherwani</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Dhaka Loom Spec #310</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Handloom gold weft in fiber moisture recalibration.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 08/96</span>
+<span class="text-on-surface">Cutter: T. Rahman</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[8%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9950</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Pure Scabal cashmere roll navy blue swatch resting on a clean oak cutting table with tailoring chalk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZg1MCZCXwBbIqKThPjNmUw61EhQm4ulimkUIG92IRq3Hxh8Ns5UZtD7x1QhSXaKe3LG26IiBndm6n39CwfxSxjOokvMdypyFWiU08d5lH8fSiuHYrVAKq4junZDg5KlgPXAO4vtC4FZOfk1drcqP5gwuxijeXzUhax4MKLFPpS25Zk8e7o1QOuF4bzBFZtzv2H11GJPxlD_DfqZQ2DsfXQ566gFEMxCX_LE7RgmJatCk7Gkn092Sn"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Arthur Wellesley</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DB Chesterfield Overcoat</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Scabal Cashmere 480g</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Vault delivery verified; resting 48hrs in London humidor.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 04/90</span>
+<span class="text-on-surface">Cutter: A. Vance</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[5%]"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9955</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Super 150s Glen Plaid English worsted cloth texture macro shot under soft workshop lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDeHGCTayowQtQIU2WAiiPxjQDuXCifkduoPrxYgXnU77mRMaSyo1JMWB5BDkm44VLU-6JuMfqxLAfnhfhms07hm5g_AIl3CRgBxRs9-oTMbxvEI3kmDw9RbBcnkFt7VKsRCe_ArJMLjt-UO_-AUN41-Al6QKEvA3Du8edRE0MYsvlkEjjZsYk-aeg86MZObeYL3NRs2ptHDcgK2ls3CpDP2Fx7-libTkJWSA0iTxXfX-oXZL9vs7Y"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Marcus Sterling-Cole</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prince of Wales Lounge Suit</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Dormeuil Super 160s</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Length audited at 3.65m; chalk alignment completed.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 06/88</span>
+<span class="text-on-surface">Cutter: C. Kingsley</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[7%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 02 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">02</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Pattern Metrology</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Brown drafting card, posture offset, bespoke curves.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9921</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Traditional heavy brown pattern paper marked with white chalk curves and brass weights in an English bespoke tailoring studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNo09owmo5D-RI0WtiIBK35mx07WPwGPVRMOg4MJePAK6Voh6fpc2qdaqkjkywKXMcn3ZhsiXncAvSk-mADfkYFJ7dyLeDrDYcfmO3JgZQ2xWSa6prdeuCcdpbdHE6Gtp_nmHMtOdOIt2cDJ1E_eUp1wUDesJ28XTcVkmsVVdNvOeZsx8YAcfL8g7NSpsqS7PojhSHahajxfJGi9DigPn36qXeRDlX-CJ_dpiyqV4JhRFT8k_TGbK"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Lord Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mayfair Royal Drape Suit</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">38 Biometric Coordinates</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Stoop posture calibration (-0.4 in back balance adjustment).
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 14/88</span>
+<span class="text-on-surface">Cutter: A. Sterling</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[16%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9928</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Tailor drafting complex armhole curves on stiff card paper with vintage wooden rules and steel compass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfSohZ-0KEG3X4dARpMAW411gMLRFPeOZsFD1pKbMYiopiVyiuB2Q6qhmiwVb-n4pf0p85XpIrQ2saOMDgcTmV1Z4lt6ksboZxp00hOE_TgBywZxcqeKKPqrYFaz0rFBsAnjT60dnnM8irvwQjsxR4mEb8Rkb757uH4o1wUWnYQU366Kj74Pp5taZ3vjCj56Oe50oHY9wtQ7cNz0OI5uEG5ISVspVZIASZ5RTO9WNXGhA9bBN2_SRf"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Devin Khondoker</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengali Silk Velvet Dinner Jacket</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Dhaka Archive Sloper</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Lapel roll curve digitized for Milanese gorge notch.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 12/82</span>
+<span class="text-on-surface">Cutter: T. Rahman</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[14%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 03 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">03</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Canvas Basting</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">5</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Floating horsehair interlining, pad-stitching body.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9905</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Hand pad-stitching of floating natural horsehair canvas on suit lapel using white silk basting thread close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWNX3L97QTYKR42dGVhl72YXxNkzT8u6SvxU6cTMfvq0TU7ff-Hs16G1fbyBYZxMJEf7eWTkxqV-v4wbj7Y1Y6CWv0U4x9yndDmyoYH40WOYPIXtYEcjTApY13IAHglEVpA0M29eQtuIhWqZPY0cr2_2-0TkbPKbITy9kVarD1O1FBPrJQ4KP57EgWo_rO6wWgxKAyfRgSfwXVoGA138-fzD9SXkXuiBKzE0XB6FVH9Xc2ZjaSo58N"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Ambassador C. Moreau</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Morning Coat Three-Piece</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Siberian Horsehair #4</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            1,200 pad-stitches applied to left chest canvas.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 26/92</span>
+<span class="text-on-surface">Cutter: M. Davies</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[28%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9912</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Tailor assembling chest canvas layers with Irish linen stay tape on raw wool body" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eI-hE-xiDz0UIK5mRcFyz5mpq9MvXt-Cv44uZMlmYS1pJEC-Do94EjL_x1SMrq6LXqxFYTITPeXSvNq495J-UpkhxoTGhIeS11r2QL-SoFUoHXo20zM8E2ORxxE2rcbwk9DwBDSmlufucKRDKE5hJ2AwHrjjikoLsdGw9tGzGRAYysopVnK24-CbAhlB6Uq5TFxQzToZGjkM9KZIQ-b0AAHSifECbmF6X4YB1KDtUMWMifNwuxRq"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Dr. Henrik Van Der Bilt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midnight Barrathea Tuxedo</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Soft Italian Chest Piece</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Shoulder seam taped; basting ready for collar attachment.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 22/84</span>
+<span class="text-on-surface">Cutter: A. Sterling</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[26%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 04 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">04</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Skeleton Muslin Fitting</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Raw baste garment trial on patron physique.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9892</span>
+<span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-uppercase text-[10px]">Urgent SLA</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Muslin toile prototype suit jacket on wooden mannequin with chalk marks and basted white threads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg-0IMtzAIKe1jU5Vta_lvACNrTvOH56VDtpB9lM4hmBGGzPA-UXR_DGVLLLJpx8CI1gRAjEL3Q2JlMXiePeshannwB3QedGNsMpeufNC-0bn8nvPeTpwYrLB9Hn6S6HlRUYyX2q86ANzd6SlQiZgfU0RL5EQsOduqLXKq5e8zKqVfqc8PZ_6XKnMWoTCdQ8PL2T-Hry6_GdBNqJQZQEQqH9fJ-dXT9Slo_7YW6DieRSRzeJsssC7d"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Julian Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Double-Breasted Chalkstripe</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Savile Row Salon Fitting</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Salon slot booked Friday 11:30 AM; pins &amp; chalk prepped.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 35/88</span>
+<span class="text-on-surface">Cutter: A. Vance</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[40%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9898</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Tailor checking shoulder seam of skeleton fitting jacket on patron in private Mayfair salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Gvhn4Ay-U0k-zcmQ4s9YDjBIYs-hgPFrY6vZmnpowqqP9FAdViiDfHGCQngi5amZ1xVI4qBko9BU8fJCNbuq6spG-aqTFr5hh9MBCs1J5oBKdk0jBhuPNhKzXaZtV5xMTysX1WL_Pd9F2XkNGmIprfF8s8MEoivTGE0PhunDnUasNFx0-Qt_Me4OvBXIEuQZ_uxia5cwLUQU6n-fyyuCvn0tK-Seen3uYFl9zBHYnLMm4vsx21Tg"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Kazi Shamsul Alam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengal Jamdani Safar Jacket</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Dhaka Flagship Suite</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            First balance checked; patron requested 0.5cm higher armscye.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 38/86</span>
+<span class="text-on-surface">Cutter: T. Rahman</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[44%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 05 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">05</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Inlay Recalibration</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Garment unbasted, inlay seams opened &amp; reshaped.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9884</span>
+<span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-uppercase text-[10px]">Urgent Bottleneck</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Deconstructed suit jacket spread flat on mahogany workbench showing inlay fabric allowances and chalk modifications" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7OVEbQqVhP6pHfBmDFg8KSp-hiaC5Z6xUd-w8vgizxFbOIlbQcKUmLEyvkMLc--OM4ROcH3nT0u9PokEW_vO6vw4D8ZBLrvpgdV9BSBn_xX6IaOdeGjp39LFtrQsT0GRgqyP4kUauKIaHL7PRIXQh5oTWTWi4_Rzm8BU4xJ8B_ZYKWsUpuhcA4tUqJV5G_kB-xRtsEPm4019GGESESsWKJhr3Dg7AEmxNerRwGfIr1P_OcQ3Qd-qC"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Viscount Linley</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Equestrian Tweed Hacking Jacket</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Post-Muslin Alteration</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-error font-body-sm">
+            Chest volume suppression by 0.35 in; collar curve trimmed.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 46/88</span>
+<span class="text-on-surface">Cutter: A. Sterling</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[52%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9889</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Pattern shears accurately trimming side seam inlays on fine grey flannel garment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUvMq7rG9q2ABsb3oWVYjT4tSVLiFhMejxIklvchvmmDVjeKxDStya39B-ehC4fjoS9fAl3ujGjk-XqJM3wCHpTlR4VIAG8ZQk99PNCDhI1pviTZ0S7PAtt_GVmjQY6775f-Aszrf8tfpVyxBiK35i1IdpdsJ8_KySBaEi48YZFZmIGrecKYpGTCCOvHD10H7IfheLcH-M7bA3nYUHUY_0S-xYNhXa74u_wC_GWaCRf_3PLgL6EE_u"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Gabriel De Sica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Solaro Sunburst Suit</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Waist Suppression +0.25 in</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Blade flare reduced; side inlays re-steamed flat.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 49/88</span>
+<span class="text-on-surface">Cutter: C. Kingsley</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[55%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 06 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">06</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Hand Needlework</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Milanese buttonholes, pick stitch, pocket welts.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9870</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Close macro shot of hands sewing a raised Milanese buttonhole using silk gimp cord on luxury suit lapel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdkyYUXY8G91UYJ4WKatJ9afpeqOuFQ_Z3ZZqU76Rfr-Dg0jADiktXLOt02mf513RKU2gSxD04yk9nLoOzDO-45ByBVlHjBRfM8Rbs-ZPxbMEV2wqtxrcayNHSYB6WS3wiUKFH0DDhrJIC06-oUfNzpzmtd77XmZZFomVm8PypYFl1m1HZPnVgaCNAwebkQ7DIloFjZGaSgpXe3msqF5pFLLcdesQO7ZcgbRba0Hm2Mzcucveuz39A"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Giancarlo Moretti</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Neapolitan Silk-Linen Blend</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Hand-waxed Gimp Cord</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Milanese buttonhole hand-stitched on left lapel gorge.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 58/88</span>
+<span class="text-on-surface">Cutter: M. Davies</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[66%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9875</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Artisan sewing horn buttons by hand with cross-stitch waxed thread on bespoke suit cuff" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoBPkYAGHybb8JqSCp4CL-bh6xw9AwXaxhWtEuxCTav_0rJD_DMS2eL_kdNbC2GXwa6EVHiJDsESYGHJJvNAjY8EQ5QzkTjrQFbq3UAA6zFVwBFcEqMWvc7rzfReNxGgMTVZehYcDDdgxnXDbL3LDxg5tny638NELRa60__2URcIirs0BvU_NezQa0hQ6_cEh66JggrJM04QAZ-v9w1YA-uOgGVv7zKQTnrlkHaDqnczajJq9PmZjM"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Tariq Al-Mansoor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Loro Piana Tasmanian Wool</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">4 Kissing Horn Buttons</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            All 8 surgeon's cuff buttonholes cleanly cut and finished.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 62/88</span>
+<span class="text-on-surface">Cutter: T. Rahman</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[70%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 07 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">07</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Second Anatomical Fitting</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Forward fitting with finished pockets &amp; sleeves set.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9861</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Sophisticated fitting room in New York Upper East Side townhouse with master cutter adjusting finished lapel drape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqpHwWtKjytMo8ZXvqB0JVwBSv-3FFVQAGc84jg4MpQYOGA8qEto2a8JeUTcMtpDMcuXpRxQ4aiWR-h1h-8n80T6aawF1oMHWjBrADaVfwEFRyF1oT9C_M1qOCwT3al0rvgFF_Wwivs6fj3jasAblWCUKiZUmtMBD-O5JOPQATDRfqYhrhRVl8BLJfOMVH6Zlh4bXLFUHyJtoJPlKP6lnZyvWjO0gbyQtETIUXgBjN8-VOtv61XsaS"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Harrison Sterling Jr.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Guncheck Country Overcoat</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">New York UES Salon</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Sleeve length verified at 0.5 in cuff exposure; passed fit audit.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 71/94</span>
+<span class="text-on-surface">Cutter: A. Sterling</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[75%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9865</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Detailed view of trousers break over handmade leather Oxford shoes in bright studio mirror" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwM9eo7Y34T6LKEQezT7VamxH9piYuAQzAvagkBR5xv7FNUSfPRZU8O0aEvV89C5SGZR4J3XuwRPZaiw0_PvtY-qpQuBX9413ABSLcPEACrqoQj-tIhyGdj9LvFzMTMG5L1yX2KXAma9IMnV07jtshIAGI-Xklfz8VozQtwb-qBLKkyiI4PKswBH-SXU-tEEp5rt49RmyulJWEbvqoWMUn7PM2IInLZK8Og1S726PIB3ZyVr9AP8jr"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Prof. Nigel Thorne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fox Brothers Flannel Two-Piece</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">London Fitting Archive</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Trouser break confirmed with military cuff taper.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 68/88</span>
+<span class="text-on-surface">Cutter: A. Vance</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[77%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 08 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">08</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">16-Pound Curved Press</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Heavy iron shaping, lapel roll bake, chest mold.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9852</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Heavy vintage cast iron press with steam rising over dark navy wool jacket on curved tailor buck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-nU3nxT9MtgK6IywtRP99JEmMCYkcPL_UfgDgYD66oo8MLWSBAz5LtQKf-YbikKKi1OMXBI8UOpCJtR0Tv0AnLzJ0DK7SZvxCrD12yX3w48O5hJnOUiV2RPLtR0eA3wvPKR1Pk7RBJV0HZ3nxcKtprbnfT2XJBOHloKn2HqrO0vjY-zUNTVss-fI4fwBIvbwwmFr324odK25qximqm_tQiRdCpENIeoZS-pGmloVvthGjye6BjO3t"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Countess Von Bern</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bespoke Riding Coat &amp; Cape</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Bespoke Chest Buck Steam</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Anatomical 3D chest curvature set; 24h bake drying.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 79/96</span>
+<span class="text-on-surface">Cutter: M. Davies</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[82%]"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9858</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Tailor pressing clean lapel edge with wooden clapper to lock in sharp crease" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7e1zsZGY5s5VmQk01cQBVSNAYxC9EYSFlaUAuhsocA9XLWIPrILahljNu1l7iXjvcLSAhFhNxpKPaeaCIHs2OacxniopEHQ_0ZVhZEVRIl-RUZLIkNa3epBTEl9YkwRupzDojNBZTvJ0ohOQfZn9-l4nc5OxpFlLZ_LiJc47yZZ5st_lMgSKjmO7KkE3IIJuqpvVpx5PHXM9DQfB03REmpcm8nYmcQQaSxeq6AxgCMzu5bBpLicmi"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Oliver Croft</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Charcoal Birdseye Lounge Suit</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Clapper Finish on Lapels</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Gorge crease tempered; zero shine cloth barrier enforced.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 78/88</span>
+<span class="text-on-surface">Cutter: C. Kingsley</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-[88%]"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 09 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">09</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Master Cutter Audit</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">88-hour compliance, guild wax seal, internal signature label.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9845</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">VIP Patron</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Silk woven bespoke label being hand-signed with archival black ink by Master Tailor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxHnyABLotXcjHWV3CBlZo5F6-Gu1-01M6xJxS4nse_mIFHMv-9cHJtEWQJBgEQZTKPswunb3GSWi9dBgsdO_9T3421lrk-YwqfjVGbXVyYughAKI6J5v9sF7iR02sosFS1IfEtHO-i2A1uWxtJthpj8Uc3Uj2nSaEbfqND5sW3O76rY_UMZcprGJc2sjDuGk4aeaEcx3mXuhLgjfOOvuN5k_TkG3BxVhP7otg2_9vtPluuL9fUAsU"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Lord Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Imperial Vicuña Overcoat</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Guild Seal #0449</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            All 88 quality checkpoints signed off by Master Alastair Sterling.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 92/92</span>
+<span class="text-secondary font-semibold">PASSED AUDIT</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-full"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9849</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">Standard</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Master Cutter inspecting sleeve pitch and drape with brass tape measure on finished luxury jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcznM_pcBVeUH4sU6ni_tzOpDJswb3vgBTYvNWpKQlEeJe1BjkoBSOKDwoCq_LcXHDpSpx99DfgOSYEZg2_lCsF_UXpC1OHLUo8eWjRLoQyog-SMc4Q-d_firegMaJPFJ-waW2sNTmkIKt4B96GJ563goi1M9HvkuUgnGMFroWInu6vSkr21DV6TowJ0-Ox53hPDNpspMcgXG7F-JTe9cQWubSgpgBo9cHpJpKdrktsAozlutTyij0"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Baron De Saint-Germain</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midnight Opera Cloak</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Dhaka Heritage Silk Weave</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Lining smoothness and hem weight verified within 0.05 oz.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Hours: 88/88</span>
+<span class="text-secondary font-semibold">PASSED AUDIT</span>
+</div>
+<div class="w-full bg-surface-container h-1">
+<div class="bg-secondary h-1 w-full"></div>
+</div>
+</div>
+</div>
+<!-- STAGE 10 -->
+<div class="w-[320px] shrink-0 flex flex-col gap-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">10</span>
+<h2 class="font-label-uppercase text-label-uppercase text-on-surface">Cedar Consignment</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface text-on-surface font-label-numeric text-label-numeric">4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">White-glove pack, cedar chest encasement, diplomatic courier.</p>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9830</span>
+<span class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-label-uppercase text-[10px]">Diplomatic</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Luxury handcrafted Spanish cedar travel garment box with brass latches and engraved monogram plaque" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk5HRfd1BqhcO3DzsUYrcXITamVFZTAfxCkEjDy9Y4e820KPslOT3xM3ufMwVDPJl6UKcs6Fu-OrWTAoyy7isuTXZPk59sF_4IaJdlx7mmGbU5ar3q1si0zPXy1ij0Og2DQ5-DtQtpOUMjNFMTQyMRgRhXO3hQCj_IQh3bFmx9i_vNPem5Wl_uLZkVb8XKRtasdURjJLdvPey_sgu9uquYBhxmff2bf8o3LpKDkovpQXzxWjONuo7p"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Ambassador Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Diplomatic Black Tie Ensemble</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Courier: Swiss Diplomatic</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            En route to Geneva via private salon courier; ETA 16:00 CET.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>Dispatched</span>
+<span class="text-secondary font-semibold">Geneva Delivery</span>
+</div>
+<div class="w-full bg-secondary h-1"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm cursor-pointer group">
+<div class="flex items-start justify-between">
+<span class="font-label-uppercase text-label-uppercase text-secondary">#AV-2025-9834</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-on-surface-variant font-label-uppercase text-[10px]">VIP Salon</span>
+</div>
+<div class="flex gap-space-sm">
+<img class="w-14 h-16 object-cover bg-surface-container" data-alt="Silk garment bag with brass zipper hung in mahogany wardrobe ready for customer pickup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmA2H7IgCq_O4FmDzwzXVWnUEZixAggdUS6aDTUaCFipOIdWSWRMxQWE6jttLZtDOnvMuTNpDQHD6P1iE0L_Dc7Jz3uR_aSbZE0GDUObufntCTuPj6YbsZZPCwsHR28pBWJYfcKSM2wTuOTRDnzjpmC3mVivbK1RB2yjsPXhzHcLwt9XA3ey09LueKxdUxHQ7Xl8nm3FtNi0_LApV7864qH5nbvBLZbePHuKzpZOkJmmOUF73Hzp-h"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface group-hover:text-secondary transition-colors">Elias Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengal Muslin Cocktail Jacket</span>
+<span class="font-label-numeric text-label-numeric text-outline mt-1">Savile Row Suite Vault</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs text-[11px] text-on-surface-variant font-body-sm">
+            Staged for private salon presentation this evening.
+          </div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-numeric text-label-numeric">
+<span>In Salon Vault</span>
+<span class="text-secondary font-semibold">Awaiting Patron</span>
+</div>
+<div class="w-full bg-secondary h-1"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Global Pipeline Status & Live Diagnostics Footer -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface">32 Commissions On-Schedule</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-error"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface">1 Bottleneck Requires Master Cutter Sign-off</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary-container"></span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface">2 White-Glove Consignments in Flight</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="font-label-uppercase text-label-uppercase">Pipeline Integrity:</span>
+<span class="font-label-numeric text-label-numeric text-secondary font-semibold">99.2% Craftsmanship Index</span>
+</div>
+</div>
+</div>
+<!-- Minimal Interactive Toast Script for Dossier Inspect Simulation -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.group');
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const patron = card.querySelector('.font-headline-sm')?.textContent || 'Order';
+          const orderRef = card.querySelector('.text-secondary')?.textContent || '';
+          console.log(`Inspecting Dossier for: ${patron} (${orderRef})`);
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>

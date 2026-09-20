@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "on-background": "#1d1c16",
+          "surface": "#fef9f0",
+          "surface-variant": "#e7e2d9",
+          "primary-container": "#111c29",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c5c6cc",
+          "on-primary-container": "#7a8595",
+          "on-surface": "#1d1c16",
+          "primary-fixed": "#d8e3f6",
+          "secondary-fixed": "#ffdea9",
+          "surface-container-high": "#ece8df",
+          "on-surface-variant": "#44474c",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#32302b",
+          "on-secondary-container": "#795c27",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#cdc5b9",
+          "secondary": "#765a24",
+          "on-primary-fixed": "#111c29",
+          "inverse-primary": "#bcc7d9",
+          "tertiary-container": "#1f1b13",
+          "background": "#fef9f0",
+          "primary-fixed-dim": "#bcc7d9",
+          "on-tertiary-container": "#898378",
+          "tertiary-fixed": "#eae1d4",
+          "surface-dim": "#ded9d1",
+          "secondary-fixed-dim": "#e7c181",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4b463d",
+          "surface-container-highest": "#e7e2d9",
+          "on-secondary-fixed": "#271900",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fef9f0",
+          "inverse-on-surface": "#f5f0e7",
+          "on-tertiary-fixed": "#1f1b13",
+          "on-secondary-fixed-variant": "#5c420e",
+          "secondary-container": "#ffd795",
+          "on-error": "#ffffff",
+          "surface-tint": "#545f6f",
+          "outline": "#75777c",
+          "on-primary-fixed-variant": "#3d4756",
+          "tertiary": "#000000",
+          "surface-container": "#f2ede4",
+          "surface-container-low": "#f8f3ea"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-lg": "2rem",
+          "gutter-sm": "1rem",
+          "space-xl": "3.5rem",
+          "margin": "1.5rem",
+          "gutter-lg": "2rem",
+          "margin-md": "3rem",
+          "space-xs": "0.25rem",
+          "margin-lg": "5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "editorial-italic": [
+            "Playfair Display"
+          ],
+          "headline-xl": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-xl-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "label-uppercase": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-numeric": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "editorial-italic": [
+            "22px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "72px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-uppercase": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-numeric": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-surface py-2 px-margin text-center font-label-uppercase text-label-uppercase tracking-widest flex items-center justify-center gap-space-md flex-wrap"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">lock</span><span>256-Bit SSL Encrypted Bespoke Checkout</span></div><span class="hidden sm:inline opacity-40">|</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary">support_agent</span><span>Private Concierge Desk: London +44 20 7946 0912 • NY +1 212 555 0184</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter-sm"><a class="flex items-center gap-3 group" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[26px]">shield</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span><span class="font-label-uppercase text-[9px] tracking-[0.25em] text-secondary">SAVILE ROW • MILAN • DHAKA</span></div></a></div><nav class="hidden lg:flex items-center gap-4 xl:gap-5" data-active-classes="text-secondary font-semibold"><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Measurement</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Fabric Vault</a><span class="font-label-numeric text-[11px] text-outline-variant">•</span><a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">Bespoke Craft</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center border border-outline-variant/60 rounded px-2 py-1 gap-1 font-label-numeric text-label-numeric text-on-surface-variant bg-surface-container-low"><span class="material-symbols-outlined text-[14px] text-secondary">currency_exchange</span><select aria-label="Select Currency" class="bg-transparent font-label-numeric text-label-numeric text-on-surface focus:outline-none cursor-pointer pr-1"><option selected="" value="USD">USD ($)</option><option value="GBP">GBP (£)</option><option value="EUR">EUR (€)</option></select></div><div class="hidden md:flex items-center gap-space-xs font-label-numeric text-label-numeric text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><span class="hidden xl:inline">Guaranteed Safe Protocol</span></div><a class="inline-flex items-center justify-center px-4 py-2 border border-secondary text-secondary font-label-uppercase text-label-uppercase hover:bg-secondary hover:text-on-secondary transition-colors" data-path="multi-step-checkout" href="#">Secure Checkout</a></div></div><div class="bg-surface-container-low border-t border-outline-variant/30 py-2 px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-numeric text-label-numeric text-on-surface-variant"><div class="flex items-center gap-2"><a class="hover:text-secondary transition-colors" data-path="home" href="#">Atelier</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Fitting</a><span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span><span class="text-secondary font-medium">Multi-Step Checkout</span></div><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span><span>Priority Tailoring Queue Confirmed</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Subtle Ambient Tint & Breadcrumb Row -->
+<div class="w-full bg-surface-container-low/60 py-space-sm px-margin lg:px-margin-lg">
+<div class="max-w-[1360px] mx-auto flex flex-wrap items-center justify-between gap-gutter-sm font-label-numeric text-label-numeric text-on-surface-variant">
+<div class="flex items-center gap-space-xs flex-wrap">
+<a class="hover:text-secondary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<a class="hover:text-secondary transition-colors" href="#">Customer Account</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<span class="text-secondary font-medium tracking-wide">Anatomical Measurement Profiles</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant/80">
+<span class="flex items-center gap-1 font-label-uppercase text-[10px] tracking-widest text-secondary">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          BIOMETRIC VAULT SECURED
+        </span>
+<span class="opacity-40">|</span>
+<span class="font-label-numeric text-label-numeric">CID: #PAT-LON-44910</span>
+</div>
+</div>
+</div>
+<!-- Page Header Dossier Banner -->
+<section class="w-full px-margin lg:px-margin-lg py-space-lg lg:py-space-xl">
+<div class="max-w-[1360px] mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-gutter-lg">
+<div class="max-w-3xl space-y-space-sm">
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 text-secondary font-label-uppercase text-[10px] tracking-widest uppercase">
+<span class="material-symbols-outlined text-[14px]">straighten</span>
+<span>Sartorial Metrology • Precision Level IV</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          Anatomical Measurement Profiles
+        </h1>
+<p class="font-editorial-italic text-editorial-italic text-on-surface-variant leading-relaxed max-w-2xl">
+          Precision digital calibrations validated by Savile Row &amp; Dhaka master cutters. Manage postures, revisions, and structural nuances across bespoke commissions.
+        </p>
+</div>
+<!-- Action Panel -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="h-[52px] px-6 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-uppercase text-label-uppercase transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span>Export Biometric Dossier</span>
+</button>
+<button class="h-[52px] px-6 bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary font-label-uppercase text-label-uppercase transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Book Re-Calibration</span>
+</button>
+<button class="h-[52px] px-7 bg-primary text-surface hover:bg-secondary hover:text-on-secondary font-label-uppercase text-label-uppercase transition-all duration-300 flex items-center gap-2 shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create New Fit Profile</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Profiles Overview Grid -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-[1360px] mx-auto space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block">PORTFOLIO CALIBRATIONS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Registered Fitting Blueprints</h2>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">3 Profiles Stored • 1 Pending Fitting</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- CARD 1: ACTIVE DEFAULT -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden group">
+<!-- Gold Accent Bar on Top -->
+<div class="absolute top-0 left-0 w-full h-[3px] bg-secondary"></div>
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="font-label-numeric text-label-numeric text-secondary block">#PRF-LONDON-89</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Savile Row Structured Drape</h3>
+</div>
+<span class="bg-secondary/15 text-secondary px-2.5 py-1 font-label-uppercase text-[10px] tracking-widest font-semibold uppercase">
+                DEFAULT ACTIVE
+              </span>
+</div>
+<!-- Badges Bar -->
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+                Master Verified: Alastair Sterling
+              </span>
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px]">
+                Commission Baseline
+              </span>
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px]">
+                Tolerance &lt;0.3mm
+              </span>
+</div>
+<!-- Vitals Grid -->
+<div class="bg-surface-container-low/70 p-space-md grid grid-cols-2 gap-y-3 gap-x-4 font-label-numeric text-label-numeric">
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Height / Weight</span>
+<span class="text-on-surface font-medium">6' 1" • 182 lbs</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Chest Circumference</span>
+<span class="text-on-surface font-medium">41.50 in</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Shoulder Slope</span>
+<span class="text-on-surface font-medium">-1.20° (Right drop)</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Armhole Scye</span>
+<span class="text-on-surface font-medium">9.85 in</span>
+</div>
+<div class="col-span-2 pt-1 border-t-0">
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Postural Calibration</span>
+<span class="text-on-surface font-medium">Erect Stance / Head Fore Compensated</span>
+</div>
+</div>
+<!-- Checkpoint status & commission link -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between font-label-numeric text-[11px]">
+<span class="text-on-surface-variant">12 / 12 Biometric Points Validated</span>
+<span class="text-secondary font-medium">Oct 27, 2025</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 overflow-hidden">
+<div class="bg-secondary h-full w-full"></div>
+</div>
+<p class="font-label-numeric text-[11px] text-on-surface-variant pt-1">
+                Linked Commission: <a class="text-secondary hover:underline" href="#">#AV-2025-9921 (Mayfair Royal Drape)</a>
+</p>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md mt-space-sm space-y-2">
+<button class="w-full py-2.5 bg-primary text-surface font-label-uppercase text-[10px] tracking-widest hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+              VIEW COMPLETE SPECIFICATION
+            </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-uppercase text-[10px] tracking-wider transition-colors" type="button">
+                Request Tuning
+              </button>
+<button class="py-2 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-uppercase text-[10px] tracking-wider transition-colors" type="button">
+                Clone for Evening
+              </button>
+</div>
+</div>
+</div>
+<!-- CARD 2: NEAPOLITAN DRAFT -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="font-label-numeric text-label-numeric text-outline block">#PRF-LONDON-92</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Neapolitan Relaxed Evening</h3>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant px-2.5 py-1 font-label-uppercase text-[10px] tracking-widest font-semibold uppercase">
+                CALIBRATION IN PROCESS
+              </span>
+</div>
+<!-- Badges Bar -->
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">pending</span>
+                Pending Muslin Fitting
+              </span>
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px]">
+                Spalla Camicia Shoulder
+              </span>
+</div>
+<!-- Vitals Grid -->
+<div class="bg-surface-container-low/70 p-space-md grid grid-cols-2 gap-y-3 gap-x-4 font-label-numeric text-label-numeric">
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Shoulder Architecture</span>
+<span class="text-on-surface font-medium">Unstructured Padless</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Armhole Pitch</span>
+<span class="text-on-surface font-medium">Lower Scye (-0.45 in)</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Chest Ease</span>
+<span class="text-on-surface font-medium">+3.2 in (Soft drape)</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Waist Suppletion</span>
+<span class="text-on-surface font-medium">Suppressed 35.25 in</span>
+</div>
+<div class="col-span-2 pt-1">
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Calibration Progress</span>
+<span class="text-on-surface font-medium">7 of 12 checkpoints recorded</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between font-label-numeric text-[11px]">
+<span class="text-on-surface-variant">Basted Fitting Required</span>
+<span class="text-on-surface-variant font-medium">58% Logged</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full w-[58%]"></div>
+</div>
+<p class="font-label-numeric text-[11px] text-on-surface-variant pt-1">
+                Next Stage: Savile Row Muslin fitting with Master Sterling.
+              </p>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md mt-space-sm space-y-2">
+<button class="w-full py-2.5 bg-secondary text-on-secondary font-label-uppercase text-[10px] tracking-widest hover:bg-primary transition-colors" type="button">
+              RESUME CALIBRATION
+            </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-uppercase text-[10px] tracking-wider transition-colors" type="button">
+                View Draft
+              </button>
+<button class="py-2 bg-surface-container text-error hover:bg-error/10 font-label-uppercase text-[10px] tracking-wider transition-colors" type="button">
+                Archive
+              </button>
+</div>
+</div>
+</div>
+<!-- CARD 3: DHAKA CEREMONIAL -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between group">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="font-label-numeric text-label-numeric text-secondary block">#PRF-DHAKA-14</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Bengal Sherwani &amp; Traditional Kurta</h3>
+</div>
+<span class="bg-surface-container-high text-secondary px-2.5 py-1 font-label-uppercase text-[10px] tracking-widest font-semibold uppercase">
+                ARCHIVAL
+              </span>
+</div>
+<!-- Badges Bar -->
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">diamond</span>
+                Archival Verified
+              </span>
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px]">
+                Handloom Ease: +4.5 in
+              </span>
+<span class="bg-surface-container-low px-2 py-0.5 text-on-surface-variant font-label-numeric text-[11px]">
+                Gulshan Atelier
+              </span>
+</div>
+<!-- Vitals Grid -->
+<div class="bg-surface-container-low/70 p-space-md grid grid-cols-2 gap-y-3 gap-x-4 font-label-numeric text-label-numeric">
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Garment Length</span>
+<span class="text-on-surface font-medium">44.0 in (Mid-Calf)</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Collar Cut (Mandarin)</span>
+<span class="text-on-surface font-medium">16.75 in • 1.75 in Band</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Chest Silhouette</span>
+<span class="text-on-surface font-medium">42.25 in (Jamdani Ease)</span>
+</div>
+<div>
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Sleeve Wrist Opening</span>
+<span class="text-on-surface font-medium">10.5 in (Churidar Cuff)</span>
+</div>
+<div class="col-span-2 pt-1">
+<span class="text-on-surface-variant/70 text-[10px] uppercase font-label-uppercase tracking-wider block">Textile Compatibility</span>
+<span class="text-on-surface font-medium">Calibrated for sovereign 300-count Jamdani weft</span>
+</div>
+</div>
+<!-- Checkpoint status -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between font-label-numeric text-[11px]">
+<span class="text-on-surface-variant">Archival Calibration Preserved</span>
+<span class="text-secondary font-medium">Updated Jun 12, 2025</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 overflow-hidden">
+<div class="bg-secondary h-full w-full"></div>
+</div>
+<p class="font-label-numeric text-[11px] text-on-surface-variant pt-1">
+                Approved by Dhaka Master Weaver Faruq Chowdhury.
+              </p>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md mt-space-sm space-y-2">
+<button class="w-full py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-uppercase text-[10px] tracking-widest transition-colors" type="button">
+              VIEW SPECIFICATION DOSSIER
+            </button>
+<button class="w-full py-2 bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary font-label-uppercase text-[10px] tracking-wider transition-colors" type="button">
+              SET AS DEFAULT FOR CEREMONIAL
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Anatomical Calibration Matrix Section -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-[1360px] mx-auto bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-md">
+<!-- Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-lg gap-gutter-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">architecture</span>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase">
+              ACTIVE BASELINE SPECIFICATION
+            </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Calibration Matrix: #PRF-LONDON-89
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Savile Row Structured Drape • Verified by Master Cutter Alastair Sterling
+          </p>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-low px-3 py-1.5 flex items-center gap-2 font-label-numeric text-label-numeric">
+<span class="text-on-surface-variant">Unit System:</span>
+<span class="font-semibold text-secondary">Inches (Imperial)</span>
+</div>
+<button class="px-4 py-2 bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary font-label-uppercase text-[11px] tracking-widest transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Request Calibration Edit</span>
+</button>
+</div>
+</div>
+<!-- Postural Compensation Advisory Alert -->
+<div class="mb-space-lg bg-surface-container-high/60 p-space-md flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">info</span>
+<div class="space-y-1">
+<span class="font-label-uppercase text-[11px] tracking-widest text-on-surface font-semibold block uppercase">
+            Master Cutter Postural Compensation Active
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Biometric scans identify a <strong>right shoulder droop of 0.75 in</strong> paired with an erect cervical stance. A hand-shaped 4mm pad gradient has been engineered into the right shoulder seam, with lapel gorge lowered by 0.30 in to ensure zero collar gap against the shirt nape.
+          </p>
+</div>
+</div>
+<!-- Matrix Breakdown Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-lg">
+<!-- Column 1: Upper Torso Architecture -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low px-3 py-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider font-semibold">
+              01. Upper Torso Architecture
+            </span>
+<span class="material-symbols-outlined text-secondary text-[18px]">dry_cleaning</span>
+</div>
+<div class="space-y-2.5 font-label-numeric text-label-numeric">
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Chest Circumference (Natural)</span>
+<span class="text-on-surface font-semibold">41.50 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Overarm Circumference</span>
+<span class="text-on-surface font-semibold">49.25 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Cross-Back Shoulder Blade</span>
+<span class="text-on-surface font-semibold">18.75 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Collar / Neck Circumference</span>
+<span class="text-on-surface font-semibold">16.20 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Shoulder Seam Pitch</span>
+<span class="text-secondary font-semibold">43.50°</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Back Length (Nap to Hem)</span>
+<span class="text-on-surface font-semibold">30.75 in</span>
+</div>
+</div>
+<!-- Micro Visual Silhouette Sketch -->
+<div class="bg-surface-container-low p-space-md text-center">
+<div class="w-full h-32 flex items-center justify-center text-on-surface-variant">
+<!-- Inline SVG Diagram: Torso Points -->
+<svg class="w-48 h-28 text-secondary/60" fill="none" viewbox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M 60 20 C 80 15, 120 15, 140 20 L 165 45 L 150 110 L 50 110 L 35 45 Z" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<circle cx="100" cy="18" fill="currentColor" r="3"></circle>
+<circle cx="50" cy="30" fill="currentColor" r="3"></circle>
+<circle cx="150" cy="34" fill="currentColor" r="3"></circle>
+<line stroke="currentColor" stroke-width="1" x1="50" x2="150" y1="30" y2="34"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="middle" x="100" y="55">18.75" Cross-Back</text>
+<circle cx="100" cy="70" fill="currentColor" r="2.5"></circle>
+<line stroke="currentColor" stroke-width="0.8" x1="42" x2="158" y1="70" y2="70"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="middle" x="100" y="82">41.50" Chest Bar</text>
+</svg>
+</div>
+<span class="font-label-numeric text-[10px] text-on-surface-variant tracking-wider uppercase block">
+              Biometric Calibration Vector • Torso Upper
+            </span>
+</div>
+</div>
+<!-- Column 2: Arm & Sleeve Geometry -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low px-3 py-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider font-semibold">
+              02. Arm &amp; Sleeve Geometry
+            </span>
+<span class="material-symbols-outlined text-secondary text-[18px]">gesture</span>
+</div>
+<div class="space-y-2.5 font-label-numeric text-label-numeric">
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Bicep Circumference</span>
+<span class="text-on-surface font-semibold">14.80 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Forearm Circumference</span>
+<span class="text-on-surface font-semibold">11.60 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Wrist Cuff Circumference</span>
+<span class="text-on-surface font-semibold">6.85 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Crown Sleeve Length (Left)</span>
+<span class="text-on-surface font-semibold">25.60 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Crown Sleeve Length (Right)</span>
+<span class="text-secondary font-semibold">25.20 in (-0.40")</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Armhole Scye Circumference</span>
+<span class="text-on-surface font-semibold">19.70 in</span>
+</div>
+</div>
+<!-- Micro Visual Sleeve Angle -->
+<div class="bg-surface-container-low p-space-md text-center">
+<div class="w-full h-32 flex items-center justify-center text-on-surface-variant">
+<!-- Inline SVG Diagram: Arm Angle -->
+<svg class="w-48 h-28 text-secondary/60" fill="none" viewbox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M 40 20 L 75 25 L 85 75 L 70 110 L 55 110 L 65 75 Z" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<circle cx="40" cy="20" fill="currentColor" r="3"></circle>
+<circle cx="75" cy="75" fill="currentColor" r="2.5"></circle>
+<circle cx="62" cy="110" fill="currentColor" r="3"></circle>
+<line stroke="currentColor" stroke-width="0.8" x1="75" x2="140" y1="75" y2="75"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="start" x="145" y="78">11.60" Forearm</text>
+<line stroke="currentColor" stroke-width="0.8" x1="62" x2="140" y1="110" y2="110"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="start" x="145" y="113">6.85" Cuff</text>
+<text class="fill-current text-[8px] font-mono" text-anchor="middle" x="100" y="38">Pitch: 14° Forward Stance</text>
+</svg>
+</div>
+<span class="font-label-numeric text-[10px] text-on-surface-variant tracking-wider uppercase block">
+              Sleeve Rotation Vector • 14° Forward
+            </span>
+</div>
+</div>
+<!-- Column 3: Lower Body & Trouser Architecture -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low px-3 py-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider font-semibold">
+              03. Lower Body &amp; Trouser
+            </span>
+<span class="material-symbols-outlined text-secondary text-[18px]">straighten</span>
+</div>
+<div class="space-y-2.5 font-label-numeric text-label-numeric">
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Natural Waist</span>
+<span class="text-on-surface font-semibold">34.50 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Trouser Waistband (Drop)</span>
+<span class="text-on-surface font-semibold">35.25 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Full Hip / Seat</span>
+<span class="text-on-surface font-semibold">41.00 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Thigh Stride Circumference</span>
+<span class="text-on-surface font-semibold">24.50 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 hover:bg-surface-container-low transition-colors">
+<span class="text-on-surface-variant">Front Rise / Back Rise</span>
+<span class="text-on-surface font-semibold">11.20 in / 16.10 in</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 bg-surface-container-low/40">
+<span class="text-on-surface-variant">Inseam to Half-Break</span>
+<span class="text-secondary font-semibold">32.25 in</span>
+</div>
+</div>
+<!-- Micro Visual Trouser Architecture -->
+<div class="bg-surface-container-low p-space-md text-center">
+<div class="w-full h-32 flex items-center justify-center text-on-surface-variant">
+<!-- Inline SVG Diagram: Trouser Rise -->
+<svg class="w-48 h-28 text-secondary/60" fill="none" viewbox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M 70 15 L 130 15 L 135 60 L 120 115 L 105 115 L 100 65 L 95 115 L 80 115 L 65 60 Z" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<line stroke="currentColor" stroke-width="1" x1="70" x2="130" y1="15" y2="15"></line>
+<line stroke="currentColor" stroke-width="0.8" x1="65" x2="135" y1="60" y2="60"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="middle" x="100" y="32">11.20" Front Rise</text>
+<text class="fill-current text-[8px] font-mono" text-anchor="middle" x="100" y="55">41.00" Seat Curve</text>
+<line stroke="currentColor" stroke-width="0.8" x1="120" x2="160" y1="115" y2="115"></line>
+<text class="fill-current text-[8px] font-mono" text-anchor="start" x="163" y="117">Half Break</text>
+</svg>
+</div>
+<span class="font-label-numeric text-[10px] text-on-surface-variant tracking-wider uppercase block">
+              Trouser Stride Plane • Medium Cuffed Drape
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Imagery & Atelier Craft Breakout -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Visual Collage -->
+<div class="lg:col-span-5 relative">
+<div class="bg-surface-container p-2 shadow-md relative z-10">
+<img class="w-full h-80 lg:h-96 object-cover" data-alt="A master bespoke tailor on Savile Row meticulously chalking basting lines on dark midnight navy worsted wool fabric with horn buttons and measuring tape nearby in soft warm directional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDodVW7QGdGsrsNpW-U_EpwGYp9ldbLxp1ZYV1erDLwzXvE9mT5NNarWxCK-5IytU8NrweJeFcpATerQHczFtN7aqmcT-c4AP244DNOVtYc0iPnyFzHLeWqQMpjYBA9jYtZMQJmiFdlkAkczfzCvWBfu_FFiEEPrh4YJmEcqu_P8qAjYSaE03yaxnFRkuKRgL352-OlwEBsnNXOKaTCyZ6IXw2c6fBy1EE5dfAuhDqAEeBoRKJ2xEC6"/>
+</div>
+<!-- Offset Under-Card -->
+<div class="hidden lg:block absolute -bottom-6 -right-6 w-48 h-48 bg-surface-container-high p-4 shadow-sm z-0">
+<div class="w-full h-full flex flex-col justify-end">
+<span class="font-label-uppercase text-[9px] text-secondary tracking-widest uppercase block">CHALK SPECIFICATION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">3-Tier Verification</span>
+</div>
+</div>
+</div>
+<!-- Narrative Context -->
+<div class="lg:col-span-7 space-y-space-md lg:pl-space-lg">
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block">
+          THE VANGUARD STANDARD
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+          Every millimeter calibrated to your living anatomy, not an algorithmic average.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Unlike industrial bespoke which relies on static grading rules, Atelier Vanguard maintains living dossiers. Each profile captures physical nuance—the tilt of a collarbone, the curvature of the spine during desk work, the drape needed when transitioning from Mayfair boardrooms to Gulshan evenings.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-sm pt-space-sm font-label-numeric text-label-numeric">
+<div class="bg-surface-container-low p-space-md">
+<span class="text-secondary font-headline-sm text-headline-sm block mb-1">0.3 mm</span>
+<span class="text-on-surface font-medium block">Laser Caliper Tolerance</span>
+<p class="text-[11px] text-on-surface-variant mt-1 leading-normal">
+              Validated with contactless optical scans during fitting trunk shows.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-md">
+<span class="text-secondary font-headline-sm text-headline-sm block mb-1">90+ Hours</span>
+<span class="text-on-surface font-medium block">Hand-Pad Stitching Ease</span>
+<p class="text-[11px] text-on-surface-variant mt-1 leading-normal">
+              Floating horsehair canvas shaped directly to profile specifications.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Version History & Revision Audit Log -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-[1360px] mx-auto bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-4">
+<div>
+<span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block">METROLOGICAL TRAIL</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Calibration Revision History</h2>
+</div>
+<div class="flex items-center gap-2 font-label-numeric text-label-numeric text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<span>Immutable Ledger • 3 Total Iterations</span>
+</div>
+</div>
+<!-- Timeline Table List -->
+<div class="space-y-4 pt-space-sm">
+<!-- Log 1: Current -->
+<div class="p-space-md bg-surface-container-low/70 flex flex-col md:flex-row md:items-center justify-between gap-gutter-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 bg-secondary text-on-secondary flex items-center justify-center font-label-numeric text-label-numeric font-bold shrink-0">
+              v1.2
+            </div>
+<div class="space-y-1">
+<div class="flex items-center gap-3 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface">Post-Basting Ease Calibration</span>
+<span class="bg-secondary/15 text-secondary px-2 py-0.5 font-label-uppercase text-[10px] tracking-wider font-semibold">
+                  CURRENT ACTIVE SPEC
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Master Cutter Alastair Sterling manually eased chest circumference (+0.25 in) and suppressed right sleeve length (-0.40 in) following physical fitting at 14 Savile Row.
+              </p>
+</div>
+</div>
+<div class="md:text-right font-label-numeric text-label-numeric shrink-0 pl-14 md:pl-0">
+<span class="text-on-surface font-semibold block">Oct 27, 2025</span>
+<span class="text-[11px] text-on-surface-variant">Verified in London</span>
+</div>
+</div>
+<!-- Log 2: Intermediate Scan -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-gutter-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 bg-surface-container-high text-on-surface flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              v1.1
+            </div>
+<div class="space-y-1">
+<div class="flex items-center gap-3 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface">3D Laser Caliper Salon Scan</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 font-label-uppercase text-[10px] tracking-wider">
+                  PHYSICAL BENCHMARK
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Full 360-degree optical metrology conducted by Tailor Julian Vance. Recorded right shoulder droop (-1.20°) and established initial scye pitch.
+              </p>
+</div>
+</div>
+<div class="md:text-right font-label-numeric text-label-numeric shrink-0 pl-14 md:pl-0">
+<span class="text-on-surface font-semibold block">Aug 15, 2025</span>
+<span class="text-[11px] text-on-surface-variant">Mayfair Salon Scan</span>
+</div>
+</div>
+<!-- Log 3: Initial Onboarding -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-gutter-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 bg-surface-container-high text-on-surface flex items-center justify-center font-label-numeric text-label-numeric font-semibold shrink-0">
+              v1.0
+            </div>
+<div class="space-y-1">
+<div class="flex items-center gap-3 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface">Digital Anatomical Guided Wizard</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 font-label-uppercase text-[10px] tracking-wider">
+                  INITIAL ONBOARDING
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Self-calibrated preliminary entry completed via Vanguard Guided Fitting Wizard with photogrammetric mobile validation.
+              </p>
+</div>
+</div>
+<div class="md:text-right font-label-numeric text-label-numeric shrink-0 pl-14 md:pl-0">
+<span class="text-on-surface font-semibold block">Jan 10, 2025</span>
+<span class="text-[11px] text-on-surface-variant">Client Direct Portal</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Master Cutter Direct Advisory Callout Banner -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-[1360px] mx-auto bg-primary text-surface p-space-lg lg:p-space-xl shadow-xl relative overflow-hidden">
+<!-- Decorative Faint Texture in SVG -->
+<div class="absolute right-0 top-0 w-96 h-full opacity-5 pointer-events-none">
+<svg class="w-full h-full text-surface" fill="currentColor" viewbox="0 0 100 100">
+<pattern height="10" id="grid-pattern" patternunits="userSpaceOnUse" width="10">
+<line stroke="currentColor" stroke-width="0.5" x1="0" x2="10" y1="0" y2="10"></line>
+</pattern>
+<rect fill="url(#grid-pattern)" height="100" width="100"></rect>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-gutter-lg">
+<div class="space-y-space-sm max-w-3xl">
+<div class="flex items-center gap-2 text-secondary font-label-uppercase text-label-uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>ANNUAL ANATOMICAL RECERTIFICATION</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-surface">
+            Have you noticed subtle adjustments in posture, stance, or athletic conditioning?
+          </h3>
+<p class="font-body-md text-body-md text-surface-dim leading-relaxed max-w-2xl">
+            A bespoke garment moves as a second skin. Our Mayfair and Dhaka cutters recommend an annual re-calibration session prior to trunk releases, ensuring seamless shoulder alignment and unyielding drape across your future commissions.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 shrink-0">
+<button class="h-[52px] px-8 bg-secondary text-on-secondary font-label-uppercase text-label-uppercase hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-md flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">event_available</span>
+<span>Reserve Master Salon Session</span>
+</button>
+<button class="h-[52px] px-6 bg-surface/10 text-surface font-label-uppercase text-label-uppercase hover:bg-surface/20 transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">contact_phone</span>
+<span>Speak With Concierge</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-md pr-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px]">shield</span><span class="font-headline-sm text-headline-sm tracking-[0.2em] uppercase text-on-surface">ATELIER VANGUARD</span></div><p class="font-editorial-italic text-editorial-italic text-on-surface-variant max-w-sm">Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</p><div class="pt-space-sm"><span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-2">The Bespoke Guarantee</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Private Salons</span><div class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="space-y-1"><p class="font-semibold text-on-surface">London Atelier</p><p>14 Savile Row, Mayfair</p><p class="font-label-numeric text-label-numeric text-secondary">+44 20 7946 0912</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">New York Atelier</p><p>680 Madison Avenue, UES</p><p class="font-label-numeric text-label-numeric text-secondary">+1 212 555 0184</p></div><div class="space-y-1"><p class="font-semibold text-on-surface">Dhaka Atelier</p><p>Road 71, Gulshan-2, Dhaka</p><p class="font-label-numeric text-label-numeric text-secondary">+880 2 988 2314</p></div></div></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">Concierge &amp; Heritage</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-secondary transition-colors" data-path="multi-step-checkout" href="#">Multi-Step Checkout</a></li><li><a class="hover:text-secondary transition-colors" data-path="guided-measurement-wizard-anatomical-calibration" href="#">Anatomical Calibration</a></li><li><a class="hover:text-secondary transition-colors" data-path="bespoke-craft" href="#">The Seven Craft Stages</a></li><li><a class="hover:text-secondary transition-colors" data-path="fabric-vault" href="#">Bespoke Cloth Mill Partners</a></li><li><a class="hover:text-secondary transition-colors" data-path="ethical-craft" href="#">Ethical Craftsmanship Guild</a></li><li><a class="hover:text-secondary transition-colors" data-path="garment-care" href="#">Lifetime Garment Care</a></li></ul></div><div><span class="font-label-uppercase text-label-uppercase text-on-surface tracking-widest block mb-4">The Vanguard Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><form class="space-y-3"><div class="relative"><input class="w-full bg-transparent border-0 border-b border-secondary/40 focus:border-secondary py-2 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none transition-colors" placeholder="Your email address" type="email"/><button aria-label="Subscribe to Vanguard Gazette" class="absolute right-0 bottom-2 text-secondary hover:text-on-surface transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div><span class="font-label-numeric text-[11px] text-on-surface-variant block">Discreet courier dispatch. Unconditional privacy.</span></form></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-gutter font-label-numeric text-label-numeric text-on-surface-variant"><p>© 2025 ATELIER VANGUARD. London • New York • Dhaka. All Rights Reserved.</p><div class="flex items-center gap-space-lg"><span>Archival Quality Super 150s &amp; Handloom Weft</span><a class="hover:text-secondary transition-colors" data-path="terms-of-service" href="#">Sartorial Terms</a><a class="hover:text-secondary transition-colors" data-path="client-privacy" href="#">Patron Discretion</a></div></div></div></footer></body></html>
