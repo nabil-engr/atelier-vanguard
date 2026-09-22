@@ -1,29 +1,20 @@
-<div class="service-bar">Complimentary insured delivery on orders over $500</div>
+<div class="service-bar">Complimentary insured worldwide courier &amp; private atelier consultation <span>|</span> London · New York · Dhaka</div>
 <header class="site-header">
-  <a routerLink="/" class="brand" (click)="menuOpen.set(false)"><span>AV</span><b>ATELIER VANGUARD</b><small>MADE TO
-      MEASURE</small></a>
+  <a routerLink="/" class="brand" (click)="menuOpen.set(false)"><i class="bi bi-shield"></i><span><b>ATELIER<br>VANGUARD</b><small>SAVILE ROW · MILAN · DHAKA</small></span></a>
   <button class="menu-toggle" aria-label="Toggle menu" (click)="toggleMenu()"><i class="bi bi-list"></i></button>
   <nav [class.open]="menuOpen()">
-    <a routerLink="/shop" routerLinkActive="active" (click)="menuOpen.set(false)">Shop</a>
-    <a routerLink="/shop" [queryParams]="{category:'Suits'}" (click)="menuOpen.set(false)">Men</a>
-    <a routerLink="/shop" [queryParams]="{category:'Dresses'}" (click)="menuOpen.set(false)">Women</a>
-    <a routerLink="/measurements" routerLinkActive="active" (click)="menuOpen.set(false)">Measurements</a>
-    <a routerLink="/booking" routerLinkActive="active" (click)="menuOpen.set(false)">Book a fitting</a>
+    <a routerLink="/">Home</a><a routerLink="/shop" [queryParams]="{category:'Suits'}">Men's<br>Tailoring</a>
+    <a routerLink="/shop" [queryParams]="{category:'Dresses'}">Women's<br>Atelier</a><a routerLink="/shop">Fabric<br>Vault</a>
+    <a routerLink="/configure/mayfair-royal-drape">Bespoke<br>Craft</a><a routerLink="/alterations">Heritage<br>Jamdani</a>
   </nav>
-  <div class="header-actions">
-    <a routerLink="/account" aria-label="Account"><i class="bi bi-person"></i></a>
-    <a routerLink="/cart" aria-label="Shopping bag" class="bag"><i class="bi bi-bag"></i><span>{{ store.count()
-        }}</span></a>
-  </div>
+  <a routerLink="/booking" class="garment-cta">Create<br>Your Garment</a>
+  <div class="header-actions"><a routerLink="/shop" aria-label="Search"><i class="bi bi-search"></i></a><a routerLink="/cart" aria-label="Shopping bag" class="bag"><i class="bi bi-bag"></i><span>{{ store.count() }}</span></a><a routerLink="/account" aria-label="Account"><i class="bi bi-person-circle"></i></a></div>
 </header>
 <main><router-outlet /></main>
 <footer>
-  <div><a routerLink="/" class="footer-brand">ATELIER VANGUARD</a>
-    <p>Made to measure in Dhaka. Delivered worldwide.</p>
-  </div>
-  <div><b>Shop</b><a routerLink="/shop">All garments</a><a routerLink="/measurements">Measurements</a><a
-      routerLink="/booking">Virtual fitting</a></div>
-  <div><b>Help</b><a routerLink="/account">Your account</a><a
-      href="mailto:concierge@ateliervanguard.com">Concierge</a><a routerLink="/alterations">Alteration support</a></div>
-  <div><b>Atelier</b><span>Dhaka · London · New York</span><span>© 2026 Atelier Vanguard</span></div>
+  <div class="footer-intro"><a routerLink="/" class="footer-brand"><i class="bi bi-shield"></i> ATELIER VANGUARD</a><h3>Master European architectural tailoring interlaced with the ancestral artistry of Bengal's sovereign textiles.</h3><small>The Bespoke Guarantee</small><p>Every commission undergoes ninety hours of hand basting, three anatomical fittings, and lifetime garment stewardship across our worldwide salons.</p></div>
+  <div><b>Private Salons</b><span>London Atelier<br>14 Savile Row, Mayfair<br>+44 20 7946 0912</span><span>New York Atelier<br>680 Madison Avenue, UES</span><span>Dhaka Atelier<br>Road 71, Gulshan-2</span></div>
+  <div><b>Concierge &amp; Heritage</b><a routerLink="/booking">Book Private Fitting</a><a routerLink="/alterations">The Seven Craft Stages</a><a routerLink="/shop">Bespoke Cloth Mill Partners</a><a routerLink="/measurements">Lifetime Garment Care</a></div>
+  <div><b>The Vanguard Gazette</b><p>Receive private invitations to seasonal trunk shows and bespoke textile releases.</p><label>Your email address <i class="bi bi-arrow-right"></i></label></div>
+  <div class="copyright">© 2026 ATELIER VANGUARD · London · New York · Dhaka. All Rights Reserved.</div>
 </footer>

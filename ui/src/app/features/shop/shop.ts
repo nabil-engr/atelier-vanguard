@@ -1,138 +1,15 @@
-import { Component, computed, signal } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
+import { Component,computed,signal } from '@angular/core';
+import { ActivatedRoute,RouterLink } from '@angular/router';
 import { PRODUCTS } from '../../core/data';
 
-@Component({
-  selector: 'app-shop',
-  imports: [RouterLink, CurrencyPipe],
-  template: `
-    <section class="shop-head">
-      <div class="container-wide">
-        <span class="eyebrow">MADE TO MEASURE</span>
-        <h1>The collection</h1>
-        <p>Made only after you order. Delivered in 4–6 weeks.</p>
-      </div>
-    </section>
-    <section class="container-wide py-5">
-      <div class="toolbar">
-        <div class="filters">
-          @for (c of categories; track c) {
-            <button [class.active]="category() === c" (click)="category.set(c)">{{ c }}</button>
-          }
-        </div>
-        <span>{{ filtered().length }} garments</span>
-      </div>
-      <div class="row g-4 mt-2">
-        @for (p of filtered(); track p.id) {
-          <a class="col-sm-6 col-lg-4 card-product" [routerLink]="['/product', p.slug]"
-            ><div>
-              <img [src]="p.imageUrl" [alt]="p.name" /><span class="tag">{{ p.category }}</span>
-            </div>
-            <h2>{{ p.name }}</h2>
-            <p>{{ p.fabric }} · {{ p.origin }}</p>
-            <b>{{ p.basePrice | currency: 'USD' : 'symbol' : '1.0-0' }}</b></a
-          >
-        } @empty {
-          <p>No garments match this filter.</p>
-        }
-      </div>
-    </section>
-  `,
-  styles: [
-    `
-      .shop-head {
-        padding: 5rem 0 3rem;
-        background: #eee8dc;
-      }
-      .shop-head h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-      }
-      .shop-head p {
-        color: var(--muted);
-      }
-      .toolbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 1rem;
-      }
-      .filters {
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-      }
-      .filters button {
-        border: 1px solid var(--line);
-        background: transparent;
-        padding: 0.6rem 1rem;
-      }
-      .filters button.active {
-        background: var(--navy);
-        color: white;
-      }
-      .toolbar > span {
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
-      .card-product {
-        color: inherit;
-        text-decoration: none;
-      }
-      .card-product > div {
-        position: relative;
-      }
-      .card-product img {
-        width: 100%;
-        aspect-ratio: 4/5;
-        object-fit: cover;
-      }
-      .tag {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        background: var(--paper);
-        padding: 0.35rem 0.55rem;
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .card-product h2 {
-        font-size: 1.45rem;
-        margin: 1rem 0 0.3rem;
-      }
-      .card-product p {
-        color: var(--muted);
-        margin: 0;
-      }
-      .card-product b {
-        display: block;
-        margin-top: 0.6rem;
-        font-family: var(--serif);
-        font-weight: 400;
-        font-size: 1.1rem;
-      }
-      @media (max-width: 600px) {
-        .toolbar {
-          align-items: flex-start;
-          gap: 1rem;
-          flex-direction: column;
-        }
-      }
-    `,
-  ],
-})
-export class Shop {
-  categories = ['All', 'Suits', 'Shirts', 'Dresses'];
-  category = signal('All');
-  filtered = computed(() =>
-    this.category() === 'All' ? PRODUCTS : PRODUCTS.filter((p) => p.category === this.category()),
-  );
-  constructor(route: ActivatedRoute) {
-    route.queryParamMap.subscribe((q) => {
-      const c = q.get('category');
-      if (c) this.category.set(c);
-    });
-  }
-}
+@Component({selector:'app-shop',imports:[RouterLink,CurrencyPipe],template:`
+<section class="catalog-head"><div class="container-wide"><span class="eyebrow">MAISON PORTFOLIO · AUTUMN / WINTER ARCHIVAL COMMISSION</span><div class="head-row"><div><h1>The Sartorial Collection</h1><p>Where the sharp structural geometry of Savile Row meets the ancestral warp and weft of sovereign Bengal handlooms.</p></div><div class="facts"><span>ACTIVE ATELIERS<b>3 Salons</b></span><span>AVERAGE CRAFT TIME<b>88.5 Hrs</b></span><span>CLOTH VAULT<b>420+ Rolls</b></span></div></div><div class="tabs">@for(c of categories;track c){<button [class.active]="category()===c" (click)="category.set(c)">{{c}}</button>}</div></div></section>
+<section class="refine"><div class="container-wide"><button><i class="bi bi-sliders"></i> Refine Criteria <b>3</b></button><span>Cloth: Loro Piana Super 150s ×</span><span>Origin: Savile &amp; Bengal ×</span><a (click)="category.set('All')">Clear All</a></div></section>
+<section class="container-wide catalog"><div class="sort">SORT CATALOGUE: <select><option>Curated Prestige (Editorial Pick)</option><option>Investment: Low to High</option></select><span>Showing 1–{{filtered().length}} of 24 Commissions</span></div><div class="catalog-grid"><aside><header>Sartorial Discipline <i class="bi bi-sun"></i></header><b>FABRIC &amp; LOOM HOUSE</b>@for(f of fabrics;track f){<label><input type="checkbox" [checked]="$index===0"> {{f}}</label>}<b>CUT &amp; ARCHITECTURAL DRAPE</b>@for(cut of cuts;track cut){<label><input type="radio" name="cut"> {{cut}}</label>}<b>COLORWAY SPECTRUM</b><div class="swatches"><i></i><i></i><i></i><i></i><i></i></div><b>BASE INVESTMENT</b><p>$750 – $4,500</p><input type="range"><footer><i class="bi bi-shield-check"></i> Bespoke Mill Sourcing<br><small>Unlisted mill runs available via Head Cutter consultation.</small></footer></aside><main><div class="products">@for(p of filtered();track p.id){<a [routerLink]="['/product',p.slug]" class="product"><div class="image"><img [src]="p.imageUrl" [alt]="p.name"><span>{{p.featured?'SOVEREIGN CLOTH':'BRITISH HERITAGE'}}</span><button aria-label="Save"><i class="bi bi-heart"></i></button></div><div class="meta"><small>{{p.category}} · COMMISSION</small><em>Dispatch 3–4 Wks</em></div><h2>{{p.name}}</h2><p>{{p.summary}}</p><div class="colors"><i></i><i></i><i></i><span>{{p.fabric}}</span></div><div class="price"><small>STARTING INVESTMENT</small><b>{{p.basePrice|currency:'USD':'symbol':'1.0-0'}}</b></div><strong>Customize Garment <i class="bi bi-sliders"></i></strong></a>}</div><div class="pagination"><span>Displaying Page 1 of 4</span><button>‹</button><button class="active">1</button><button>2</button><button>3</button><button>4</button><button>›</button></div></main></div></section>
+<section class="travelling"><div><span class="eyebrow">SOVEREIGN CONCIERGE PROTOCOL</span><h2>Require a Private Travelling Tailor?</h2><p>Our Senior Cutter and Textile Archivist fly with bespoke swatches, full anatomical measuring tape, and Jamdani handloom archives directly to your residence.</p><a routerLink="/booking">Book Salon or Suite Fitting</a></div><aside><small>AUTUMN / WINTER TRUNK ITINERARY</small><p><b>The Connaught, Mayfair</b><span>Nov 12–16</span></p><p><b>The Carlyle, New York</b><span>Nov 22–26</span></p><p><b>Gulshan Atelier, Dhaka</b><span>Dec 04–09</span></p></aside></section>
+`,styles:[`
+.catalog-head{padding:3.5rem 0 0;background:#f3ede2}.head-row{display:flex;justify-content:space-between;align-items:end;gap:2rem}.head-row h1{font-size:clamp(3rem,5vw,5.5rem);line-height:1;margin:.7rem 0}.head-row p{font:1.35rem/1.55 var(--serif);max-width:760px;color:#544f48}.facts{display:grid;grid-template-columns:repeat(3,1fr);background:#faf7f0;padding:1.4rem;min-width:390px}.facts span{padding:0 1rem;border-right:1px solid var(--line);font-size:.5rem;color:#777}.facts span:last-child{border:0}.facts b{display:block;font:1rem var(--serif);color:#111;margin-top:.4rem}.tabs{display:flex;gap:.4rem;margin-top:2rem;overflow:auto}.tabs button{border:1px solid var(--line);background:#f8f4ec;padding:.55rem 1rem;font-size:.58rem;letter-spacing:.12em;white-space:nowrap}.tabs button.active{background:#080808;color:#fff}.refine{background:#ede6da;padding:.8rem 0}.refine>div{display:flex;align-items:center;gap:.6rem}.refine button,.refine span{border:1px solid #d6cdbf;background:#f8f4ec;padding:.55rem .8rem;font-size:.62rem}.refine button b{background:#111;color:#fff;border-radius:50%;padding:.1rem .35rem}.refine a{font-size:.6rem;color:#755a28;cursor:pointer}.catalog{padding-block:2.2rem 5rem}.sort{font-size:.56rem;color:#666;margin-bottom:1.5rem;display:flex;gap:1rem;align-items:center}.sort select{padding:.65rem;border:1px solid var(--line);background:#eee8dd}.catalog-grid{display:grid;grid-template-columns:260px 1fr;gap:2rem}.catalog-grid>aside{background:#f1eadf;padding:1.2rem;height:max-content;display:flex;flex-direction:column;gap:.65rem}.catalog-grid>aside header{display:flex;justify-content:space-between;font:1rem var(--serif);margin-bottom:.5rem}.catalog-grid>aside>b{font-size:.55rem;letter-spacing:.13em;margin-top:1rem}.catalog-grid>aside label{font-size:.68rem;color:#555}.swatches{display:flex;gap:.35rem}.swatches i,.colors i{width:18px;height:18px;background:#0c1722;border:1px solid #aaa}.swatches i:nth-child(2),.colors i:nth-child(2){background:#9b7540}.swatches i:nth-child(3){background:#f5f0e7}.swatches i:nth-child(4){background:#a2171b}.swatches i:nth-child(5){background:#333}.catalog-grid>aside footer{border-top:1px solid var(--line);padding-top:1rem;font-size:.66rem}.catalog-grid>aside footer small{color:#777}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}.product{background:#fff;text-decoration:none;color:inherit;padding-bottom:.8rem}.image{position:relative}.image img{width:100%;aspect-ratio:4/5;object-fit:cover}.image>span{position:absolute;top:.6rem;left:.6rem;background:#050505;color:#fff;padding:.35rem .5rem;font-size:.48rem}.image button{position:absolute;right:.6rem;top:.6rem;width:32px;height:32px;border:0;background:#faf7f1}.meta,.price{display:flex;justify-content:space-between;align-items:center;padding:0 .8rem}.meta{margin-top:.8rem}.meta small,.meta em,.price small{font-size:.48rem;letter-spacing:.1em;color:#777}.product h2{font-size:1.25rem;margin:.45rem .8rem}.product>p{font-size:.68rem;color:#666;line-height:1.5;margin:.3rem .8rem;height:43px;overflow:hidden}.colors{display:flex;align-items:center;gap:.25rem;margin:.6rem .8rem}.colors i{width:12px;height:12px}.colors i:nth-child(3){background:#ddd}.colors span{margin-left:auto;font-size:.52rem}.price{border-top:1px solid var(--line);padding-top:.6rem}.price b{font:1.1rem var(--serif)}.product>strong{display:block;background:#050505;color:#fff;margin:.7rem .8rem 0;padding:.7rem;text-align:center;font-size:.58rem;letter-spacing:.06em}.pagination{display:flex;gap:.3rem;justify-content:flex-end;align-items:center;margin-top:3rem}.pagination span{margin-right:auto;font-size:.58rem}.pagination button{border:0;background:#eee8dd;width:34px;height:34px}.pagination button.active{background:#050505;color:#fff}.travelling{background:#050505;color:#ddd;padding:4rem max(calc((100vw - 1200px)/2),2rem);display:grid;grid-template-columns:1fr 1fr;gap:5rem}.travelling h2{color:#fff;font-size:2.5rem}.travelling p{font:1.15rem/1.55 var(--serif);color:#9aa2ad;max-width:600px}.travelling a{display:inline-block;background:#a77a25;color:#fff;text-decoration:none;padding:1rem 1.5rem;font-size:.6rem;text-transform:uppercase}.travelling aside{background:#1b1812;padding:1.5rem}.travelling aside small{color:#a77a25}.travelling aside p{display:flex;justify-content:space-between;font:normal .7rem var(--sans);color:#ddd;border-bottom:1px solid #383127;padding:.7rem}.travelling aside span{color:#ad8337}
+@media(max-width:950px){.head-row{align-items:start;flex-direction:column}.facts{min-width:0;width:100%}.catalog-grid{grid-template-columns:1fr}.catalog-grid>aside{display:none}.products{grid-template-columns:1fr 1fr}.travelling{grid-template-columns:1fr}}@media(max-width:560px){.products{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.facts span{border:0;border-bottom:1px solid var(--line);padding:.7rem}.sort span{display:none}}
+`]})
+export class Shop{categories=['All','Suits','Dresses','Shirts'];fabrics=['Loro Piana Super 150s','Dhaka Handloom Jamdani','Scabal Noble Cashmere','Fox Brothers Worsted Flannel','Giza 87 Egyptian Cotton'];cuts=['Savile Row Structured','Neapolitan Spalla Camicia','6×2 Double-Breasted Royal','Bengal Formal Sherwani Cut'];category=signal('All');filtered=computed(()=>this.category()==='All'?PRODUCTS:PRODUCTS.filter(p=>p.category===this.category()));constructor(route:ActivatedRoute){route.queryParamMap.subscribe(q=>{const c=q.get('category');if(c)this.category.set(c)})}}
